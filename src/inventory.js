@@ -1,8 +1,8 @@
 import {computedFrom} from 'aurelia-framework';
 
 export class inventory {
-  currentLoad = 1;
-  strength = 10;
+  currentLoad;
+  strength;
   creatureType = 'biped';
   creatureSize = 'medium';
 

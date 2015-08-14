@@ -1,9 +1,9 @@
 Install packages with:
-'''shell
+```shell
 jspm install
-'''
+```
 
 Run with:
-'''shell
+```shell
 gulp watch
-'''
+```

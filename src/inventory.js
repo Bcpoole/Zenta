@@ -1,11 +1,12 @@
 import {computedFrom} from 'aurelia-framework';
 
 export class inventory {
+  currentLoad = 1;
   strength = 10;
   creatureType = 'bipedal';
   creatureSize = 'medium';
 
-  @computedFrom('strength', 'creatureType', 'creatureSize');
+  @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize');
   get loads() {
     return this.calculateCarryCapacity();
   }
@@ -19,7 +20,7 @@ export class inventory {
     for (var i = 1; i <= 29; i++) {
       var modStr = i + this.getCategoryModifier(i);
 
-      var light, med, heavy;
+      var light, medium, heavy;
       if (i < 10) {
         heavy = modStr * 10;
       } else {
@@ -29,20 +30,37 @@ export class inventory {
       }
 
       heavy = heavy * this.getSizeModifier();
-      med = Math.floor((2/3) * heavy);
+      medium = Math.floor((2/3) * heavy);
       light = Math.floor((1/3) * heavy);
 
       var style = '#FFFFFF';
       if (i == this.strength) {
         style = '#66AFFC';
       }
+      var isLight, isMedium, isHeavy;
+      isLight = isMedium = isHeavy = style;
+      if (i == this.strength) {
+        if (this.currentLoad <= light) {
+          isLight = '#2186FC';
+        } else if (this.currentLoad <= medium) {
+          isMedium = '#2186FC';
+        } else if (this.currentLoad <= heavy) {
+          isHeavy = '#2186FC';
+        } else {
+          style = '#DA300C';
+          isLight = isMedium = isHeavy = style;
+        }
+      }
 
       loadSizes.push({
         strength: i,
         light: light + " lbs. or less",
-        medium: (light+1) + "-" + med + " lbs.",
-        heavy: (med+1) + "-" + heavy + " lbs.",
-        style: style
+        medium: (light+1) + "-" + medium + " lbs.",
+        heavy: (medium+1) + "-" + heavy + " lbs.",
+        style: style,
+        isLight: isLight,
+        isMedium: isMedium,
+        isHeavy: isHeavy
       });
     }
 

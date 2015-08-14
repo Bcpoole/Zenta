@@ -1,6 +1,6 @@
 import {computedFrom} from 'aurelia-framework';
 
-export class inventory {
+export class carryCapacity {
   currentLoad;
   strength;
   creatureType = 'biped';

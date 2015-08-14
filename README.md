@@ -12,3 +12,5 @@ gulp watch
 # Features
 ## Carry Capacity Calculator
 Generates a table based on size and biped/quadraped and highlights your relevant row.
+
+*Special thanks to Cevah from the Pazio forums for the based value formula*

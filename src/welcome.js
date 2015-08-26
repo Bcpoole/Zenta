@@ -1,14 +1,20 @@
 import {computedFrom} from 'aurelia-framework';
+import {inject} from 'aurelia-framework';
+import {ApplicationState} from './applicationState';
 
+@inject(ApplicationState)
 export class Welcome{
   heading = 'Pathfinder Utility Application!';
 
-  constructor() {
+  constructor(appState) {
     if (window.File && window.FileList && window.FileReader) {
     }
     else {
         alert("Your browser does not support File API. You will be unable to load your character.");
     }
+
+    this.appState = appState;
+    this.loadedCharacter = this.appState.loadedCharacter;
   }
 
   fileSelected() {
@@ -21,7 +27,8 @@ export class Welcome{
 
         try {
           var json = JSON.parse(myCharacter);
-          this.myCharacter = myCharacter;
+          this.appState.loadedCharacter = json;
+          //this.loadedCharacter = json;
         } catch(e) {
           this.myCharacter = '';
           alert(file.name + ' is not valid json');

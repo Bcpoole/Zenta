@@ -1,18 +1,27 @@
 import {computedFrom} from 'aurelia-framework';
+import {inject} from 'aurelia-framework';
+import {ApplicationState} from './applicationState';
 
+@inject(ApplicationState)
 export class carryCapacity {
   currentLoad;
   strength;
   creatureType = 'biped';
   creatureSize = 'medium';
 
+  constructor(appState) {
+    this.appState = appState;
+
+    var obj = this.appState.loadedCharacter;
+    console.log(obj);
+    console.log(obj.hair);
+
+    this.strength = 10;
+  }
+
   @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize');
   get loads() {
     return this.calculateCarryCapacity();
-  }
-
-  constructor() {
-
   }
 
   calculateCarryCapacity() {

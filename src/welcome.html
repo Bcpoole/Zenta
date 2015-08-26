@@ -4,7 +4,9 @@
     <section>
       <label for="files">Select a file: </label>
       <input id="files" type="file" change.delegate="fileSelected($event)">
-      ${myCharacter}
     </section>
+    <div>
+      ${appState.loadedCharacter.name}
+    </div>
   </section>
 </template>

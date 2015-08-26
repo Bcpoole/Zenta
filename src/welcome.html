@@ -1,5 +1,10 @@
 <template>
   <section class="au-animate">
     <h2>${heading}</h2>
+    <section>
+      <label for="files">Select a file: </label>
+      <input id="files" type="file" change.delegate="fileSelected($event)">
+      ${myCharacter}
+    </section>
   </section>
 </template>

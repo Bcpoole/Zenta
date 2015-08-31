@@ -12,11 +12,18 @@ export class carryCapacity {
   constructor(appState) {
     this.appState = appState;
 
-    var obj = this.appState.loadedCharacter;
-    console.log(obj);
-    console.log(obj.hair);
+    this.loadedCharacter = this.appState.loadedCharacter;
 
-    this.strength = 10;
+    this.loadCharacter();
+  }
+
+  loadCharacter() {
+    if (this.loadedCharacter) {
+      let scores = this.loadedCharacter.abilityScores;
+      this.strength = scores.strength;
+    } else {
+      console.log('no character loaded.')
+    }
   }
 
   @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize');

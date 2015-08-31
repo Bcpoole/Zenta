@@ -5,8 +5,35 @@
       <label for="files">Select a file: </label>
       <input id="files" type="file" change.delegate="fileSelected($event)">
     </section>
-    <div>
-      ${appState.loadedCharacter.name}
+    <hr>
+    <div if.bind="appState.loadedCharacter">
+      <h2>${appState.loadedCharacter.name}</h2>
+      <table class="table table-striped">
+        <tr>
+          <td>Strength</td>
+          <td>${appState.loadedCharacter.abilityScores.strength}</td>
+        </tr>
+        <tr>
+          <td>Dexterity</td>
+          <td>${appState.loadedCharacter.abilityScores.dexterity}</td>
+        </tr>
+        <tr>
+          <td>Constitution</td>
+          <td>${appState.loadedCharacter.abilityScores.constitution}</td>
+        </tr>
+        <tr>
+          <td>Intelligence</td>
+          <td>${appState.loadedCharacter.abilityScores.intelligence}</td>
+        </tr>
+        <tr>
+          <td>Wisdom</td>
+          <td>${appState.loadedCharacter.abilityScores.wisdom}</td>
+        </tr>
+        <tr>
+          <td>Charisma</td>
+          <td>${appState.loadedCharacter.abilityScores.charisma}</td>
+        </tr>
+      </table>
     </div>
   </section>
 </template>

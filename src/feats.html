@@ -1,6 +1,47 @@
 <template>
   <section>
-    <h2>feats</h2>
-    <p>${hello}</p>
+    <div class="alert alert-error">${err}</div>
+    <div if.bind="loadedCharacter.feats">
+      <h1>Feats</h1>
+      <div repeat.for="feat of loadedCharacter.feats.selected">
+        <div class="panel-group" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                  ${feat.name}
+                </a>
+              </h4>
+            </div>
+            <div class="panel-collapse collapse in" role="tabpanel">
+              <div class="panel-body">
+                ${feat.benefit}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div if.bind="loadedCharacter.feats.flaws">
+      <h1>Flaws</h1>
+      <div repeat.for="flaw of loadedCharacter.feats.flaws">
+        <div class="panel-group" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                  ${flaw.name}
+                </a>
+              </h4>
+            </div>
+            <div class="panel-collapse collapse in" role="tabpanel">
+              <div class="panel-body">
+                ${flaw.effect}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>

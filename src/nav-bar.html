@@ -21,6 +21,17 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <li if.bind="appState.loadedCharacter" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+            ${appState.loadedCharacter.name}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href.bind="feats">Feats & Flaws</a>
+            </li>
+          </ul>
+        </li>
         <li class="loader" if.bind="router.isNavigating">
           <i class="fa fa-spinner fa-spin fa-2x"></i>
         </li>

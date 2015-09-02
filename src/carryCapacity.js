@@ -9,6 +9,11 @@ export class carryCapacity {
   creatureType = 'biped';
   creatureSize = 'medium';
 
+  @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize');
+  get loads() {
+    return this.calculateCarryCapacity();
+  }
+
   constructor(appState) {
     this.appState = appState;
 
@@ -24,11 +29,6 @@ export class carryCapacity {
     } else {
       console.log('no character loaded.')
     }
-  }
-
-  @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize');
-  get loads() {
-    return this.calculateCarryCapacity();
   }
 
   calculateCarryCapacity() {

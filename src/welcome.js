@@ -4,7 +4,7 @@ import {ApplicationState} from './applicationState';
 
 @inject(ApplicationState)
 export class Welcome{
-  heading = 'Pathfinder Utility Application!';
+  heading = 'Zenta - A Pathfinder Utility App!';
 
   constructor(appState) {
     if (window.File && window.FileList && window.FileReader) {

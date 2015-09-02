@@ -15,7 +15,15 @@
             </div>
             <div class="panel-collapse collapse in" role="tabpanel">
               <div class="panel-body">
-                ${feat.benefit}
+                <p if.bind="feat.flavor">
+                  <i>${feat.flavor}</i><br>
+                </p>
+                <p if.bind="feat.prerequisites">
+                  <strong>Prequisites:</strong>${feat.prerequisites}<br>
+                </p>
+                <p if.bind="feat.benefit">
+                  ${feat.benefit}
+                </p>
               </div>
             </div>
           </div>
@@ -36,7 +44,18 @@
             </div>
             <div class="panel-collapse collapse in" role="tabpanel">
               <div class="panel-body">
-                ${flaw.effect}
+                <p if.bind="flaw.flavor">
+                  <i>${flaw.flavor}</i>
+                </p>
+                <p if.bind="flaw.prerequisites">
+                  <strong>Prequisites: </strong>${flaw.prerequisites}
+                </p>
+                <p if.bind="flaw.effect">
+                  <strong>Effect: </strong>${flaw.effect}
+                </p>
+                <p if.bind="flaw.benefit">
+                  <strong>Benefit: </strong>${flaw.benefit}
+                </p>
               </div>
             </div>
           </div>

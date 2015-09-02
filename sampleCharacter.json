@@ -117,7 +117,6 @@
 		"flaws": [
 			{
 				"name": "Xiphiphilia",
-				"prerequisites": "",
 				"effect": "The character is fascinated by large sword-like blades of all types. When encountering such a weapon for the first time, the character must succeed at a will save DC 15 or become fascinated by the weapon for 1d4 rounds. If the weapon is for sale, then the character will purchase it. If he cannot afford it he will attempt to negotiate a lower price or offer trade. If the weapon is being wielded by an enemy, then the player fixates on that opponent exclusively, ignoring all other combatants until the opponent dies or the player is able to take the weapon in question.",
 				"benefit": "Bonus Feat",
 				"flavor": "An unhealthy fascination with swords and large bladed weapons."

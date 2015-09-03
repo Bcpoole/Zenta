@@ -1,6 +1,35 @@
 <template>
   <section>
-    <h2>equipment</h2>
-    <p>${hello}</p>
+    <h2>Equipment</h2>
+    <div repeat.for="item of loadedCharacter.wondrousItems">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label if.bind="item.name">${item.slot} - ${item.name}</label>
+                <label if.bind="!item.name">${item.slot}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel" if.bind="item.name">
+            <div class="panel-body">
+              <p>
+                ${item.description}
+              </p>
+              <p>
+                <strong>Value: </strong>${item.value} gp
+              </p>
+              <p>
+                <strong>Aura: </strong>${item.aura}
+              </p>
+              <p>
+                <strong>Weight: </strong>${item.weight} lbs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>

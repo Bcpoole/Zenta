@@ -1,6 +1,25 @@
 <template>
   <section>
-    <h2>inventory</h2>
-    <p>${hello}</p>
+    <div repeat.for="item of loadedCharacter.inventory">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${item.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <strong>Weight: </strong>${item.weight}
+              <p if.bind="item.description">
+                ${item.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>

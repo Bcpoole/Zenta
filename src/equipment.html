@@ -1,6 +1,84 @@
 <template>
   <section>
     <h2>Weapons</h2>
+    <div repeat.for="weapon of loadedCharacter.weapons">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label if.bind="weapon.weaponBonus">${weapon.name} ${weapon.weaponBonus}</label>
+                <label if.bind="weapon.isMasterwork && !weapon.weaponBonus">${weapon.name} (mw)</label>
+                <label if.bind="!weapon.isMasterwork">${weapon.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p>
+                <strong>Damage: </strong>${weapon.damage}
+              </p>
+              <p>
+                <strong>Critical: </strong>${weapon.crit}
+              </p>
+              <p>
+                <strong>Weight: </strong>${weapon.weight} lbs.
+              </p>
+              <p>
+                <strong>Value: </strong>${weapon.value} gp
+              </p>
+              <p if.bind="weapon.material">
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                          <label>${weapon.material.name}</label>
+                        </a>
+                      </h4>
+                    </div>
+                    <div class="panel-collapse collapse in" role="tabpanel">
+                      <div class="panel-body">
+                        <p>
+                          <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
+                          <strong>Hardness: </strong>${weapon.material.hardness}
+                        </p>
+                        <p>
+                          ${weapon.material.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p>
+              <div if.bind="weapon.enchantments" repeat.for="enchantment of weapon.enchantments">
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                          <label>${enchantment.name}</label>
+                        </a>
+                      </h4>
+                    </div>
+                    <div class="panel-collapse collapse in" role="tabpanel">
+                      <div class="panel-body">
+                        <p>
+                          <strong>Aura: </strong>${enchantment.aura}
+                        </p>
+                        <p>
+                          ${enchantment.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <hr>
     <h2>Armor</h2>
     <hr>

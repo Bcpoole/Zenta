@@ -49,7 +49,7 @@
                   </div>
                 </div>
               </p>
-              <div if.bind="weapon.enchantments" repeat.for="enchantment of weapon.enchantments">
+              <div repeat.for="enchantment of weapon.enchantments">
                 <div class="panel-group" role="tablist" aria-multiselectable="true">
                   <div class="panel panel-default">
                     <div class="panel-heading" role="tab">
@@ -104,30 +104,30 @@
               <strong>Value: </strong>${armor.value} gp
             </p>
             <p if.bind="armor.material">
-            <div class="panel-group" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                      <label>${armor.material.name}</label>
-                    </a>
-                  </h4>
-                </div>
-                <div class="panel-collapse collapse in" role="tabpanel">
-                  <div class="panel-body">
-                    <p>
-                      <strong>HP/IN: </strong>${armor.material.hpIn}<br>
-                      <strong>Hardness: </strong>${armor.material.hardness}
-                    </p>
-                    <p>
-                      ${armor.material.description}
-                    </p>
+              <div class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                        <label>${armor.material.name}</label>
+                      </a>
+                    </h4>
+                  </div>
+                  <div class="panel-collapse collapse in" role="tabpanel">
+                    <div class="panel-body">
+                      <p>
+                        <strong>HP/IN: </strong>${armor.material.hpIn}<br>
+                        <strong>Hardness: </strong>${armor.material.hardness}
+                      </p>
+                      <p>
+                        ${armor.material.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </p>
-            <div if.bind="armor.enchantments" repeat.for="enchantment of armor.enchantments">
+            <div repeat.for="enchantment of armor.enchantments">
               <div class="panel-group" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab">
@@ -186,5 +186,31 @@
     </div>
     <hr>
     <h2>Rings</h2>
+    <div repeat.for="ring of loadedCharacter.rings">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${ring.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p>
+                <strong>Aura: </strong>${ring.aura}
+              </p>
+              <p>
+                <strong>Value: </strong>${ring.value}
+              </p>
+              <p>
+                ${ring.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>

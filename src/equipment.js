@@ -11,5 +11,6 @@ export class equipment {
       this.appState = appState;
 
       this.loadedCharacter = this.appState.loadedCharacter;
+      this.armor = this.loadedCharacter.armor;
     }
 }

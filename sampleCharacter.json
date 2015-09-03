@@ -204,7 +204,7 @@
 		"ac": 9,
 		"maxDexBonus": 1,
 		"armorCheckPenalty": -5,
-		"arcaneSpellFailureChance": 0.35,
+		"arcaneSpellFailureChance": 35,
 		"speed": "20/15",
 		"weight": 50,
 		"value": 19650,
@@ -212,7 +212,7 @@
 		"armorBonus": "+5 armor with one +4 special ability",
 		"material": {
 			"name": "Living Steel",
-			"hp/in": 35,
+			"hpIn": 35,
 			"hardness": 15,
 			"description": "Some trees suck up potent minerals through their roots the same way others draw water from the ground. Though these trees blunt saws and axes used to hew them and shrug off fire, they eventually succumb to time or the elements. When properly harvested, these fallen trees produce nuggets of a metal called living steel. This glossy green metal slowly repairs itself. An item made from living steel repairs damage to itself at a rate of 2 hit points per day, or 1 hit point per day if it has the broken condition. Items not primarily of metal are not meaningfully affected by being partially made of living steel.\\n\\nArmor and shields made from living steel can damage metal weapons that strike them. Whenever the wielder of a metal weapon rolls a natural 1 on an attack roll against a creature wearing living steel armor or wielding a living steel shield, the item must make a DC 20 Fortitude save or gain the broken condition. If the weapon already has the broken condition, it is instead destroyed. Living steel cannot damage adamantine weapons in this way."
 		},
@@ -220,7 +220,7 @@
 			{
 				"name": "Invulnerability",
 				"description": "This suit of armor grants the wearer damage reduction 5/magic. Invulnerable armor emits a strong aura of abjuration (and evocation if miracle is used).",
-				"arua": "strong varies"
+				"aura": "strong varies"
 			}
 		]
 	},

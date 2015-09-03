@@ -23,3 +23,6 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 
 ## Feats & Flaws
 Displays Feats & Flaws details of uploaded character.
+
+## Equipment
+Displays Weapons, Armor, Wondrous Items, and Rings and their details.

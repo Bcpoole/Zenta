@@ -6,11 +6,19 @@ import {ApplicationState} from './applicationState';
 export class Welcome{
   heading = 'Zenta - A Pathfinder Utility App!';
 
+  get loadedCharacter() {
+    return this._loadedCharacter;
+  }
+  set loadedCharacter(val) {
+    this._loadedCharacter = val;
+    this.appState.loadedCharacter = val;
+  }
+
   constructor(appState) {
     if (window.File && window.FileList && window.FileReader) {
     }
     else {
-        alert("Your browser does not support File API. You will be unable to load your character.");
+      alert("Your browser does not support File API. You will be unable to load your character.");
     }
 
     this.appState = appState;
@@ -21,16 +29,13 @@ export class Welcome{
       let reader = new FileReader();
       let file = this.$event.target.files[0];
       reader.readAsText(file);
-      console.log(file);
       reader.onload = () => {
         let myCharacter = reader.result;
 
         try {
-          var json = JSON.parse(myCharacter);
-          this.appState.loadedCharacter = json;
-          //this.loadedCharacter = json;
+          this.loadedCharacter = JSON.parse(myCharacter);
         } catch(e) {
-          this.myCharacter = '';
+          this.loadedCharacter = null;
           alert(file.name + ' is not valid json');
         }
       };

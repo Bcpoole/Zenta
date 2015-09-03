@@ -8,9 +8,9 @@ export class equipment {
   }
 
   constructor(appState) {
-      this.appState = appState;
+    this.appState = appState;
 
-      this.loadedCharacter = this.appState.loadedCharacter;
-      this.armor = this.loadedCharacter.armor;
+    this.loadedCharacter = this.appState.loadedCharacter;
+    this.armor = this.loadedCharacter.armor;
   }
 }

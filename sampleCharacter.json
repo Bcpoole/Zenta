@@ -170,33 +170,35 @@
 		"swim": 2,
 		"useMagicDevice": 27
 	},
-	"weapon": {
-		"name": "Nodachi",
-		"damage": "1d10",
-		"crit": "18-20/x2",
-		"weight": 8,
-		"value": 3060,
-		"isMasterwork": true,
-		"weaponBonus": "+1 weapon with two +1 special abilities",
-		"material": {
-			"name": "Adamantine",
-			"hp/in": 40,
-			"hardness": 20,
-			"description": "Adamantine is extremely strong and favored by weapon and armor smiths alike for its ability to cut through solid barriers with ease and endure heavy blows.\\n\\nWeapons fashioned from adamantine have a natural ability to bypass hardness when sundering weapons or attacking objects, ignoring hardness less than 20.\\n\\nArmor made from adamantine grants its wearer damage reduction of 1/— if it's light armor, 2/— if it's medium armor, and 3/— if it's heavy armor. Adamantine is so costly that weapons and armor made from it are always of masterwork quality; the masterwork cost is included in the prices given. Thus, adamantine weapons and ammunition have a +1 enhancement bonus on attack rolls, and the armor check penalty of adamantine armor is lessened by 1 compared to ordinary armor of its type. Items without metal parts cannot be made from adamantine. An arrow could be made of adamantine, but a quarterstaff could not."
-		},
-		"enchantments": [
-			{
-				"name": "Cruel",
-				"description": "When the wielder strikes a creature that is frightened, shaken, or panicked with a cruel weapon, that creature becomes sickened for 1 round. When the wielder uses the weapon to knock unconscious or kill a creature, he gains 5 temporary hit points that last for 10 minutes.",
-				"arua": "faint necromancy"
+	"weapons": [
+		{
+			"name": "Nodachi",
+			"damage": "1d10",
+			"crit": "18-20/x2",
+			"weight": 8,
+			"value": 3060,
+			"isMasterwork": true,
+			"weaponBonus": "+1 weapon with two +1 special abilities",
+			"material": {
+				"name": "Adamantine",
+				"hp/in": 40,
+				"hardness": 20,
+				"description": "Adamantine is extremely strong and favored by weapon and armor smiths alike for its ability to cut through solid barriers with ease and endure heavy blows.\\n\\nWeapons fashioned from adamantine have a natural ability to bypass hardness when sundering weapons or attacking objects, ignoring hardness less than 20.\\n\\nArmor made from adamantine grants its wearer damage reduction of 1/— if it's light armor, 2/— if it's medium armor, and 3/— if it's heavy armor. Adamantine is so costly that weapons and armor made from it are always of masterwork quality; the masterwork cost is included in the prices given. Thus, adamantine weapons and ammunition have a +1 enhancement bonus on attack rolls, and the armor check penalty of adamantine armor is lessened by 1 compared to ordinary armor of its type. Items without metal parts cannot be made from adamantine. An arrow could be made of adamantine, but a quarterstaff could not."
 			},
-			{
-				"name": "Defending",
-				"description": "A defending weapon allows the wielder to transfer some or all of the weapon's enhancement bonus to his AC as a bonus that stacks with all others. As a free action, the wielder chooses how to allocate the weapon's enhancement bonus at the start of his turn before using the weapon, and the bonus to AC lasts until his next turn. This ability can only be placed on melee weapons.",
-				"arua": "moderate abjuration"
-			}
-		]
-	},
+			"enchantments": [
+				{
+					"name": "Cruel",
+					"description": "When the wielder strikes a creature that is frightened, shaken, or panicked with a cruel weapon, that creature becomes sickened for 1 round. When the wielder uses the weapon to knock unconscious or kill a creature, he gains 5 temporary hit points that last for 10 minutes.",
+					"arua": "faint necromancy"
+				},
+				{
+					"name": "Defending",
+					"description": "A defending weapon allows the wielder to transfer some or all of the weapon's enhancement bonus to his AC as a bonus that stacks with all others. As a free action, the wielder chooses how to allocate the weapon's enhancement bonus at the start of his turn before using the weapon, and the bonus to AC lasts until his next turn. This ability can only be placed on melee weapons.",
+					"arua": "moderate abjuration"
+				}
+			]
+		}
+	],
 	"armor": {
 		"name": "Hellknight Plate",
 		"ac": 9,

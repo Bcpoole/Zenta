@@ -1,6 +1,10 @@
 <template>
   <section>
-    <h2>Equipment</h2>
+    <h2>Weapons</h2>
+    <hr>
+    <h2>Armor</h2>
+    <hr>
+    <h2>Wondrous Items</h2>
     <div repeat.for="item of loadedCharacter.wondrousItems">
       <div class="panel-group" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
@@ -31,5 +35,7 @@
         </div>
       </div>
     </div>
+    <hr>
+    <h2>Rings</h2>
   </section>
 </template>

@@ -1,5 +1,78 @@
 <template>
   <section>
+    <h2>Racial Traits</h2>
+    <div repeat.for="trait of loadedCharacter.traits.racial">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${trait.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p if.bind="trait.flavor">
+                <i>${trait.flavor}</i>
+              </p>
+              <p>
+                ${trait.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
     <h2>Traits</h2>
+    <div repeat.for="trait of loadedCharacter.traits.selected">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${trait.name} - ${trait.type}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p if.bind="trait.flavor">
+                <i>${trait.flavor}</i>
+              </p>
+              <p>
+                ${trait.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h2>Drawbacks</h2>
+    <div repeat.for="trait of loadedCharacter.traits.drawbacks">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${trait.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p if.bind="trait.flavor">
+                <i>${trait.flavor}</i>
+              </p>
+              <p>
+                ${trait.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>

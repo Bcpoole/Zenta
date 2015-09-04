@@ -1,7 +1,7 @@
 <template>
   <section>
-    <table class="table table-striped" repeat.for="skill of loadedCharacter.skills">
-      <tr>
+    <table class="table table-striped">
+      <tr repeat.for="skill of loadedCharacter.skills">
         <td style="width:50%"><strong>${skill.name}</strong></td>
         <td style="width:50%">${skill.ranks}</td>
       </tr>

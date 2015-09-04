@@ -135,143 +135,143 @@
 	],
 	"skills": [
 		{
-			"name": "acrobatics",
+			"name": "Acrobatics",
 			"ranks": 5
 		},
 		{
-			"name": "appraise",
+			"name": "Appraise",
 			"ranks": 0
 		},
 		{
-			"name":"bluff",
+			"name":"Bluff",
 			"ranks": 21
 		},
 		{
-			"name": "climb",
+			"name": "Climb",
 			"ranks": 10
 		},
 		{
-			"name": "craft",
+			"name": "Craft",
 			"ranks": 0
 		},
 		{
-			"name": "diplomacy",
+			"name": "Diplomacy",
 			"ranks": 8
 		},
 		{
-			"name": "disableDevice",
+			"name": "Disable Device",
 			"ranks": 0
 		},
 		{
-			"name": "disguise",
+			"name": "Disguise",
 			"ranks": 21
 		},
 		{
-			"name": "escapeArtist",
+			"name": "Escape Artist",
 			"ranks": 0
 		},
 		{
-			"name": "fly",
+			"name": "Fly",
 			"ranks": 7
 		},
 		{
-			"name": "handleAnimal",
+			"name": "Handle Animal",
 			"ranks": 9
 		},
 		{
-			"name": "heal",
+			"name": "Heal",
 			"ranks": -2
 		},
 		{
-			"name": "intimidate",
+			"name": "Intimidate",
 			"ranks": 27
 		},
 		{
-			"name": "knowledgeArcana",
+			"name": "Knowledge Arcana",
 			"ranks": 0
 		},
 		{
-			"name": "knowledgeDungeoneering",
+			"name": "Knowledge Dungeoneering",
 			"ranks": 0
 		},
 		{
-			"name": "knowledgeEngineering",
+			"name": "Knowledge Engineering",
 			"ranks": 0
 		},
 		{
-			"name": "knowledgeGeography",
+			"name": "Knowledge Geography",
 			"ranks": 0
 		},
 		{
-      "name": "knowledgeHistory",
+      "name": "Knowledge History",
       "ranks": 0
     },
 		{
-      "name": "knowledgeLocal",
+      "name": "Knowledge Local",
       "ranks": 0
     },
 		{
-      "name": "knowledgeNature",
+      "name": "Knowledge Nature",
       "ranks": 0
     },
 		{
-      "name": "knowledgeNobility",
+      "name": "Knowledge Nobility",
       "ranks": 0
     },
 		{
-      "name": "knowledgePlanes",
+      "name": "Knowledge Planes",
       "ranks": 0
     },
 		{
-      "name": "knowledgeReligion",
+      "name": "Knowledge Religion",
       "ranks": 0
     },
 		{
-      "name": "linguistics",
+      "name": "Linguistics",
       "ranks": 0
     },
 		{
-      "name": "perception",
+      "name": "Perception",
       "ranks": 1
     },
 		{
-      "name": "perform",
+      "name": "Perform",
       "ranks": 8
     },
 		{
-      "name": "profession",
+      "name": "Profession",
       "ranks": -2
     },
 		{
-      "name": "ride",
+      "name": "Ride",
       "ranks": 0
     },
 		{
-      "name": "senseMotive",
+      "name": "Sense Motive",
       "ranks": 2
     },
 		{
-      "name": "sleightOfHand",
+      "name": "Sleight of Hand",
       "ranks": -1
     },
 		{
-      "name": "spellcraft",
+      "name": "Spellcraft",
       "ranks": 0
     },
 		{
-      "name": "stealth",
+      "name": "Stealth",
       "ranks": 3
     },
 		{
-      "name": "survival",
+      "name": "Survival",
       "ranks": -2
     },
 		{
-      "name": "swim",
+      "name": "Swim",
       "ranks": 2
     },
 		{
-      "name": "useMagicDevice",
+      "name": "Use Magic Device",
       "ranks": 27
     }
 	],

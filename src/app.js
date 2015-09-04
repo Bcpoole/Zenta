@@ -12,7 +12,8 @@ export class App {
       { route: 'skills', name: 'skills', moduleId: 'skills', nav: false, title: 'Skills' },
       { route: 'characteristics', name: 'characteristics', moduleId: 'characteristics', nav: false, title: 'Characteristics' },
       { route: 'inventory', name: 'inventory', moduleId: 'inventory', nav: false, title: 'Inventory' },
-      { route: 'equipment', name: 'equipment', moduleId: 'equipment', nav: false, title: 'Equipment' }
+      { route: 'equipment', name: 'equipment', moduleId: 'equipment', nav: false, title: 'Equipment' },
+      { route: 'stats', name: 'stats', moduleId: 'stats', nav: false, title: 'Stats' }
     ]);
 
     this.router = router;

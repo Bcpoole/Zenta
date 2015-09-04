@@ -1,8 +1,8 @@
 <template>
   <section>
-    <div class="alert alert-error">${err}</div>
+    <div class="alert alert-error" if.bind="err">${err}</div>
     <div if.bind="loadedCharacter.feats">
-      <h1>Feats</h1>
+      <h2>Feats</h2>
       <div repeat.for="feat of loadedCharacter.feats.selected">
         <div class="panel-group" role="tablist" aria-multiselectable="true">
           <div class="panel panel-default">
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div if.bind="loadedCharacter.feats.flaws">
-      <h1>Flaws</h1>
+      <h2>Flaws</h2>
       <div repeat.for="flaw of loadedCharacter.feats.flaws">
         <div class="panel-group" role="tablist" aria-multiselectable="true">
           <div class="panel panel-default">

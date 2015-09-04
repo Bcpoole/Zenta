@@ -1,17 +1,17 @@
 {
 	"name": "Isaac Araki",
 	"characteristics": {
-		"race": "human",
-		"gender": "male",
-		"alignment": "chaotic good",
-		"size": "medium",
-		"hair": "red-brown with white highlights on the side",
-		"eyes": "brown",
-		"skin": "white",
+		"race": "Human",
+		"gender": "Male",
+		"alignment": "Chaotic Good",
+		"size": "Medium",
+		"hair": "Red-brown with white highlights on the side",
+		"eyes": "Brown",
+		"skin": "White",
 		"height": "6'3\"",
 		"weight": 180,
 		"age": 32,
-		"diety": "Desna",
+		"deity": "Desna",
 		"homeland": "Rozzaria"
 	},
 	"abilityScores": {

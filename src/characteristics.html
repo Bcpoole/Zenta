@@ -1,6 +1,32 @@
 <template>
   <section>
-    <h2>characteristics</h2>
-    <p>${hello}</p>
+    <h2>Characteristics</h2>
+      <strong>Race: </strong>${loadedCharacter.characteristics.race}<br>
+      <strong>Gender: </strong>${loadedCharacter.characteristics.gender}<br>
+      <strong>Alignment: </strong>${loadedCharacter.characteristics.alignment}<br>
+      <strong>Size: </strong>${loadedCharacter.characteristics.size}<br>
+      <strong>Hair: </strong>${loadedCharacter.characteristics.hair}<br>
+      <strong>Eyes: </strong>${loadedCharacter.characteristics.eyes}<br>
+      <strong>Skin: </strong>${loadedCharacter.characteristics.skin}<br>
+      <strong>Height: </strong>${loadedCharacter.characteristics.height}<br>
+      <strong>Weight: </strong>${loadedCharacter.characteristics.weight}<br>
+      <strong>Age: </strong>${loadedCharacter.characteristics.age}<br>
+      <strong>Deity: </strong>${loadedCharacter.characteristics.deity}<br>
+      <strong>Homeland: </strong>${loadedCharacter.characteristics.homeland}
+    <hr>
+    <div>
+      <h2>Languages</h2>
+      <table class="table table-striped">
+        <tr repeat.for="language of loadedCharacter.languages">
+          <td>${language}</td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+    <h2>Speed</h2>
+    <strong>Land: </strong> ${loadedCharacter.speed.land}<br>
+    <strong>Swim: </strong> ${loadedCharacter.speed.swim}<br>
+    <strong>Fly: </strong> ${loadedCharacter.speed.fly}<br>
+    <strong>Burrow: </strong> ${loadedCharacter.speed.burrow}<br>
   </section>
 </template>

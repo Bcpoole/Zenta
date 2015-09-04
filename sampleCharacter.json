@@ -133,43 +133,148 @@
 		"Common",
 		"Elven"
 	],
-	"skills": {
-		"acrobatics": 5,
-		"appraise": 0,
-		"bluff": 21,
-		"climb": 10,
-		"craft": 0,
-		"diplomacy": 8,
-		"disableDevice": 0,
-		"disguise": 21,
-		"escapeArtist": 0,
-		"fly": 7,
-		"handleAnimal": 9,
-		"heal": -2,
-		"intimidate": 27,
-		"knoweldgeArcana": 0,
-		"knoweldgeDungeoneering": 0,
-		"knoweldgeEngineering": 0,
-		"knoweldgeGeography": 0,
-		"knoweldgeHistory": 0,
-		"knoweldgeLocal": 0,
-		"knoweldgeNature": 0,
-		"knoweldgeNobility": 0,
-		"knoweldgePlanes": 0,
-		"knoweldgeReligion": 0,
-		"linguistics": 0,
-		"perception": 1,
-		"perform": 8,
-		"profession": -2,
-		"ride": 0,
-		"senseMotive": 2,
-		"sleightOfHand": -1,
-		"spellcraft": 0,
-		"stealth": 3,
-		"survival": -2,
-		"swim": 2,
-		"useMagicDevice": 27
-	},
+	"skills": [
+		{
+			"name": "acrobatics",
+			"ranks": 5
+		},
+		{
+			"name": "appraise",
+			"ranks": 0
+		},
+		{
+			"name":"bluff",
+			"ranks": 21
+		},
+		{
+			"name": "climb",
+			"ranks": 10
+		},
+		{
+			"name": "craft",
+			"ranks": 0
+		},
+		{
+			"name": "diplomacy",
+			"ranks": 8
+		},
+		{
+			"name": "disableDevice",
+			"ranks": 0
+		},
+		{
+			"name": "disguise",
+			"ranks": 21
+		},
+		{
+			"name": "escapeArtist",
+			"ranks": 0
+		},
+		{
+			"name": "fly",
+			"ranks": 7
+		},
+		{
+			"name": "handleAnimal",
+			"ranks": 9
+		},
+		{
+			"name": "heal",
+			"ranks": -2
+		},
+		{
+			"name": "intimidate",
+			"ranks": 27
+		},
+		{
+			"name": "knowledgeArcana",
+			"ranks": 0
+		},
+		{
+			"name": "knowledgeDungeoneering",
+			"ranks": 0
+		},
+		{
+			"name": "knowledgeEngineering",
+			"ranks": 0
+		},
+		{
+			"name": "knowledgeGeography",
+			"ranks": 0
+		},
+		{
+      "name": "knowledgeHistory",
+      "ranks": 0
+    },
+		{
+      "name": "knowledgeLocal",
+      "ranks": 0
+    },
+		{
+      "name": "knowledgeNature",
+      "ranks": 0
+    },
+		{
+      "name": "knowledgeNobility",
+      "ranks": 0
+    },
+		{
+      "name": "knowledgePlanes",
+      "ranks": 0
+    },
+		{
+      "name": "knowledgeReligion",
+      "ranks": 0
+    },
+		{
+      "name": "linguistics",
+      "ranks": 0
+    },
+		{
+      "name": "perception",
+      "ranks": 1
+    },
+		{
+      "name": "perform",
+      "ranks": 8
+    },
+		{
+      "name": "profession",
+      "ranks": -2
+    },
+		{
+      "name": "ride",
+      "ranks": 0
+    },
+		{
+      "name": "senseMotive",
+      "ranks": 2
+    },
+		{
+      "name": "sleightOfHand",
+      "ranks": -1
+    },
+		{
+      "name": "spellcraft",
+      "ranks": 0
+    },
+		{
+      "name": "stealth",
+      "ranks": 3
+    },
+		{
+      "name": "survival",
+      "ranks": -2
+    },
+		{
+      "name": "swim",
+      "ranks": 2
+    },
+		{
+      "name": "useMagicDevice",
+      "ranks": 27
+    }
+	],
 	"weapons": [
 		{
 			"name": "Nodachi",

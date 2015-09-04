@@ -1,29 +1,9 @@
 <template>
   <section>
-    <table class="table table-striped">
+    <table class="table table-striped" repeat.for="skill of loadedCharacter.skills">
       <tr>
-        <td>Strength</td>
-        <td>${appState.loadedCharacter.abilityScores.strength}</td>
-      </tr>
-      <tr>
-        <td>Dexterity</td>
-        <td>${appState.loadedCharacter.abilityScores.dexterity}</td>
-      </tr>
-      <tr>
-        <td>Constitution</td>
-        <td>${appState.loadedCharacter.abilityScores.constitution}</td>
-      </tr>
-      <tr>
-        <td>Intelligence</td>
-        <td>${appState.loadedCharacter.abilityScores.intelligence}</td>
-      </tr>
-      <tr>
-        <td>Wisdom</td>
-        <td>${appState.loadedCharacter.abilityScores.wisdom}</td>
-      </tr>
-      <tr>
-        <td>Charisma</td>
-        <td>${appState.loadedCharacter.abilityScores.charisma}</td>
+        <td style="width:50%">${skill.name}</td>
+        <td style="width:50%">${skill.ranks}</td>
       </tr>
     </table>
   </section>

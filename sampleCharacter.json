@@ -31,11 +31,11 @@
 			"currentHP": 73,
 			"maxHP": 73,
 			"ac": 26,
-			"touchAC": -10,
+			"touchAC": 10,
 			"cmd": 22,
-			"willSave": 0,
-			"fortSave": 0,
-			"reflexSave": 0,
+			"willSave": 3,
+			"fortSave": 7,
+			"reflexSave": 3,
 			"spellResistance": 17
 		}
 	},
@@ -136,7 +136,8 @@
 	"skills": [
 		{
 			"name": "Acrobatics",
-			"ranks": 5
+			"ranks": 5,
+      "classSkill": true
 		},
 		{
 			"name": "Appraise",

@@ -1,24 +1,28 @@
 {
-  "name": "aurelia-skeleton-navigation",
-  "version": "0.16.2",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia.",
+  "name": "Zenta",
+  "version": "0.3.0",
+  "description": "A Pathfinder character JSON data viewer app with Aurelia.",
   "keywords": [
     "aurelia",
-    "navigation",
-    "skeleton"
+    "Pathfinder"
   ],
-  "homepage": "http://aurelia.io",
+  "homepage": "https://github.com/Bcpoole/Zenta",
   "bugs": {
     "url": "https://github.com/aurelia/skeleton-navigation/issues"
   },
   "license": "MIT",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
-  "main": "dist/commonjs/index.js",
+  "author": "Brandon Poole <brandoncpoole@gmail.com>",
+  "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-navigation"
+    "url": "https://github.com/Bcpoole/Zenta.git"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "e2e": "gulp serve e2e"
   },
   "devDependencies": {
+    "aurelia-cli": "^0.3.1",
     "aurelia-tools": "^0.1.3",
     "browser-sync": "^1.8.1",
     "conventional-changelog": "0.0.11",
@@ -28,6 +32,7 @@
     "gulp-bump": "^0.3.1",
     "gulp-changed": "^1.1.0",
     "gulp-jshint": "^1.9.0",
+    "gulp-notify": "^2.2.0",
     "gulp-plumber": "^0.6.6",
     "gulp-protractor": "^0.0.12",
     "gulp-sourcemaps": "^1.3.0",
@@ -48,36 +53,35 @@
   },
   "jspm": {
     "dependencies": {
-      "aurelia-animator-css": "github:aurelia/animator-css@^0.14.1",
-      "aurelia-binding": "github:aurelia/binding@^0.8.3",
-      "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.15.0",
-      "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.9.1",
-      "aurelia-event-aggregator": "github:aurelia/event-aggregator@^0.6.2",
-      "aurelia-fetch-client": "github:aurelia/fetch-client@^0.1.1",
-      "aurelia-framework": "github:aurelia/framework@^0.14.0",
-      "aurelia-history": "github:aurelia/history@^0.6.1",
-      "aurelia-history-browser": "github:aurelia/history-browser@^0.6.2",
-      "aurelia-loader": "github:aurelia/loader@^0.8.3",
-      "aurelia-loader-default": "github:aurelia/loader-default@^0.9.1",
-      "aurelia-logging": "github:aurelia/logging@^0.6.2",
-      "aurelia-metadata": "github:aurelia/metadata@^0.7.1",
-      "aurelia-path": "github:aurelia/path@^0.8.1",
-      "aurelia-route-recognizer": "github:aurelia/route-recognizer@^0.6.1",
-      "aurelia-router": "github:aurelia/router@^0.10.3",
-      "aurelia-task-queue": "github:aurelia/task-queue@^0.6.1",
-      "aurelia-templating": "github:aurelia/templating@^0.13.12",
-      "aurelia-templating-binding": "github:aurelia/templating-binding@^0.13.2",
-      "aurelia-templating-resources": "github:aurelia/templating-resources@^0.13.2",
-      "aurelia-templating-router": "github:aurelia/templating-router@^0.14.1",
+      "aurelia-animator-css": "github:aurelia/animator-css@^0.16.0",
+      "aurelia-binding": "github:aurelia/binding@^0.9.0",
+      "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.17.0",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.10.0",
+      "aurelia-event-aggregator": "github:aurelia/event-aggregator@^0.8.0",
+      "aurelia-fetch-client": "github:aurelia/fetch-client@^0.2.0",
+      "aurelia-framework": "github:aurelia/framework@^0.16.0",
+      "aurelia-history": "github:aurelia/history@^0.7.0",
+      "aurelia-history-browser": "github:aurelia/history-browser@^0.8.0",
+      "aurelia-loader": "github:aurelia/loader@^0.9.0",
+      "aurelia-loader-default": "github:aurelia/loader-default@^0.10.0",
+      "aurelia-logging": "github:aurelia/logging@^0.7.0",
+      "aurelia-metadata": "github:aurelia/metadata@^0.8.0",
+      "aurelia-path": "github:aurelia/path@^0.9.0",
+      "aurelia-route-recognizer": "github:aurelia/route-recognizer@^0.7.0",
+      "aurelia-router": "github:aurelia/router@^0.12.0",
+      "aurelia-task-queue": "github:aurelia/task-queue@^0.7.0",
+      "aurelia-templating": "github:aurelia/templating@^0.15.0",
+      "aurelia-templating-binding": "github:aurelia/templating-binding@^0.15.0",
+      "aurelia-templating-resources": "github:aurelia/templating-resources@^0.15.0",
+      "aurelia-templating-router": "github:aurelia/templating-router@^0.16.0",
       "bootstrap": "github:twbs/bootstrap@^3.3.4",
       "core-js": "npm:core-js@^0.9.4",
-      "css": "github:systemjs/plugin-css@^0.1.11",
       "fetch": "github:github/fetch@^0.9.0",
       "font-awesome": "npm:font-awesome@^4.3.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "babel": "npm:babel-core@^5.6.4",
+      "babel-runtime": "npm:babel-runtime@^5.6.4",
       "core-js": "npm:core-js@^0.9.4"
     },
     "overrides": {

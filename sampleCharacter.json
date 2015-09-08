@@ -12,7 +12,8 @@
 		"weight": 180,
 		"age": 32,
 		"deity": "Desna",
-		"homeland": "Rozzaria"
+		"homeland": "Rozzaria",
+    "description": "A zealous for justice knight who switched to vigilante justice after executing his corrupt lord."
 	},
 	"abilityScores": {
 		"strength": 15,

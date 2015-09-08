@@ -25,12 +25,12 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 - Feats and Flaws
 - Traits & Drawbacks
 - Equipment
-*Displays Weapons, Armor, Wondrous Items, and Rings and their details.*
+--*Displays Weapons, Armor, Wondrous Items, and Rings and their details.*
 - Inventory
 - Classes
-*Includes levels, if Prestige, and Archetype
+--*Includes levels, if Prestige, and Archetype*
 - Characteristics
 - Stats
-*Ability Scores
+--*Ability Scores*
 
 **TO-DO: Offensive & Defensive Stats**

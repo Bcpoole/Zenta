@@ -30,4 +30,6 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 - Characteristics
 - Stats - *Ability Scores*
 
-**TO-DO: Offensive & Defensive Stats**
+## TO-DO
+- **Stats** - Offensive & Defensive
+- Character Creation

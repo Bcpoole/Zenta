@@ -22,15 +22,15 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 *Special thanks to Cevah from the Pazio forums for the base value formula*
 
 ## Displays
-### Feats and Flaws
-### Traits & Drawbacks
-### Equipment
-Displays Weapons, Armor, Wondrous Items, and Rings and their details.
-### Inventory
-### Classes
-Includes levels, if Prestige, and Archetype
-### Characteristics
-### Stats
-Ability Scores
+- Feats and Flaws
+- Traits & Drawbacks
+- Equipment
+*Displays Weapons, Armor, Wondrous Items, and Rings and their details.*
+- Inventory
+- Classes
+*Includes levels, if Prestige, and Archetype
+- Characteristics
+- Stats
+*Ability Scores
 
-TO-DO: Offensive & Defensive Stats
+**TO-DO: Offensive & Defensive Stats**

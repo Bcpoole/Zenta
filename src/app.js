@@ -13,7 +13,8 @@ export class App {
       { route: 'characteristics', name: 'characteristics', moduleId: 'characteristics', nav: false, title: 'Characteristics' },
       { route: 'inventory', name: 'inventory', moduleId: 'inventory', nav: false, title: 'Inventory' },
       { route: 'equipment', name: 'equipment', moduleId: 'equipment', nav: false, title: 'Equipment' },
-      { route: 'stats', name: 'stats', moduleId: 'stats', nav: false, title: 'Stats' }
+      { route: 'stats', name: 'stats', moduleId: 'stats', nav: false, title: 'Stats' },
+      { route: 'classes', name: 'classes', moduleId: 'classes', nav: false, title: 'Classes' }
     ]);
 
     this.router = router;

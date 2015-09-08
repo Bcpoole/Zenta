@@ -13,7 +13,7 @@
 		"age": 32,
 		"deity": "Desna",
 		"homeland": "Rozzaria",
-    "description": "A zealous for justice knight who switched to vigilante justice after executing his corrupt lord."
+		"description": "A zealous for justice knight who switched to vigilante justice after executing his corrupt lord."
 	},
 	"abilityScores": {
 		"strength": 15,
@@ -138,7 +138,7 @@
 		{
 			"name": "Acrobatics",
 			"ranks": 5,
-      "classSkill": true
+			"classSkill": true
 		},
 		{
 			"name": "Appraise",
@@ -205,77 +205,77 @@
 			"ranks": 0
 		},
 		{
-      "name": "Knowledge History",
-      "ranks": 0
-    },
+			"name": "Knowledge History",
+			"ranks": 0
+		},
 		{
-      "name": "Knowledge Local",
-      "ranks": 0
-    },
+			"name": "Knowledge Local",
+			"ranks": 0
+		},
 		{
-      "name": "Knowledge Nature",
-      "ranks": 0
-    },
+			"name": "Knowledge Nature",
+			"ranks": 0
+		},
 		{
-      "name": "Knowledge Nobility",
-      "ranks": 0
-    },
+			"name": "Knowledge Nobility",
+			"ranks": 0
+		},
 		{
-      "name": "Knowledge Planes",
-      "ranks": 0
-    },
+			"name": "Knowledge Planes",
+			"ranks": 0
+		},
 		{
-      "name": "Knowledge Religion",
-      "ranks": 0
-    },
+			"name": "Knowledge Religion",
+			"ranks": 0
+		},
 		{
-      "name": "Linguistics",
-      "ranks": 0
-    },
+			"name": "Linguistics",
+			"ranks": 0
+		},
 		{
-      "name": "Perception",
-      "ranks": 1
-    },
+			"name": "Perception",
+			"ranks": 1
+		},
 		{
-      "name": "Perform",
-      "ranks": 8
-    },
+			"name": "Perform",
+			"ranks": 8
+		},
 		{
-      "name": "Profession",
-      "ranks": -2
-    },
+			"name": "Profession",
+			"ranks": -2
+		},
 		{
-      "name": "Ride",
-      "ranks": 0
-    },
+			"name": "Ride",
+			"ranks": 0
+		},
 		{
-      "name": "Sense Motive",
-      "ranks": 2
-    },
+			"name": "Sense Motive",
+			"ranks": 2
+		},
 		{
-      "name": "Sleight of Hand",
-      "ranks": -1
-    },
+			"name": "Sleight of Hand",
+			"ranks": -1
+		},
 		{
-      "name": "Spellcraft",
-      "ranks": 0
-    },
+			"name": "Spellcraft",
+			"ranks": 0
+		},
 		{
-      "name": "Stealth",
-      "ranks": 3
-    },
+			"name": "Stealth",
+			"ranks": 3
+		},
 		{
-      "name": "Survival",
-      "ranks": -2
-    },
+			"name": "Survival",
+			"ranks": -2
+		},
 		{
-      "name": "Swim",
-      "ranks": 2
-    },
+			"name": "Swim",
+			"ranks": 2
+		},
 		{
-      "name": "Use Magic Device",
-      "ranks": 27
-    }
+			"name": "Use Magic Device",
+			"ranks": 27
+		}
 	],
 	"weapons": [
 		{
@@ -445,7 +445,8 @@
 		{
 			"name": "Dark Knight",
 			"levels": 10,
-			"isPrestige": false
+			"isPrestige": false,
+			"archetype": null
 		}
 	]
 }

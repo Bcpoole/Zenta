@@ -11,5 +11,9 @@ export class stats {
     this.appState = appState;
 
     this.loadedCharacter = this.appState.loadedCharacter;
+
+    this.abilityScores = this.loadedCharacter.abilityScores;
+    this.offenseStats = this.loadedCharacter.stats.offense;
+    this.defenseStats = this.loadedCharacter.stats.defense;
   }
 }

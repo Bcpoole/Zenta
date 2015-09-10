@@ -5,37 +5,48 @@
       <table class="table table-striped">
         <tr>
           <td>Strength</td>
-          <td>${loadedCharacter.abilityScores.strength}</td>
+          <td>${abilityScores.strength}</td>
         </tr>
         <tr>
           <td>Dexterity</td>
-          <td>${loadedCharacter.abilityScores.dexterity}</td>
+          <td>${abilityScores.dexterity}</td>
         </tr>
         <tr>
           <td>Constitution</td>
-          <td>${loadedCharacter.abilityScores.constitution}</td>
+          <td>${abilityScores.constitution}</td>
         </tr>
         <tr>
           <td>Intelligence</td>
-          <td>${loadedCharacter.abilityScores.intelligence}</td>
+          <td>${abilityScores.intelligence}</td>
         </tr>
         <tr>
           <td>Wisdom</td>
-          <td>${loadedCharacter.abilityScores.wisdom}</td>
+          <td>${abilityScores.wisdom}</td>
         </tr>
         <tr>
           <td>Charisma</td>
-          <td>${loadedCharacter.abilityScores.charisma}</td>
+          <td>${abilityScores.charisma}</td>
         </tr>
       </table>
     </div>
     <hr>
     <div>
       <h2>Offensive</h2>
+      <strong>BAB: </strong>${offenseStats.bab}<br>
+      <strong>CMB: </strong>${offenseStats.cmb}<br>
     </div>
     <hr>
     <div>
       <h2>Defensive</h2>
+      <strong>Current HP: </strong>${defenseStats.currentHP}
+      <strong>Max HP: </strong>${defenseStats.maxHP}<br>
+      <strong>AC: </strong>${defenseStats.ac}
+      <strong>Touch AC: </strong>${defenseStats.touchAC}<br>
+      <strong>CMD: </strong>${defenseStats.cmd}<br>
+      <strong>Will Save: </strong>${defenseStats.willSave}
+      <strong>Fort Save: </strong>${defenseStats.fortSave}
+      <strong>Reflex Save: </strong>${defenseStats.reflexSave}<br>
+      <strong>Spell Resistance: </strong>${defenseStats.spellResistance}
     </div>
   </section>
 </template>

@@ -47,12 +47,11 @@ export class Welcome{
   }
 
   getClassesAndLevels() {
-    this.classes = "";
-    console.log(this.loadedCharacter);
+    let charClasses = "";
     for (var charClass of this.loadedCharacter.classes) {
-      this.classes += charClass.name + " " + charClass.levels + " ";
+      charClasses += charClass.name + " " + charClass.levels + "/";
     }
 
-    //this.classes =
+    this.classes = charClasses.substring(0, charClasses.length - 1);
   }
 }

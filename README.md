@@ -28,9 +28,8 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 - Inventory
 - Classes - *Includes levels, if Prestige, and Archetype*
 - Characteristics
-- Stats - *Ability Scores*
+- Stats - *Ability Scores, Offensive & Defensive Stats*
 
 ## TO-DO
 - Add Ant Load, etc to Carry Capacity
-- Add inStorage bool variable to Inventory and separate lists (plus total weight)
 - Character Creation

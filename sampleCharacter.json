@@ -67,7 +67,7 @@
 			{
 				"name": "Cold Heart",
 				"description": "You gain a +2 trait bonus on saving throws against spells and effects with the emotion descriptor.",
-				"type": "Regionial"
+				"type": "Regional"
 			}
 		],
 		"drawbacks": [
@@ -438,7 +438,13 @@
 	"inventory": [
 		{
 			"name": "bag of cheap rings",
-			"weight": 1
+			"weight": 1,
+			"equipped" : true
+		},
+		{
+			"name": "book of laws",
+			"weight": 1,
+			"equipped" : false
 		}
 	],
 	"classes": [

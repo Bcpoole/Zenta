@@ -1,9 +1,31 @@
 <template>
   <section>
     <h2>Inventory</h2>
-    <h4>TotalWeight: ${totalWeight}</h4>
+    <h4>TotalWeight: ${totalWeight} lbs.</h4>
     <div repeat.for="item of characterInventory">
-      <div class="panel-group" role="tablist" aria-multiselectable="true">
+      <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="item.equipped">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${item.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <strong>Weight: </strong>${item.weight}
+              <p if.bind="item.description">
+                ${item.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Storage</h2>
+    <div repeat.for="item of characterInventory">
+      <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="!item.equipped">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab">
             <h4 class="panel-title">

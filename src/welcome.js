@@ -23,6 +23,10 @@ export class Welcome{
 
     this.appState = appState;
     this.loadedCharacter = this.appState.loadedCharacter;
+
+    if (this.loadedCharacter != null) {
+      getClassesAndLevels();
+    }
   }
 
   fileSelected() {
@@ -34,10 +38,21 @@ export class Welcome{
 
         try {
           this.loadedCharacter = JSON.parse(myCharacter);
+          this.getClassesAndLevels();
         } catch(e) {
           this.loadedCharacter = null;
           alert(file.name + ' is not valid json');
         }
       };
+  }
+
+  getClassesAndLevels() {
+    this.classes = "";
+    console.log(this.loadedCharacter);
+    for (var charClass of this.loadedCharacter.classes) {
+      this.classes += charClass.name + " " + charClass.levels + " ";
+    }
+
+    //this.classes =
   }
 }

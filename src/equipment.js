@@ -12,5 +12,18 @@ export class equipment {
 
     this.loadedCharacter = this.appState.loadedCharacter;
     this.armor = this.loadedCharacter.armor;
+
+    this.computeTotalWeight();
+  }
+
+  computeTotalWeight() {
+    this.totalWeight = this.loadedCharacter.armor.weight;
+
+    for (var item of this.loadedCharacter.wondrousItems) {
+      this.totalWeight += item.weight;
+    }
+    for (var item of this.loadedCharacter.weapons) {
+      this.totalWeight += item.weight;
+    }
   }
 }

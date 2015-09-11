@@ -20,7 +20,9 @@ export class inventory {
     this.totalWeight = 0;
 
     for (var item of this.characterInventory) {
-      this.totalWeight += item.weight;
+      if (item.equipped) {
+        this.totalWeight += item.weight;
+      }
     }
   }
 }

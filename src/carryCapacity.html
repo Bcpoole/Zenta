@@ -2,25 +2,27 @@
   <section>
     <h2>Carry Capacity</h2>
     <div class="well well-lg">
-      Current Load: <input type="number" class="form-control" value.bind="currentLoad" placeholder="0">
-      Strength Score: <input type="number" class="form-control" value.bind="strength" placeholder="10" min="1" max="29">
-        Type
-        <select class="form-control" value.bind="creatureType">
-          <option value='biped'>Biped</option>
-          <option value="quadruped">Quadruped</option>
-        </select>
-        Size
-        <select class="form-control" value.bind="creatureSize">
-          <option value="fine">Fine</option>
-          <option value="diminutive">Diminutive</option>
-          <option value="tiny">Tiny</option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-          <option value="huge">Huge</option>
-          <option value="gargantuan">Gargantuan</option>
-          <option value="colossal">Colossal</option>
-        </select>
+      <h5>Current Load</h5>
+      <input type="number" class="form-control" value.bind="currentLoad" placeholder="0">
+      <h5>Strength Score</h5>
+      <input type="number" class="form-control" value.bind="strength" placeholder="10" min="1" max="29">
+      <h5>Type</h5>
+      <select class="form-control" value.bind="creatureType">
+        <option value='biped'>Biped</option>
+        <option value="quadruped">Quadruped</option>
+      </select>
+      <h5>Size</h5>
+      <select class="form-control" value.bind="creatureSize">
+        <option value="fine">Fine</option>
+        <option value="diminutive">Diminutive</option>
+        <option value="tiny">Tiny</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="huge">Huge</option>
+        <option value="gargantuan">Gargantuan</option>
+        <option value="colossal">Colossal</option>
+      </select>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">Carrying Capacity Table</div>

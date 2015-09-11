@@ -26,10 +26,31 @@ export class carryCapacity {
     if (this.loadedCharacter) {
       let scores = this.loadedCharacter.abilityScores;
       this.strength = scores.strength;
+
+      this.currentLoad = this.computeTotalWeight();
     } else {
       console.log('no character loaded.')
     }
   }
+
+  computeTotalWeight() {
+      let totalWeight = this.loadedCharacter.armor.weight;
+
+      for (var item of this.loadedCharacter.wondrousItems) {
+        totalWeight += item.weight;
+      }
+      for (var item of this.loadedCharacter.weapons) {
+        totalWeight += item.weight;
+      }
+
+      for (var item of this.loadedCharacter.inventory) {
+        if (item.equipped) {
+          totalWeight += item.weight;
+        }
+      }
+
+      return totalWeight;
+    }
 
   calculateCarryCapacity() {
     var loadSizes = [];

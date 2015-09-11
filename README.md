@@ -31,5 +31,6 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 - Stats - *Ability Scores*
 
 ## TO-DO
-- **Stats** - Offensive & Defensive
+- Add Ant Load, etc to Carry Capacity
+- Add inStorage bool variable to Inventory and separate lists (plus total weight)
 - Character Creation

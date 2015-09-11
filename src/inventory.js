@@ -11,5 +11,16 @@ export class inventory {
     this.appState = appState;
 
     this.loadedCharacter = this.appState.loadedCharacter;
+    this.characterInventory = this.loadedCharacter.inventory;
+
+    this.computeTotalWeight();
+  }
+
+  computeTotalWeight() {
+    this.totalWeight = 0;
+
+    for (var item of this.characterInventory) {
+      this.totalWeight += item.weight;
+    }
   }
 }

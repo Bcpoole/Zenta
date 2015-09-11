@@ -1,7 +1,8 @@
 <template>
   <section>
     <h2>Inventory</h2>
-    <div repeat.for="item of loadedCharacter.inventory">
+    <h4>TotalWeight: ${totalWeight}</h4>
+    <div repeat.for="item of characterInventory">
       <div class="panel-group" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab">

@@ -25,7 +25,7 @@ export class Welcome{
     this.loadedCharacter = this.appState.loadedCharacter;
 
     if (this.loadedCharacter != null) {
-      getClassesAndLevels();
+      this.getClassesAndLevels();
     }
   }
 

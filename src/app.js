@@ -7,6 +7,7 @@ export class App {
     config.map([
       { route: '', name: 'welcome', moduleId: 'welcome', nav: false, title:'Welcome' },
       { route: 'carryCapacity', name: 'carryCapacity', moduleId: 'carryCapacity', nav: true, title:'Carry Capacity' },
+      { route: 'characterCreation', name: 'characterCreation', moduleId: 'characterCreation', nav: true, title: 'Character Creation' },
       { route: 'feats', name: 'feats', moduleId: 'feats', nav: false, title: 'Feats & Flaws' },
       { route: 'traits', name: 'traits', moduleId: 'traits', nav: false, title: 'Traits & Drawbacks' },
       { route: 'skills', name: 'skills', moduleId: 'skills', nav: false, title: 'Skills' },

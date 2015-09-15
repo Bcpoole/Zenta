@@ -1,6 +1,10 @@
 <template>
   <section>
-    <h2>characterCreation</h2>
-    <p>${hello}</p>
+    <h2>Character Creation</h2>
+    <div>
+      <h5>Name</h5>
+      <input type="text" class="form-control" value.bind="characterName">
+      <button class="btn btn-primary" click.delegate="createCharacter()">Create</button>
+    </div>
   </section>
 </template>

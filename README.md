@@ -33,3 +33,6 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 ## TO-DO
 - Add Ant Load, etc to Carry Capacity
 - Character Creation
+-- Format output file
+-- Clean up UI
+-- Add Attribute Point buy system calculator

@@ -36,8 +36,8 @@ More features to follow.
 
 ## TO-DO
 - Cleanup UI when data not present (test with characterTemplate)
-**Carry Capacity**
+- **Carry Capacity**
 - Add Ant Load, etc
-**Character Creation**
+- **Character Creation**
 - Format output file
 - Add Attribute Point buy system calculator

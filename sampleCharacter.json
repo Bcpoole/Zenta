@@ -182,7 +182,7 @@
 		},
 		{
 			"name": "Heal",
-			"ranks": -2
+			"ranks": 2
 		},
 		{
 			"name": "Intimidate",
@@ -242,7 +242,7 @@
 		},
 		{
 			"name": "Profession",
-			"ranks": -2
+			"ranks": 0
 		},
 		{
 			"name": "Ride",
@@ -254,7 +254,7 @@
 		},
 		{
 			"name": "Sleight of Hand",
-			"ranks": -1
+			"ranks": 0
 		},
 		{
 			"name": "Spellcraft",
@@ -266,7 +266,7 @@
 		},
 		{
 			"name": "Survival",
-			"ranks": -2
+			"ranks": 2
 		},
 		{
 			"name": "Swim",

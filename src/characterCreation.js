@@ -8,28 +8,39 @@ export class characterCreation {
   }
 
   createCharacter() {
-  	let character = this.generateCharacter();
 
-    let element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(character)));
-    element.setAttribute('download', this.characterName + ".json");
+  	if (this.characterName == null || this.characterName.trim().length == 0) {
+  		alert("Must input a name");
+  		return;
+  	}
 
-    element.style.display = 'none';
-    document.body.appendChild(element);
+  	this.characterName = this.characterName.trim();
 
-    element.click();
-
-    document.body.removeChild(element);
+  	this.generateCharacter();
   }
   
   generateCharacter() {
+  	var characterName = this.characterName;
 		let reader = new FileReader();
-		let file =" characterTemplate.json";
-		reader.readAsText(file);
-		reader.onload = () => {
-			let result = reader.result;
-			result.name = this.characterName;
-			return result;
-		}
+
+		let client = new XMLHttpRequest();
+    client.open('GET', '/characterTemplate.json');
+		client.send();
+    client.onreadystatechange = function() {
+    	if (client.readyState == 4) {
+				let character = JSON.parse(client.response);
+				character.name = characterName;
+				let element = document.createElement('a');
+				element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(character)));
+				element.setAttribute('download', characterName + ".json");
+
+				element.style.display = 'none';
+				document.body.appendChild(element);
+
+				element.click();
+
+				document.body.removeChild(element);
+			}
+    }
 	}
 }

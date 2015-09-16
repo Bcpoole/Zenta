@@ -7,11 +7,11 @@
     </p>
     <p>
       <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(10)">Low Fantasy (10)</button>
-        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(15)">Standard Fantasy (15)</button>
-        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(20)">High Fantasy (20)</button>
-        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(25)">Epic Fantasy (25)</button>
-        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(0)">Custom</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalBudget(10)">Low Fantasy (10)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalBudget(15)">Standard Fantasy (15)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalBudget(20)">High Fantasy (20)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalBudget(25)">Epic Fantasy (25)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalBudget(0)">Custom</button>
       </div>
       <table class="table table-striped" click.delegate="updateScores()">
         <tr>
@@ -29,7 +29,7 @@
           <td>${score.cost}</td>
         </tr>
       </table>
-      <label>Remaining: </label> ${remainingPoints}/${totalPoints}
+      <label>Remaining: </label> ${remainingBudget}/${totalBudget}
     </p>
     <button class="btn btn-primary" click.delegate="createCharacter()">Create</button>
   </section>

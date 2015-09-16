@@ -4,24 +4,14 @@ import {ApplicationState} from './applicationState';
 
 @inject(ApplicationState)
 export class characterCreation {
-	@computedFrom('scores');
-  get scores() {
-    return this._scores;
-  }
-
-  set scores(val) {
-  console.log('stuff');
-  	this._scores = val;
-  }
-
   constructor(appState) {
     this.appState = appState;
 
-		let defaultPoints = 15;
-		this.remainingPoints = defaultPoints;
-		this.setTotalPoints(defaultPoints); //Do standard by default
+		this.generateScores();
 
-    this.generateScores();
+		let defaultBudget = 15;
+		this.remainingBudget= defaultBudget;
+		this.setTotalBudget(defaultBudget); //Do standard by default
   }
 
   createCharacter() {
@@ -77,17 +67,34 @@ export class characterCreation {
 		}
 	}
 
-	setTotalPoints(totalPoints) {
-		this.totalPoints = totalPoints;
+	setTotalBudget(totalBudget) {
+		this.totalBudget = totalBudget;
+
+		this.updateBudget();
 	}
 
 	determineMod(points) {
 		return Math.floor((points - 10) / 2);
 	}
 
+	determineCost(points) {
+		let values = [-4, -2, -1, 0, 1, 2, 3, 5, 7, 10, 13, 17];
+		return values[points-10+3];
+	}
+
 	updateScores() {
 		for (let score of this.scores) {
 			score.mod = this.determineMod(score.points);
+			score.cost = this.determineCost(score.points);
+		}
+
+		this.updateBudget();
+	}
+
+	updateBudget() {
+		this.remainingBudget = this.totalBudget;
+		for (let score of this.scores) {
+			this.remainingBudget -= score.cost;
 		}
 	}
 }

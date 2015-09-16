@@ -21,6 +21,11 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 
 *Special thanks to Cevah from the Pazio forums for the base value formula*
 
+## Character Creation
+Creates a new character based on input name.
+
+More features to follow.
+
 ## Displays
 - Feats and Flaws
 - Traits & Drawbacks
@@ -33,6 +38,5 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 ## TO-DO
 - Add Ant Load, etc to Carry Capacity
 - Character Creation
--- Format output file
--- Clean up UI
--- Add Attribute Point buy system calculator
+* Format output file
+* Add Attribute Point buy system calculator

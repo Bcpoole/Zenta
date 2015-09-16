@@ -5,6 +5,32 @@
       <h5>Name</h5>
       <input type="text" class="form-control" value.bind="characterName">
     </p>
+    <p>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(10)">Low Fantasy (10)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(15)">Standard Fantasy (15)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(20)">High Fantasy (20)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(25)">Epic Fantasy (25)</button>
+        <button type="button" class="btn btn-default" click.delegate="setTotalPoints(0)">Custom</button>
+      </div>
+      <table class="table table-striped" click.delegate="updateScores()">
+        <tr>
+          <th>Ability</th>
+          <th>Points</th>
+          <th>Mod</th>
+          <th>Cost</th>
+        </tr>
+        <tr repeat.for="score of scores">
+          <td>${score.name}</td>
+          <td>
+            <input type="number" class="form-control" value.bind="score.points" min="7" max="18">
+          </td>
+          <td>${score.mod}</td>
+          <td>${score.cost}</td>
+        </tr>
+      </table>
+      <label>Remaining: </label> ${remainingPoints}/${totalPoints}
+    </p>
     <button class="btn btn-primary" click.delegate="createCharacter()">Create</button>
   </section>
 </template>

@@ -1,10 +1,27 @@
+import {computedFrom} from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
 import {ApplicationState} from './applicationState';
 
 @inject(ApplicationState)
 export class characterCreation {
+	@computedFrom('scores');
+  get scores() {
+    return this._scores;
+  }
+
+  set scores(val) {
+  console.log('stuff');
+  	this._scores = val;
+  }
+
   constructor(appState) {
     this.appState = appState;
+
+		let defaultPoints = 15;
+		this.remainingPoints = defaultPoints;
+		this.setTotalPoints(defaultPoints); //Do standard by default
+
+    this.generateScores();
   }
 
   createCharacter() {
@@ -42,5 +59,35 @@ export class characterCreation {
 				document.body.removeChild(element);
 			}
     }
+	}
+
+	generateScores() {
+		this.scores = [];
+		let scoreNames = ['Strength', 'Dexterity', 'Constitution,', 'Intelligence', 'Wisdom', 'Charisma'];
+
+		for (let name of scoreNames) {
+			this.scores.push(
+				{
+					name: name,
+					points: 10,
+					mod: 0,
+					cost: 0
+				}
+			)
+		}
+	}
+
+	setTotalPoints(totalPoints) {
+		this.totalPoints = totalPoints;
+	}
+
+	determineMod(points) {
+		return Math.floor((points - 10) / 2);
+	}
+
+	updateScores() {
+		for (let score of this.scores) {
+			score.mod = this.determineMod(score.points);
+		}
 	}
 }

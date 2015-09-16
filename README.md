@@ -1,5 +1,4 @@
-Included is sampleCharacter.json as a template/guideline. I'll eventually add a Character Creation section once the rest of the app is complete (when the format is solidified).
-
+Included is sampleCharacter.json as a guideline (mostly done but needs some additions).
 # Setup
 Install packages with:
 ```shell
@@ -36,7 +35,9 @@ More features to follow.
 - Stats - *Ability Scores, Offensive & Defensive Stats*
 
 ## TO-DO
-- Add Ant Load, etc to Carry Capacity
-- Character Creation
-* Format output file
-* Add Attribute Point buy system calculator
+- Cleanup UI when data not present (test with characterTemplate)
+### Carry Capacity
+- Add Ant Load, etc
+### Character Creation
+- Format output file
+- Add Attribute Point buy system calculator

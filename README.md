@@ -35,7 +35,6 @@ More features to follow.
 - Stats - *Ability Scores, Offensive & Defensive Stats*
 
 ## TO-DO
-- Cleanup UI when data not present (test with characterTemplate)
 - **Carry Capacity**
 - Add Ant Load, etc
 - **Character Creation**

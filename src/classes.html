@@ -1,6 +1,9 @@
 <template>
   <section>
+    <h2>Classes</h2>
+    <h3>${classes}</h3>
     <div repeat.for="class of loadedCharacter.classes">
+      <hr>
       <p>
         <h2 if.bind="class.archetype">${class.name} - ${class.archetype}</h2>
         <h2 if.bind="class.isPrestige">${class.name} - Prestige</h2>

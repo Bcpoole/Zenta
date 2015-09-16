@@ -1,62 +1,59 @@
 <template>
   <section>
     <div class="alert alert-error" if.bind="err">${err}</div>
-    <div if.bind="loadedCharacter.feats">
-      <h2>Feats</h2>
-      <div repeat.for="feat of loadedCharacter.feats.selected">
-        <div class="panel-group" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab">
-              <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                  <label>${feat.name}</label>
-                </a>
-              </h4>
-            </div>
-            <div class="panel-collapse collapse in" role="tabpanel">
-              <div class="panel-body">
-                <p if.bind="feat.flavor">
-                  <i>${feat.flavor}</i><br>
-                </p>
-                <p if.bind="feat.prerequisites">
-                  <strong>Prequisites:</strong>${feat.prerequisites}<br>
-                </p>
-                <p if.bind="feat.benefit">
-                  ${feat.benefit}
-                </p>
-              </div>
+    <h2>Feats</h2>
+    <div repeat.for="feat of loadedCharacter.feats.selected" if.bind="loadedCharacter.feats.selected.length > 0">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${feat.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p if.bind="feat.flavor">
+                <i>${feat.flavor}</i><br>
+              </p>
+              <p if.bind="feat.prerequisites">
+                <strong>Prequisites:</strong>${feat.prerequisites}<br>
+              </p>
+              <p if.bind="feat.benefit">
+                ${feat.benefit}
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div if.bind="loadedCharacter.feats.flaws">
-      <h2>Flaws</h2>
-      <div repeat.for="flaw of loadedCharacter.feats.flaws">
-        <div class="panel-group" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab">
-              <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                  <label>${flaw.name}</label>
-                </a>
-              </h4>
-            </div>
-            <div class="panel-collapse collapse in" role="tabpanel">
-              <div class="panel-body">
-                <p if.bind="flaw.flavor">
-                  <i>${flaw.flavor}</i>
-                </p>
-                <p if.bind="flaw.prerequisites">
-                  <strong>Prequisites: </strong>${flaw.prerequisites}
-                </p>
-                <p if.bind="flaw.effect">
-                  <strong>Effect: </strong>${flaw.effect}
-                </p>
-                <p if.bind="flaw.benefit">
-                  <strong>Benefit: </strong>${flaw.benefit}
-                </p>
-              </div>
+    <hr>
+    <h2>Flaws</h2>
+    <div repeat.for="flaw of loadedCharacter.feats.flaws"  if.bind="loadedCharacter.feats.flaws.length > 0">
+      <div class="panel-group" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                <label>${flaw.name}</label>
+              </a>
+            </h4>
+          </div>
+          <div class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+              <p if.bind="flaw.flavor">
+                <i>${flaw.flavor}</i>
+              </p>
+              <p if.bind="flaw.prerequisites">
+                <strong>Prequisites: </strong>${flaw.prerequisites}
+              </p>
+              <p if.bind="flaw.effect">
+                <strong>Effect: </strong>${flaw.effect}
+              </p>
+              <p if.bind="flaw.benefit">
+                <strong>Benefit: </strong>${flaw.benefit}
+              </p>
             </div>
           </div>
         </div>

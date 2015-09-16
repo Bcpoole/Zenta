@@ -11,5 +11,15 @@ export class classes {
     this.appState = appState;
 
     this.loadedCharacter = this.appState.loadedCharacter;
+    this.getClassesAndLevels();
   }
+
+  getClassesAndLevels() {
+      let charClasses = "";
+      for (var charClass of this.loadedCharacter.classes) {
+        charClasses += charClass.name + " " + charClass.levels + "/";
+      }
+
+      this.classes = charClasses.substring(0, charClasses.length - 1);
+    }
 }

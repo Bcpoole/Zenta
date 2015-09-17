@@ -28,6 +28,13 @@ export class characterCreation {
   
   generateCharacter() {
   	var characterName = this.characterName;
+  	var strength = this.getScore('Strength');
+		var dexterity = this.getScore('Dexterity');
+		var constitution = this.getScore('Constitution');
+		var intelligence = this.getScore('Intelligence');
+		var wisdom = this.getScore('Wisdom');
+		var charisma = this.getScore('Charisma');
+
 		let reader = new FileReader();
 
 		let client = new XMLHttpRequest();
@@ -37,6 +44,14 @@ export class characterCreation {
     	if (client.readyState == 4) {
 				let character = JSON.parse(client.response);
 				character.name = characterName;
+
+				character.abilityScores.strength = strength;
+				character.abilityScores.dexterity = dexterity;
+				character.abilityScores.constitution = constitution;
+				character.abilityScores.intelligence = intelligence;
+				character.abilityScores.wisdom = wisdom;
+				character.abilityScores.charisma = charisma;
+
 				let element = document.createElement('a');
 				element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(character)));
 				element.setAttribute('download', characterName + ".json");
@@ -51,9 +66,16 @@ export class characterCreation {
     }
 	}
 
+	getScore(name) {
+		var score = this.scores.filter(function (score) {
+        return score.name === name;
+    })[0];
+    return score.points;
+	}
+
 	generateScores() {
 		this.scores = [];
-		let scoreNames = ['Strength', 'Dexterity', 'Constitution,', 'Intelligence', 'Wisdom', 'Charisma'];
+		let scoreNames = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
 
 		for (let name of scoreNames) {
 			this.scores.push(

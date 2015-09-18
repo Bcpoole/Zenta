@@ -24,9 +24,7 @@ export class Welcome{
     this.appState = appState;
     this.loadedCharacter = this.appState.loadedCharacter;
 
-    if (this.loadedCharacter != null) {
-      this.getClassesAndLevels();
-    }
+    this.setDescriptor();
   }
 
   fileSelected() {
@@ -34,16 +32,22 @@ export class Welcome{
       let reader = new FileReader();
       let file = this.$event.target.files[0];
       reader.readAsText(file);
+
       reader.onload = () => {
         let myCharacter = reader.result;
 
         try {
           this.loadedCharacter = JSON.parse(myCharacter);
-          this.getClassesAndLevels();
+          this.setDescriptor();
         } catch(e) {
           this.loadedCharacter = null;
           this.err = file.name + ' is not valid json';
+          return;
         }
+
+				if (this.loadedCharacter.name === '') {
+					this.loadedCharacter.name = 'NULL';
+				}
       };
   }
 
@@ -54,5 +58,16 @@ export class Welcome{
     }
 
     this.classes = charClasses.substring(0, charClasses.length - 1);
+  }
+
+  setDescriptor() {
+  	this.descriptor = null;
+		if (this.loadedCharacter != null) {
+			this.getClassesAndLevels();
+
+			if (this.classes != "" || this.loadedCharacter.characteristics.race != "") {
+				this.descriptor = "- " + this.loadedCharacter.characteristics.race + " " + this.classes;
+			}
+		}
   }
 }

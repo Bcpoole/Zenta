@@ -241,23 +241,6 @@
 		}
 	],
 	"weapons": [
-		{
-			"name": "",
-			"damage": "",
-			"crit": "",
-			"weight": 0,
-			"value": 0,
-			"isMasterwork": false,
-			"weaponBonus": "",
-			"material": {
-				"name": "",
-				"hpIn": 0,
-				"hardness": 0,
-				"description": ""
-			},
-			"enchantments": [
-			]
-		}
 	],
 	"armor": {
 		"name": "",

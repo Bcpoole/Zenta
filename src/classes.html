@@ -2,6 +2,9 @@
   <section>
     <h2>Classes</h2>
     <h3>${classes}</h3>
+    <div class="alert alert-danger" role="alert" if.bind="loadedCharacter.classes.length == 0">
+      <strong>${loadedCharacter.name}</strong> doesn't have any classes!
+    </div>
     <div repeat.for="class of loadedCharacter.classes">
       <hr>
       <p>

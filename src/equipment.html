@@ -4,7 +4,7 @@
     <h4>Weight: ${totalWeight} lbs.</h4>
     <hr>
     <h2>Weapons</h2>
-    <div repeat.for="weapon of loadedCharacter.weapons" if.bind="loadedCharacter.weapons.length > 0">
+    <div repeat.for="weapon of loadedCharacter.weapons">
       <div class="panel-group" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab">

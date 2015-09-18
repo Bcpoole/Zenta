@@ -1,10 +1,13 @@
 <template>
   <section class="au-animate">
     <h2>${heading}</h2>
-    <section>
+    <p>
       <label for="files">Select a file: </label>
       <input id="files" type="file" change.delegate="fileSelected($event)">
-    </section>
+    </p>
+    <div class="alert alert-danger" role="alert" if.bind="err">
+      <strong>${err}</strong>
+    </div>
     <hr>
     <div if.bind="loadedCharacter">
       <h2>${loadedCharacter.name} - ${loadedCharacter.characteristics.race} ${classes}</h2>

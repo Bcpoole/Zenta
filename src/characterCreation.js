@@ -15,9 +15,9 @@ export class characterCreation {
   }
 
   createCharacter() {
-
+  	this.err = null;
   	if (this.characterName == null || this.characterName.trim().length == 0) {
-  		alert("Must input a name");
+  		this.err = "Your character needs a name!";
   		return;
   	}
 

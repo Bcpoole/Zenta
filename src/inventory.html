@@ -1,7 +1,10 @@
 <template>
   <section>
     <h2>Inventory</h2>
-    <h4>Weight: ${totalWeight} lbs.</h4>
+    <div class="alert alert-info" role="alert" if.bind="characterInventory.length == 0">
+      <strong>${loadedCharacter.name}</strong> doesn't have anything in their inventory.
+    </div>
+    <h4 if.bind="characterInventory.length > 0">Inventory Weight: ${totalWeight} lbs.</h4>
     <div repeat.for="item of characterInventory">
       <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="item.equipped">
         <div class="panel panel-default">

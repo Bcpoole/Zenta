@@ -30,6 +30,7 @@ export class Welcome{
   }
 
   fileSelected() {
+  		this.err = null;
       let reader = new FileReader();
       let file = this.$event.target.files[0];
       reader.readAsText(file);
@@ -41,7 +42,7 @@ export class Welcome{
           this.getClassesAndLevels();
         } catch(e) {
           this.loadedCharacter = null;
-          alert(file.name + ' is not valid json');
+          this.err = file.name + ' is not valid json';
         }
       };
   }

@@ -4,10 +4,8 @@
     <div class="alert alert-danger" role="alert" if.bind="err">
       <strong>${err}</strong>
     </div>
-    <p>
-      <h5>Name</h5>
-      <input type="text" class="form-control" value.bind="characterName">
-    </p>
+    <h5>Name</h5>
+    <input type="text" class="form-control" value.bind="characterName">
     <p>
       <div class="btn-group" role="group" aria-label="...">
         <button type="button" class="btn btn-default" click.delegate="setTotalBudget(10)">Low Fantasy (10)</button>

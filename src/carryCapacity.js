@@ -4,7 +4,7 @@ import {ApplicationState} from './applicationState';
 
 @inject(ApplicationState)
 export class carryCapacity {
-  @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize');
+  @computedFrom('currentLoad', 'strength', 'creatureType', 'creatureSize', 'hasAntHaul', 'hasMulebackCords');
   get loads() {
     return this.calculateCarryCapacity();
   }
@@ -33,39 +33,50 @@ export class carryCapacity {
   }
 
   computeTotalWeight() {
-      let totalWeight = this.loadedCharacter.armor.weight;
+		let totalWeight = this.loadedCharacter.armor.weight;
 
-      for (var item of this.loadedCharacter.wondrousItems) {
-        totalWeight += item.weight;
-      }
-      for (var item of this.loadedCharacter.weapons) {
-        totalWeight += item.weight;
-      }
+		for (var item of this.loadedCharacter.wondrousItems) {
+			totalWeight += item.weight;
+		}
+		for (var item of this.loadedCharacter.weapons) {
+			totalWeight += item.weight;
+		}
 
-      for (var item of this.loadedCharacter.inventory) {
-        if (item.equipped) {
-          totalWeight += item.weight;
-        }
-      }
+		for (var item of this.loadedCharacter.inventory) {
+			if (item.equipped) {
+				totalWeight += item.weight;
+			}
+		}
 
-      return totalWeight;
-    }
+		return totalWeight;
+	}
 
   calculateCarryCapacity() {
     var loadSizes = [];
     for (var i = 1; i <= 29; i++) {
       var light, medium, heavy;
-      if (i < 10) {
-        heavy = i * 10;
+
+      let computedStr = i;
+      if (this.hasMulebackCords) {
+      	computedStr += 8;
+      }
+      if (computedStr < 10) {
+        heavy = computedStr * 10;
       } else {
         var values = [0,25,28.75,32.5,37.5,43.75,50,57.5,65,75,87.5];
-        var idx = 1 + i - 10 * Math.floor(i/10);
-        heavy = values[idx] * Math.pow(4, Math.floor(i/10));
+        var idx = 1 + computedStr - 10 * Math.floor(computedStr/10);
+        heavy = values[idx] * Math.pow(4, Math.floor(computedStr/10));
       }
 
       heavy = heavy * this.getSizeModifier();
       medium = Math.floor((2/3) * heavy);
       light = Math.floor((1/3) * heavy);
+
+      if (this.hasAntHaul) {
+      	heavy *= 3;
+      	medium *= 3;
+      	light *= 3;
+      }
 
       var style = '#FFFFFF';
       if (i == this.strength) {

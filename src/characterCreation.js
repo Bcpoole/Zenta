@@ -1,11 +1,13 @@
 import {computedFrom} from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
 import {ApplicationState} from './applicationState';
+import {DialogService, Prompt} from 'aurelia-dialog';
 
-@inject(ApplicationState)
+@inject(ApplicationState, DialogService)
 export class characterCreation {
-  constructor(appState) {
+  constructor(appState, dialogService) {
     this.appState = appState;
+    this.dialogService = dialogService;
 
 		this.generateScores();
 
@@ -94,6 +96,16 @@ export class characterCreation {
 
 		this.updateBudget();
 	}
+
+  setCustomBudget() {
+    this.dialogService.open({ viewModel: Prompt, model: 'Insert Total Points'}).then((result) => {
+      if(/\d+/.test(result) && Number.isInteger(Number(result))) {
+        this.setTotalBudget(result.replace(/\s+/g, ''));
+      } else {
+        alert('"' + result + '"' + ' is not invalid input!');
+      }
+    });
+  }
 
 	determineMod(points) {
 		return Math.floor((points - 10) / 2);

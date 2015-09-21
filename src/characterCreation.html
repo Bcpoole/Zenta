@@ -12,14 +12,7 @@
         <button type="button" class="btn btn-default" click.delegate="setTotalBudget(15)">Standard Fantasy (15)</button>
         <button type="button" class="btn btn-default" click.delegate="setTotalBudget(20)">High Fantasy (20)</button>
         <button type="button" class="btn btn-default" click.delegate="setTotalBudget(25)">Epic Fantasy (25)</button>
-        <div class="col-lg-2">
-          <div class="input-group">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button" click.delegate="setTotalBudget(customBudget)">Custom</button>
-            </span>
-            <input type="text" class="form-control" placeholder="0" value.bind="customBudget">
-          </div>
-        </div>
+        <button class="btn btn-default" type="button" click.delegate="setCustomBudget()">Custom</button>
       </div>
       <table class="table table-striped" click.delegate="updateScores()">
         <tr>

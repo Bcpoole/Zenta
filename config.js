@@ -19,6 +19,7 @@ System.config({
     "aurelia-binding": "github:aurelia/binding@0.9.1",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.17.0",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.10.1",
+    "aurelia-dialog": "github:aurelia/dialog@0.2.1",
     "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.8.0",
     "aurelia-fetch-client": "github:aurelia/fetch-client@0.2.0",
     "aurelia-framework": "github:aurelia/framework@0.16.0",
@@ -72,6 +73,12 @@ System.config({
       "aurelia-logging": "github:aurelia/logging@0.7.0",
       "aurelia-metadata": "github:aurelia/metadata@0.8.0",
       "core-js": "npm:core-js@0.9.18"
+    },
+    "github:aurelia/dialog@0.2.1": {
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.10.1",
+      "aurelia-framework": "github:aurelia/framework@0.16.0",
+      "aurelia-metadata": "github:aurelia/metadata@0.8.0",
+      "aurelia-templating": "github:aurelia/templating@0.15.3"
     },
     "github:aurelia/event-aggregator@0.8.0": {
       "aurelia-logging": "github:aurelia/logging@0.7.0"

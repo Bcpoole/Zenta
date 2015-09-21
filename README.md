@@ -7,7 +7,7 @@ npm install
 ```
 
 Run with:
-```shell
+```shellhn
 gulp watch
 ```
 

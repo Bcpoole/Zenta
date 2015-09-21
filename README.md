@@ -36,8 +36,3 @@ More features to follow.
 
 ## TO-DO
 - Change fields to editable + save feature
-- **Carry Capacity**
-- Add Ant Load, etc
-- **Character Creation**
-- Format output file
-- Add Attribute Point buy system calculator

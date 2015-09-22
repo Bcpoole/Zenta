@@ -5,17 +5,17 @@ export class App {
   configureRouter(config, router){
     config.title = 'Zenta';
     config.map([
-      { route: '', name: 'welcome', moduleId: 'welcome', nav: false, title:'Welcome' },
-      { route: 'carryCapacity', name: 'carryCapacity', moduleId: 'carryCapacity', nav: true, title:'Carry Capacity' },
-      { route: 'characterCreation', name: 'characterCreation', moduleId: 'characterCreation', nav: true, title: 'Character Creation' },
-      { route: 'feats', name: 'feats', moduleId: 'feats', nav: false, title: 'Feats & Flaws' },
-      { route: 'traits', name: 'traits', moduleId: 'traits', nav: false, title: 'Traits & Drawbacks' },
-      { route: 'skills', name: 'skills', moduleId: 'skills', nav: false, title: 'Skills' },
-      { route: 'characteristics', name: 'characteristics', moduleId: 'characteristics', nav: false, title: 'Characteristics' },
-      { route: 'inventory', name: 'inventory', moduleId: 'inventory', nav: false, title: 'Inventory' },
-      { route: 'equipment', name: 'equipment', moduleId: 'equipment', nav: false, title: 'Equipment' },
-      { route: 'stats', name: 'stats', moduleId: 'stats', nav: false, title: 'Stats' },
-      { route: 'classes', name: 'classes', moduleId: 'classes', nav: false, title: 'Classes' }
+      { route: '', name: 'welcome', moduleId: 'home/welcome', nav: false, title:'Welcome' },
+      { route: 'carryCapacity', name: 'carryCapacity', moduleId: 'home/carryCapacity', nav: true, title:'Carry Capacity' },
+      { route: 'characterCreation', name: 'characterCreation', moduleId: 'home/characterCreation', nav: true, title: 'Character Creation' },
+      { route: 'feats', name: 'feats', moduleId: 'character/feats', nav: false, title: 'Feats & Flaws' },
+      { route: 'traits', name: 'traits', moduleId: 'character/traits', nav: false, title: 'Traits & Drawbacks' },
+      { route: 'skills', name: 'skills', moduleId: 'character/skills', nav: false, title: 'Skills' },
+      { route: 'characteristics', name: 'characteristics', moduleId: 'character/characteristics', nav: false, title: 'Characteristics' },
+      { route: 'inventory', name: 'inventory', moduleId: 'character/inventory', nav: false, title: 'Inventory' },
+      { route: 'equipment', name: 'equipment', moduleId: 'character/equipment', nav: false, title: 'Equipment' },
+      { route: 'stats', name: 'stats', moduleId: 'character/stats', nav: false, title: 'Stats' },
+      { route: 'classes', name: 'classes', moduleId: 'character/classes', nav: false, title: 'Classes' }
     ]);
 
     this.router = router;

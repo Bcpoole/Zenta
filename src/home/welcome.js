@@ -1,6 +1,6 @@
 import {computedFrom} from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
-import {ApplicationState} from './applicationState';
+import {ApplicationState} from '../applicationState';
 
 @inject(ApplicationState)
 export class Welcome{

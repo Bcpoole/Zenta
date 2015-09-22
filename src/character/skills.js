@@ -1,8 +1,8 @@
 import {inject} from 'aurelia-framework';
-import {ApplicationState} from './applicationState';
+import {ApplicationState} from '../applicationState';
 
 @inject(ApplicationState)
-export class traits {
+export class skills {
   canActivate(params, routeConfig, navigationInstruction) {
     return (!!this.loadedCharacter);
   }

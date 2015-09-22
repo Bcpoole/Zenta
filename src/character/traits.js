@@ -1,8 +1,8 @@
 import {inject} from 'aurelia-framework';
-import {ApplicationState} from './applicationState';
+import {ApplicationState} from '../applicationState';
 
 @inject(ApplicationState)
-export class stats {
+export class traits {
   canActivate(params, routeConfig, navigationInstruction) {
     return (!!this.loadedCharacter);
   }
@@ -11,9 +11,5 @@ export class stats {
     this.appState = appState;
 
     this.loadedCharacter = this.appState.loadedCharacter;
-
-    this.abilityScores = this.loadedCharacter.abilityScores;
-    this.offenseStats = this.loadedCharacter.stats.offense;
-    this.defenseStats = this.loadedCharacter.stats.defense;
   }
 }

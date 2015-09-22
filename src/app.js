@@ -18,6 +18,12 @@ export class App {
       { route: 'classes', name: 'classes', moduleId: 'character/classes', nav: false, title: 'Classes' }
     ]);
 
+    var pattern = Trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    document.body.appendChild(pattern.canvas())
+
     this.router = router;
   }
 }

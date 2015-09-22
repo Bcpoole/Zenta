@@ -12,6 +12,9 @@ export class feats {
 
       this.loadedCharacter = this.appState.loadedCharacter;
 
+      this.feats = this.loadedCharacter.feats.selected;
+      this.flaws = this.loadedCharacter.feats.flaws;
+
       if (!this.loadedCharacter.feats || this.loadedCharacter.feats.selected.length == 0) {
         this.err = "Loaded character doesn't have any Feats.";
       }

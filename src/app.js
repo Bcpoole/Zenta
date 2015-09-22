@@ -20,7 +20,13 @@ export class App {
 
     var pattern = Trianglify({
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
+        cell_size: 52,
+        color_space: 'hsl',
+        variance: '100',
+        seed: 'Zenta',
+        x_colors: 'PuBu',
+        y_colors: 'PuBuGn'
     });
     document.body.appendChild(pattern.canvas())
 

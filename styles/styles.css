@@ -244,3 +244,10 @@ div.au-stagger {
   position: absolute;
   left: -9999px;
 }
+
+.footer {
+  padding: 12px;
+  background-color: rgba(255,255,255,.6);
+  text-align: center;
+  margin-top: 15px;
+}

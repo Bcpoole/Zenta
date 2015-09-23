@@ -4,82 +4,64 @@
     <h4>Weight: ${totalWeight} lbs.</h4>
     <hr>
     <h2>Weapons</h2>
-    <div repeat.for="weapon of loadedCharacter.weapons">
-      <div class="panel-group" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                <label if.bind="weapon.weaponBonus">${weapon.name} ${weapon.weaponBonus}</label>
-                <label if.bind="weapon.isMasterwork && !weapon.weaponBonus">${weapon.name} (mw)</label>
-                <label if.bind="!weapon.isMasterwork">${weapon.name}</label>
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse in" role="tabpanel">
-            <div class="panel-body">
-              <p>
-                <strong>Damage: </strong>${weapon.damage}
-              </p>
-              <p>
-                <strong>Critical: </strong>${weapon.crit}
-              </p>
-              <p>
-                <strong>Weight: </strong>${weapon.weight} lbs.
-                <strong>Value: </strong>${weapon.value} gp
-              </p>
-              <p if.bind="weapon.material">
-                <div class="panel-group" role="tablist" aria-multiselectable="true">
-                  <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                      <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                          <label>${weapon.material.name}</label>
-                        </a>
-                      </h4>
-                    </div>
-                    <div class="panel-collapse collapse in" role="tabpanel">
-                      <div class="panel-body">
-                        <p>
-                          <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
-                          <strong>Hardness: </strong>${weapon.material.hardness}
-                        </p>
-                        <p>
-                          ${weapon.material.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </p>
-              <div repeat.for="enchantment of weapon.enchantments">
-                <div class="panel-group" role="tablist" aria-multiselectable="true">
-                  <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                      <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                          <label>${enchantment.name}</label>
-                        </a>
-                      </h4>
-                    </div>
-                    <div class="panel-collapse collapse in" role="tabpanel">
-                      <div class="panel-body">
-                        <p>
-                          <strong>Aura: </strong>${enchantment.aura}
-                        </p>
-                        <p>
-                          ${enchantment.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+    <ul class="accordion css-accordion">
+      <li class="accordion-item" repeat.for="weapon of loadedCharacter.weapons">
+        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.name" />
+        <label if.bind="weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">${weapon.name} ${weapon.weaponBonus}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label if.bind="weapon.isMasterwork && !weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">${weapon.name} (mw)<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label if.bind="!weapon.isMasterwork" for.bind="weapon.name" class="accordion-item-hd">${weapon.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd">
+          <p>
+            <strong>Damage: </strong>${weapon.damage}
+          </p>
+          <p>
+            <strong>Critical: </strong>${weapon.crit}
+          </p>
+          <p>
+            <strong>Weight: </strong>${weapon.weight} lbs.
+            <strong>Value: </strong>${weapon.value} gp
+          </p>
+          <p if.bind="weapon.material">
+          <div class="panel-group" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                    <label>${weapon.material.name}</label>
+                  </a>
+                </h4>
+              </div>
+              <div class="panel-collapse collapse in" role="tabpanel">
+                <div class="panel-body">
+                  <p>
+                    <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
+                    <strong>Hardness: </strong>${weapon.material.hardness}
+                  </p>
+                  <p>
+                    ${weapon.material.description}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+          </p>
+          <ul class="accordion css-accordion">
+            <li class="accordion-item" repeat.for="enchantment of weapon.enchantments">
+              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
+              <label for.bind="enchantment.name" class="accordion-item-hd">${enchantment.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+              <div class="accordion-item-bd">
+                <p>
+                  <strong>Aura: </strong>${enchantment.aura}
+                </p>
+                <p>
+                  ${enchantment.description}
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
     <hr>
     <h2>Armor</h2>
     <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="loadedCharacter.armor.name">
@@ -130,90 +112,63 @@
                 </div>
               </div>
             </p>
-            <div repeat.for="enchantment of armor.enchantments">
-              <div class="panel-group" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab">
-                    <h4 class="panel-title">
-                      <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                        <label>${enchantment.name}</label>
-                      </a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse in" role="tabpanel">
-                    <div class="panel-body">
-                      <p>
-                        <strong>Aura: </strong>${enchantment.aura}
-                      </p>
-                      <p>
-                        ${enchantment.description}
-                      </p>
-                    </div>
-                  </div>
+            <ul class="accordion css-accordion">
+              <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
+                <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
+                <label for.bind="enchantment.name" class="accordion-item-hd">${enchantment.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+                <div class="accordion-item-bd">
+                  <p>
+                    <strong>Aura: </strong>${enchantment.aura}
+                  </p>
+                  <p>
+                    ${enchantment.description}
+                  </p>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
     <hr>
     <h2>Wondrous Items</h2>
-    <div repeat.for="item of loadedCharacter.wondrousItems">
-      <div class="panel-group" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                <label if.bind="item.name">${item.slot} - ${item.name}</label>
-                <label if.bind="!item.name">${item.slot}</label>
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse in" role="tabpanel" if.bind="item.name">
-            <div class="panel-body">
-              <p>
-                ${item.description}
-              </p>
-              <p>
-                <strong>Weight: </strong>${item.weight} lbs.
-                <strong>Value: </strong>${item.value} gp
-              </p>
-              <p>
-                <strong>Aura: </strong>${item.aura}
-              </p>
-            </div>
-          </div>
+    <ul class="accordion css-accordion">
+      <li class="accordion-item" repeat.for="item of loadedCharacter.wondrousItems">
+        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="item.name" />
+        <label for.bind="item.name" if.bind="item.name" class="accordion-item-hd">${item.slot} - ${item.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label for.bind="item.name" if.bind="!item.name" class="accordion-item-hd">${item.slot}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd">
+          <p>
+            ${item.description}
+          </p>
+          <p>
+            <strong>Weight: </strong>${item.weight} lbs.
+            <strong>Value: </strong>${item.value} gp
+          </p>
+          <p>
+            <strong>Aura: </strong>${item.aura}
+          </p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
     <hr>
     <h2>Rings</h2>
-    <div repeat.for="ring of loadedCharacter.rings">
-      <div class="panel-group" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                <label>${ring.name}</label>
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse in" role="tabpanel">
-            <div class="panel-body">
-              <p>
-                <strong>Aura: </strong>${ring.aura}
-              </p>
-              <p>
-                <strong>Value: </strong>${ring.value}
-              </p>
-              <p>
-                ${ring.description}
-              </p>
-            </div>
-          </div>
+    <ul class="accordion css-accordion">
+      <li class="accordion-item" repeat.for="ring of loadedCharacter.rings">
+        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="ring.name" />
+        <label for.bind="ring.name" class="accordion-item-hd">${ring.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd">
+          <p>
+            <strong>Aura: </strong>${ring.aura}
+          </p>
+          <p>
+            <strong>Value: </strong>${ring.value}
+          </p>
+          <p>
+            ${ring.description}
+          </p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 </template>

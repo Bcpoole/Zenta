@@ -11,5 +11,8 @@ export class traits {
     this.appState = appState;
 
     this.loadedCharacter = this.appState.loadedCharacter;
+    this.traits = this.loadedCharacter.traits.selected;
+    this.drawbacks = this.loadedCharacter.traits.drawbacks;
+    this.racialTraits = this.loadedCharacter.traits.racial;
   }
 }

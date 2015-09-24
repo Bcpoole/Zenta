@@ -251,3 +251,10 @@ div.au-stagger {
   text-align: center;
   margin-top: 15px;
 }
+
+.table-alt > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(255,255,255,.2);
+}
+.table-alt > tbody > tr:nth-of-type(even) {
+  background-color: rgba(255,255,255,.4);
+}

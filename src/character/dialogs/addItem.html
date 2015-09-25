@@ -1,0 +1,17 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="item.name" />
+      <h2>Weight</h2>
+      <input value.bind="item.weight" />
+      <h2>Description</h2>
+      <input value.bind="item.description" />
+    </dialog-body>
+
+    <dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(item)">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

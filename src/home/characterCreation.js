@@ -2,12 +2,18 @@ import {computedFrom} from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 import {DialogService, Prompt} from 'aurelia-dialog';
+import {Validation} from 'aurelia-validation';
 
-@inject(ApplicationState, DialogService)
+@inject(ApplicationState, DialogService, Validation)
 export class characterCreation {
-  constructor(appState, dialogService) {
+  constructor(appState, dialogService, validation) {
     this.appState = appState;
     this.dialogService = dialogService;
+
+    this.validation = validation.on(this)
+      .ensure('characterName')
+      .isNotEmpty()
+      .hasMinLength(1)
 
 		this.generateScores();
 
@@ -17,15 +23,19 @@ export class characterCreation {
   }
 
   createCharacter() {
-  	this.err = null;
-  	if (this.characterName == null || this.characterName.trim().length == 0) {
-  		this.err = "Your character needs a name!";
-  		return;
-  	}
-
-  	this.characterName = this.characterName.trim();
-
-  	this.generateCharacter();
+    this.validation.validate()
+    .then( () => {
+      this.characterName = this.characterName.trim();
+      this.generateCharacter();
+    }, (err) => {
+      let msg = 'Could not create character!';
+      let keys = Object.keys(err.properties);
+      for (let key of keys) {
+        msg += '\n' + key + " " + err.properties[key].message;
+      }
+      alert(msg);
+    }
+    );
   }
   
   generateCharacter() {

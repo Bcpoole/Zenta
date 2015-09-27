@@ -1,11 +1,12 @@
 <template>
   <section>
     <h2>Character Creation</h2>
-    <div class="alert alert-danger" role="alert" if.bind="err">
-      <strong>${err}</strong>
-    </div>
-    <h5>Name</h5>
-    <input type="text" class="form-control" value.bind="characterName">
+    <form role="form" validate.bind="validation">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" value.bind="characterName">
+      </div>
+    </form>
     <p>
       <div class="btn-group" role="group" aria-label="...">
         <button type="button" class="btn btn-default" click.delegate="setTotalBudget(10)">Low Fantasy (10)</button>

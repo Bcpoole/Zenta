@@ -24,7 +24,7 @@ export class inventory {
 
     for (var item of this.characterInventory) {
       if (item.equipped) {
-        this.totalWeight += item.weight;
+        this.totalWeight += item.weight * item.quantity;
       }
     }
   }

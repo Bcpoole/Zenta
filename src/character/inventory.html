@@ -5,51 +5,43 @@
       <strong>${loadedCharacter.name}</strong> doesn't have anything in their inventory.
     </div>
     <h4 if.bind="characterInventory.length > 0">Inventory Weight: ${totalWeight} lbs.</h4>
-    <div repeat.for="item of characterInventory">
-      <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="item.equipped">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                <label>${item.name}</label>
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse in" role="tabpanel">
-            <div class="panel-body">
-              <strong>Weight: </strong>${item.weight}
+    <p>
+      <ul class="accordion css-accordion">
+        <li class="accordion-item" repeat.for="item of characterInventory">
+          <div if.bind="item.equipped">
+            <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="item.name" />
+            <label for.bind="item.name" class="accordion-item-hd">${item.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+            <div class="accordion-item-bd">
+              <strong>Weight: </strong>${item.weight}<br>
+              <strong>Quantity: </strong>${item.quantity}
               <p if.bind="item.description">
                 ${item.description}
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <button click.delegate="addItem('inventory')">+</button>
+        </li>
+      </ul>
+    </p>
+    <button click.delegate="addItem('inventory')" class="btn btn-primary">+</button>
     <hr>
     <h2>Storage</h2>
-    <div repeat.for="item of characterInventory">
-      <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="!item.equipped">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                <label>${item.name}</label>
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse in" role="tabpanel">
-            <div class="panel-body">
-              <strong>Weight: </strong>${item.weight}
+    <p>
+      <ul class="accordion css-accordion">
+        <li class="accordion-item" repeat.for="item of characterInventory">
+          <div if.bind="!item.equipped">
+            <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="item.name" />
+            <label for.bind="item.name" class="accordion-item-hd">${item.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+            <div class="accordion-item-bd">
+              <strong>Weight: </strong>${item.weight}<br>
+              <strong>Quantity: </strong>${item.quantity}
               <p if.bind="item.description">
                 ${item.description}
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <button click.delegate="addItem('storage')">+</button>
+        </li>
+      </ul>
+    </p>
+    <button click.delegate="addItem('storage')" class="btn btn-primary">+</button>
   </section>
 </template>

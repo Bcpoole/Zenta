@@ -44,7 +44,7 @@ export class carryCapacity {
 
 		for (var item of this.loadedCharacter.inventory) {
 			if (item.equipped) {
-				totalWeight += item.weight;
+				totalWeight += item.weight  * item.quantity;
 			}
 		}
 

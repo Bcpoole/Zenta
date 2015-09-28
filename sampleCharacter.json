@@ -439,13 +439,23 @@
 		{
 			"name": "bag of cheap rings",
 			"weight": 1,
+            "description": "Cheaply made rings to be linked with Ring of Transposition",
+            "quantity": 1,
 			"equipped" : true
 		},
 		{
 			"name": "book of laws",
 			"weight": 1,
+            "quantity": 1,
 			"equipped" : false
-		}
+		},
+      {
+        "name": "Masterwork Manacles",
+        "weight": 2,
+        "description": "Manacles can bind a Medium creature. A manacled creature can use the Escape Artist skill to slip free (DC 35). Breaking the manacles requires a Strength check (DC 28). Manacles have hardness 10 and 10 hit points.",
+        "quantity": 3,
+        "equipped" : true
+      }
 	],
 	"classes": [
 		{

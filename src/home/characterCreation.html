@@ -33,6 +33,6 @@
       </table>
       <label>Remaining: </label> ${remainingBudget}/${totalBudget}
     </p>
-    <button class="btn btn-primary" click.delegate="createCharacter()">Create</button>
+    <button class="btn btn-primary" click.delegate="createCharacter()" disabled.bind="!validation.result.isValid" >Create</button>
   </section>
 </template>

@@ -13,7 +13,7 @@ export class characterCreation {
     this.validation = validation.on(this)
       .ensure('characterName')
       .isNotEmpty()
-      .hasMinLength(1)
+      .hasMinLength(1);
 
 		this.generateScores();
 

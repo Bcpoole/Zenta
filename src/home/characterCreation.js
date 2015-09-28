@@ -7,6 +7,8 @@ import {Validation} from 'aurelia-validation';
 @inject(ApplicationState, DialogService, Validation)
 export class characterCreation {
   constructor(appState, dialogService, validation) {
+    this.characterName = '';
+
     this.appState = appState;
     this.dialogService = dialogService;
 

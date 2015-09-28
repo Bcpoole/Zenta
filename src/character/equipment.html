@@ -21,21 +21,23 @@
             <strong>Weight: </strong>${weapon.weight} lbs.
             <strong>Value: </strong>${weapon.value} gp
           </p>
-          <ul class="accordion css-accordion">
-            <li class="accordion-item">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.material.name" />
-              <label for.bind="weapon.material.name" class="accordion-item-hd">${weapon.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <p>
-                  <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
-                  <strong>Hardness: </strong>${weapon.material.hardness}
-                </p>
-                <p>
-                  ${weapon.material.description}
-                </p>
-              </div>
-            </li>
-          </ul>
+          <p>
+            <ul class="accordion css-accordion">
+              <li class="accordion-item">
+                <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.material.name" />
+                <label for.bind="weapon.material.name" class="accordion-item-hd">${weapon.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+                <div class="accordion-item-bd">
+                  <p>
+                    <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
+                    <strong>Hardness: </strong>${weapon.material.hardness}
+                  </p>
+                  <p>
+                    ${weapon.material.description}
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </p>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of weapon.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
@@ -73,21 +75,23 @@
             <strong>Weight: </strong>${armor.weight} lbs.
             <strong>Value: </strong>${armor.value} gp
           </p>
-          <ul class="accordion css-accordion">
-            <li class="accordion-item">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.material.name" />
-              <label for.bind="armor.material.name" class="accordion-item-hd">${armor.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <p>
-                  <strong>HP/IN: </strong>${armor.material.hpIn}<br>
-                  <strong>Hardness: </strong>${armor.material.hardness}
-                </p>
-                <p>
-                  ${armor.material.description}
-                </p>
-              </div>
-            </li>
-          </ul>
+          <p>
+            <ul class="accordion css-accordion">
+              <li class="accordion-item">
+                <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.material.name" />
+                <label for.bind="armor.material.name" class="accordion-item-hd">${armor.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+                <div class="accordion-item-bd">
+                  <p>
+                    <strong>HP/IN: </strong>${armor.material.hpIn}<br>
+                    <strong>Hardness: </strong>${armor.material.hardness}
+                  </p>
+                  <p>
+                    ${armor.material.description}
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </p>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />

@@ -21,30 +21,21 @@
             <strong>Weight: </strong>${weapon.weight} lbs.
             <strong>Value: </strong>${weapon.value} gp
           </p>
-          <p if.bind="weapon.material">
-          <div class="panel-group" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                    <label>${weapon.material.name}</label>
-                  </a>
-                </h4>
+          <ul class="accordion css-accordion">
+            <li class="accordion-item">
+              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.material.name" />
+              <label for.bind="weapon.material.name" class="accordion-item-hd">${weapon.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+              <div class="accordion-item-bd">
+                <p>
+                  <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
+                  <strong>Hardness: </strong>${weapon.material.hardness}
+                </p>
+                <p>
+                  ${weapon.material.description}
+                </p>
               </div>
-              <div class="panel-collapse collapse in" role="tabpanel">
-                <div class="panel-body">
-                  <p>
-                    <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
-                    <strong>Hardness: </strong>${weapon.material.hardness}
-                  </p>
-                  <p>
-                    ${weapon.material.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          </p>
+            </li>
+          </ul>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of weapon.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />

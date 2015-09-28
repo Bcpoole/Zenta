@@ -46,6 +46,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.18",
     "fetch": "github:github/fetch@0.9.0",
     "font-awesome": "npm:font-awesome@4.4.0",
+    "dice": "github:lordnull/dice.js@0.8.0",
     "systemjs/plugin-css": "github:systemjs/plugin-css@0.1.18",
     "trianglify": "npm:trianglify@0.3.1",
     "github:aurelia/animator-css@0.16.0": {

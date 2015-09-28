@@ -8,6 +8,8 @@ export class App {
       { route: '', name: 'welcome', moduleId: 'home/welcome', nav: false, title:'Welcome' },
       { route: 'carryCapacity', name: 'carryCapacity', moduleId: 'home/carryCapacity', nav: true, title:'Carry Capacity' },
       { route: 'characterCreation', name: 'characterCreation', moduleId: 'home/characterCreation', nav: true, title: 'Character Creation' },
+      { route: 'diceRoller', name: 'diceRoller', moduleId: 'home/diceRoller', nav: true, title: 'Dice Roller' },
+
       { route: 'feats', name: 'feats', moduleId: 'character/feats', nav: false, title: 'Feats & Flaws' },
       { route: 'traits', name: 'traits', moduleId: 'character/traits', nav: false, title: 'Traits & Drawbacks' },
       { route: 'skills', name: 'skills', moduleId: 'character/skills', nav: false, title: 'Skills' },

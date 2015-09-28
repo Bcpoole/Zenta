@@ -4,7 +4,8 @@ export function configure(aurelia) {
     .developmentLogging()
     .plugin('aurelia-animator-css')
     .plugin('aurelia-dialog')
-    .plugin('aurelia-validation');
+    .plugin('aurelia-validation')
+    .plugin('dice');
 
   aurelia.start().then(a => a.setRoot());
 }

@@ -1,0 +1,14 @@
+<template>
+  <section>
+    <h2>Dice Roller</h2>
+    <form role="form" validate.bind="validation" submit.delegate="roll()">
+      <div class="form-group">
+        <p>
+          <input type="text" class="form-control" value.bind="rollInput">
+        </p>
+        <button class="btn btn-primary" disabled.bind="!validation.result.isValid">Roll</button>
+      </div>
+    </form>
+    ${rollResult}
+  </section>
+</template>

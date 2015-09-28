@@ -64,72 +64,65 @@
     </ul>
     <hr>
     <h2>Armor</h2>
-    <div class="panel-group" role="tablist" aria-multiselectable="true" if.bind="loadedCharacter.armor.name">
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab">
-          <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-              <label if.bind="armor.armorBonus">${armor.name} ${armor.armorBonus}</label>
-              <label if.bind="armor.isMasterwork && !armor.armorBonus">${armor.name} (mw)</label>
-              <label if.bind="!armor.isMasterwork">${armor.name}</label>
-            </a>
-          </h4>
-        </div>
-        <div class="panel-collapse collapse in" role="tabpanel">
-          <div class="panel-body">
-            <p>
-              <strong>AC: </strong>${armor.ac}<br>
-              <strong>Max Dex Bonus: </strong>${armor.maxDexBonus}<br>
-              <strong>Armor Check Penalty: </strong>${armor.armorCheckPenalty}<br>
-              <strong>Arcane Spell Failure Chance: </strong>${armor.arcaneSpellFailureChance}%<br>
-              <strong>Speed: </strong>${armor.speed}
-            </p>
-            <p>
-              <strong>Weight: </strong>${armor.weight} lbs.
-              <strong>Value: </strong>${armor.value} gp
-            </p>
-            <p if.bind="armor.material">
-              <div class="panel-group" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab">
-                    <h4 class="panel-title">
-                      <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
-                        <label>${armor.material.name}</label>
-                      </a>
-                    </h4>
-                  </div>
-                  <div class="panel-collapse collapse in" role="tabpanel">
-                    <div class="panel-body">
-                      <p>
-                        <strong>HP/IN: </strong>${armor.material.hpIn}<br>
-                        <strong>Hardness: </strong>${armor.material.hardness}
-                      </p>
-                      <p>
-                        ${armor.material.description}
-                      </p>
-                    </div>
+    <ul class="accordion css-accordion">
+      <li class="accordion-item" if.bind="armor.name">
+        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.name" />
+        <label if.bind="armor.armorBonus" for.bind="armor.name" class="accordion-item-hd">${armor.name} ${armor.armorBonus}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label if.bind="armor.isMasterwork && !armor.armorBonus" for.bind="armor.name" class="accordion-item-hd">${armor.name} (mw)<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label if.bind="!armor.isMasterwork" for.bind="armor.name" class="accordion-item-hd">${armor.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd">
+          <p>
+            <strong>AC: </strong>${armor.ac}<br>
+            <strong>Max Dex Bonus: </strong>${armor.maxDexBonus}<br>
+            <strong>Armor Check Penalty: </strong>${armor.armorCheckPenalty}<br>
+            <strong>Arcane Spell Failure Chance: </strong>${armor.arcaneSpellFailureChance}%<br>
+            <strong>Speed: </strong>${armor.speed}
+          </p>
+          <p>
+            <strong>Weight: </strong>${armor.weight} lbs.
+            <strong>Value: </strong>${armor.value} gp
+          </p>
+          <p if.bind="armor.material">
+            <div class="panel-group" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true">
+                      <label>${armor.material.name}</label>
+                    </a>
+                  </h4>
+                </div>
+                <div class="panel-collapse collapse in" role="tabpanel">
+                  <div class="panel-body">
+                    <p>
+                      <strong>HP/IN: </strong>${armor.material.hpIn}<br>
+                      <strong>Hardness: </strong>${armor.material.hardness}
+                    </p>
+                    <p>
+                      ${armor.material.description}
+                    </p>
                   </div>
                 </div>
               </div>
-            </p>
-            <ul class="accordion css-accordion">
-              <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
-                <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
-                <label for.bind="enchantment.name" class="accordion-item-hd">${enchantment.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-                <div class="accordion-item-bd">
-                  <p>
-                    <strong>Aura: </strong>${enchantment.aura}
-                  </p>
-                  <p>
-                    ${enchantment.description}
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+            </div>
+          </p>
+          <ul class="accordion css-accordion">
+            <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
+              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
+              <label for.bind="enchantment.name" class="accordion-item-hd">${enchantment.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+              <div class="accordion-item-bd">
+                <p>
+                  <strong>Aura: </strong>${enchantment.aura}
+                </p>
+                <p>
+                  ${enchantment.description}
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
     <hr>
     <h2>Wondrous Items</h2>
     <ul class="accordion css-accordion">

@@ -1,14 +1,13 @@
 <template>
   <section>
     <h2>Dice Roller</h2>
-    <form role="form" validate.bind="validation" submit.delegate="roll()">
-      <div class="form-group">
-        <p>
-          <input type="text" class="form-control" value.bind="rollInput">
-        </p>
-        <button class="btn btn-primary" disabled.bind="!validation.result.isValid">Roll</button>
-      </div>
-    </form>
+    <p>
+      <input type="text" class="form-control" value.bind="rollInput">
+    </p>
+    <p>
+      <button class="btn btn-primary" disabled.bind="!rollValidation.result.isValid" click.delegate="roll()">Roll</button>
+      <button class="btn btn-primary" disabled.bind="!rerollValidation.result.isValid" click.delegate="reroll()">Reroll</button>
+    </p>
     <div class="alert alert-danger" role="alert" if.bind="err">
       <strong>Invalid Input</strong>
     </div>

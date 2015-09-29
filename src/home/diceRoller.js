@@ -6,10 +6,15 @@ import * as Dice from 'dice';
 export class diceRoller {
   constructor(validation, dice) {
     this.rollInput = '';
+    this.lastRoll = '';
     this.dice = dice;
 
-    this.validation = validation.on(this)
+    this.rollValidation = validation.on(this)
       .ensure('rollInput')
+      .isNotEmpty()
+      .hasMinLength(1);
+    this.rerollValidation = validation.on(this)
+      .ensure('lastRoll')
       .isNotEmpty()
       .hasMinLength(1);
 
@@ -20,18 +25,29 @@ export class diceRoller {
     try {
       this.err = null;
       var res = this.dice.roll(this.rollInput);
-      this.rollResult = res;
 
-      if (this.rollHistory.length == 10) {
-        this.rollHistory.pop();
-      }
-      this.rollHistory.unshift({
-        input: this.rollInput,
-        result: this.rollResult
-      });
+      this.addToTable(this.rollInput, res);
+
+      this.lastRoll = this.rollInput;
+      this.rollInput = '';
     } catch (err) {
       this.err = err;
     }
+  }
 
+  reroll() {
+    let res = this.dice.roll(this.lastRoll);
+
+    this.addToTable(this.lastRoll, res);
+  }
+
+  addToTable(roll, result) {
+    if (this.rollHistory.length == 10) {
+      this.rollHistory.pop();
+    }
+    this.rollHistory.unshift({
+      input: roll,
+      result: result
+    });
   }
 }

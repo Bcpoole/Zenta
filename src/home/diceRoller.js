@@ -24,7 +24,7 @@ export class diceRoller {
   roll() {
     try {
       this.err = null;
-      var res = this.dice.roll(this.rollInput);
+      let res = this.dice.roll(this.rollInput);
 
       this.addToTable(this.rollInput, res);
 

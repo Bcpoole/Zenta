@@ -22,6 +22,13 @@ export class diceRoller {
       var res = this.dice.roll(this.rollInput);
       this.rollResult = res;
 
+      if (this.rollHistory.length == 10) {
+        this.rollHistory.pop();
+      }
+      this.rollHistory.unshift({
+        input: this.rollInput,
+        result: this.rollResult
+      });
     } catch (err) {
       this.err = err;
     }

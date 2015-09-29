@@ -12,6 +12,15 @@
     <div class="alert alert-danger" role="alert" if.bind="err">
       <strong>Invalid Input</strong>
     </div>
-    ${rollResult}
+    <table class="table table-alt">
+      <tr>
+        <th>Roll</th>
+        <th>Result</th>
+      </tr>
+      <tr repeat.for="roll of rollHistory" style="background-color:${load.style}">
+        <td>${roll.input}</td>
+        <td>${roll.result}</td>
+      </tr>
+    </table>
   </section>
 </template>

@@ -12,10 +12,19 @@ export class diceRoller {
       .ensure('rollInput')
       .isNotEmpty()
       .hasMinLength(1);
+
+    this.rollHistory = [];
   }
 
   roll() {
-    var res = this.dice.roll(this.rollInput);
-    this.rollResult = res;
+    try {
+      this.err = null;
+      var res = this.dice.roll(this.rollInput);
+      this.rollResult = res;
+
+    } catch (err) {
+      this.err = err;
+    }
+
   }
 }

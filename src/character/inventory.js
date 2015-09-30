@@ -34,7 +34,7 @@ export class inventory {
       name: '',
       weight: '',
       description: '',
-      isEquipped: false
+      equipped: false
     };
     if (sender === 'inventory') {
       item.equipped = true;
@@ -42,6 +42,9 @@ export class inventory {
     this.dialogService.open({ viewModel: AddItem, model: item }).then(response => {
       if (!response.wasCancelled) {
         this.characterInventory.push(response);
+        if (response.equipped) {
+          this.computeTotalWeight();
+        }
       }
     });
   }

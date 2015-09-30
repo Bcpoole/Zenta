@@ -33,22 +33,19 @@
         Muleback Cords
       </h5>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">Carrying Capacity Table</div>
-      <table class="table table-alt">
-        <tr>
-          <th>Strength Score</th>
-          <th>Light Load</th>
-          <th>Medium Load</th>
-          <th>Heavy Load</th>
-        </tr>
-        <tr repeat.for="load of loads" style="background-color:${load.style}">
-          <td>${load.strength}</td>
-          <td style="background-color:${load.isLight}">${load.light}</td>
-          <td style="background-color:${load.isMedium}">${load.medium}</td>
-          <td style="background-color:${load.isHeavy}">${load.heavy}</td>
-        </tr>
-      </table>
-    </div>
+    <table class="table table-alt">
+      <tr>
+        <th>Strength Score</th>
+        <th>Light Load</th>
+        <th>Medium Load</th>
+        <th>Heavy Load</th>
+      </tr>
+      <tr repeat.for="load of loads" style="background-color:${load.style}">
+        <td style="background-color:${load.isSelected}">${load.strength}</td>
+        <td style="background-color:${load.isLight}">${load.light}</td>
+        <td style="background-color:${load.isMedium}">${load.medium}</td>
+        <td style="background-color:${load.isHeavy}">${load.heavy}</td>
+      </tr>
+    </table>
   </section>
 </template>

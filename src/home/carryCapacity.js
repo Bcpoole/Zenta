@@ -78,22 +78,27 @@ export class carryCapacity {
       	light *= 3;
       }
 
-      var style = '#FFFFFF';
-      if (i == this.strength) {
-        style = '#66AFFC';
+      if (i % 2 == 0) {
+        var style = 'rgba(255,255,252,.2)';
+      } else if (i % 2 == 1) {
+        var style = 'rgba(255,255,252,.4)';
       }
-      var isLight, isMedium, isHeavy;
-      isLight = isMedium = isHeavy = style;
+      if (i == this.strength) {
+        style = 'rgba(100,172,252,.6)';
+      }
+      var isLight, isMedium, isHeavy, isSelected;
+      isSelected = isLight = isMedium = isHeavy = style;
+      let highlighted = 'rgba(35,135,252,.6)';
       if (i == this.strength) {
         if (this.currentLoad <= light) {
-          isLight = '#2186FC';
+          isLight = highlighted ;
         } else if (this.currentLoad <= medium) {
-          isMedium = '#2186FC';
+          isMedium = highlighted ;
         } else if (this.currentLoad <= heavy) {
-          isHeavy = '#2186FC';
+          isHeavy = highlighted ;
         } else {
           style = '#DA300C';
-          isLight = isMedium = isHeavy = style;
+          isSelected= isLight = isMedium = isHeavy = style;
         }
       }
 
@@ -103,6 +108,7 @@ export class carryCapacity {
         medium: (light+1) + "-" + medium + " lbs.",
         heavy: (medium+1) + "-" + heavy + " lbs.",
         style: style,
+        isSelected: isSelected,
         isLight: isLight,
         isMedium: isMedium,
         isHeavy: isHeavy

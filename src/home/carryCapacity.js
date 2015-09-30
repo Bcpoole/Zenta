@@ -1,5 +1,4 @@
-import {computedFrom} from 'aurelia-framework';
-import {inject} from 'aurelia-framework';
+import {computedFrom, inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 
 @inject(ApplicationState)

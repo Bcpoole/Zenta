@@ -1,56 +1,16 @@
 <template>
   <section>
-    <div>
-      <h2>Ability Scores</h2>
-      <table class="table table-alt">
-        <tr>
-          <td>Strength</td>
-          <td>
-            <div class="col-md-1">
-              <input type="number" class="form-control" value.bind="abilityScores.strength" min="0">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Dexterity</td>
-          <td>
-            <div class="col-md-1">
-              <input type="number" class="form-control" value.bind="abilityScores.dexterity" min="0">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Constitution</td>
-          <td>
-            <div class="col-md-1">
-              <input type="number" class="form-control" value.bind="abilityScores.constitution" min="0">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Intelligence</td>
-          <td>
-            <div class="col-md-1">
-              <input type="number" class="form-control" value.bind="abilityScores.intelligence" min="0">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Wisdom</td>
-          <td>
-            <div class="col-md-1">
-              <input type="number" class="form-control" value.bind="abilityScores.wisdom" min="0">
-            </div>
-        <tr>
-          <td>Charisma</td>
-          <td>
-            <div class="col-md-1">
-              <input type="number" class="form-control" value.bind="abilityScores.charisma" min="0">
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <h2>Ability Scores</h2>
+    <table class="table table-alt">
+      <tr repeat.for="score of scores">
+        <td>${score.name.charAt(0).toUpperCase()  + score.name.slice(1)}</td>
+        <td>
+          <div class="col-md-1">
+            <input type="number" class="form-control" value.bind="score.score" min="0">
+          </div>
+        </td>
+      </tr>
+    </table>
     <hr>
     <div>
       <h2>Offensive</h2>

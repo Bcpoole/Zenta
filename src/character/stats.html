@@ -2,6 +2,11 @@
   <section>
     <h2>Ability Scores</h2>
     <table class="table table-alt">
+      <tr>
+        <th>Ability</th>
+        <th>Score</th>
+        <th>Mod</th>
+      </tr>
       <tr repeat.for="score of scores">
         <td>${score.name.charAt(0).toUpperCase()  + score.name.slice(1)}</td>
         <td>
@@ -9,6 +14,7 @@
             <input type="number" class="form-control" value.bind="score.score" min="0">
           </div>
         </td>
+        <td>${score.mod}</td>
       </tr>
     </table>
     <hr>

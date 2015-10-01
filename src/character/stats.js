@@ -9,8 +9,10 @@ export class stats {
 
   get scores() {
     for (let i in this._scores) {
-      if (this._scores[i] != null && this.abilityScores[this._scores[i].name] != this._scores[i].score) {
-        this.abilityScores[this._scores[i].name] = this._scores[i].score;
+      let score = this._scores[i];
+      if (this.abilityScores[score.name] != score.score) {
+        this.abilityScores[score.name] = score.score;
+        score.mod = this.getMod(score.score);
       }
     }
     return this._scores;
@@ -31,10 +33,16 @@ export class stats {
     this.scores = [];
     let keys = Object.keys(this.abilityScores);
     for (let key of keys) {
+      let score = this.abilityScores[key];
       this.scores.push({
         name: key,
-        score: this.abilityScores[key]
+        score: score,
+        mod: this.getMod(score)
       })
     }
+  }
+
+  getMod(score) {
+    return Math.floor((score - 10) / 2);
   }
 }

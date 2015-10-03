@@ -21,9 +21,10 @@ Generates a table based on size and biped/quadraped and highlights your relevant
 *Special thanks to Cevah from the Pazio forums for the base value formula*
 
 ## Character Creation
-Creates a new character based on input name.
+Creates a new character based on input name and using a point-buy stat calculator.
 
-More features to follow.
+## Dice Roller
+Input any valid dice roll string to generate results. Shows last 10 rolls history.
 
 ## Displays
 - Feats and Flaws
@@ -35,4 +36,4 @@ More features to follow.
 - Stats - *Ability Scores, Offensive & Defensive Stats*
 
 ## TO-DO
-- Change fields to editable + save feature
+- Change fields to editable

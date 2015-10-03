@@ -2,7 +2,7 @@ import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 
 @inject(ApplicationState)
-export class sspells {
+export class spells {
   canActivate(params, routeConfig, navigationInstruction) {
     return (!!this.loadedCharacter);
   }
@@ -11,5 +11,6 @@ export class sspells {
     this.appState = appState;
 
     this.loadedCharacter = this.appState.loadedCharacter;
+    this.spells = this.loadedCharacter.spells;
   }
 }

@@ -1,5 +1,43 @@
 <template>
   <section>
     <h2>Spells</h2>
+    <div repeat.for="i of 10">
+      <h3 if.bind="i == 1">
+        ${i}st Level Spells
+      </h3>
+      <h3 if.bind="i == 2">
+        ${i}nd Level Spells
+      </h3>
+      <h3 if.bind="i == 3">
+        ${i}rd Level Spells
+      </h3>
+      <h3 if.bind="i != 1 && i != 2 && i != 3">
+        ${i}th Level Spells
+      </h3>
+      <ul class="accordion css-accordion">
+        <li class="accordion-item" repeat.for="spell of spells">
+          <div if.bind="spell.level == i">
+            <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
+            <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+            <div class="accordion-item-bd">
+              <strong>School: </strong>${spell.school}<br>
+              <strong>Level: </strong>${spell.level}<br>
+              <h3>Casting</h3>
+              <strong>Casting Time: </strong>${spell.castingTime}<br>
+              <strong>Components: </strong>${spell.components}
+              <h3>Effect</h3>
+              <strong>Range: </strong>${spell.range}<br>
+              <strong>Area: </strong>${spell.area}<br>
+              <strong>Duration: </strong>${spell.duration}<br>
+              <strong>Saving Throw: </strong>${spell.savingThrow}<br>
+              <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
+              <p>
+                ${spell.description}
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>

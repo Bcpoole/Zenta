@@ -17,6 +17,7 @@ export class App {
       { route: 'inventory', name: 'inventory', moduleId: 'character/inventory', nav: false, title: 'Inventory' },
       { route: 'equipment', name: 'equipment', moduleId: 'character/equipment', nav: false, title: 'Equipment' },
       { route: 'stats', name: 'stats', moduleId: 'character/stats', nav: false, title: 'Stats' },
+      { route: 'spells', name: 'spells', moduleId: 'character/spells', nav: false, title: 'Spells' },
       { route: 'classes', name: 'classes', moduleId: 'character/classes', nav: false, title: 'Classes' }
     ]);
 

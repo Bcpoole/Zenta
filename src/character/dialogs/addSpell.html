@@ -1,10 +1,26 @@
 <template>
   <dialog>
     <dialog-body>
-      <h2>Name</h2>
-      <input value.bind="spell.name" />
-      <h2>Description</h2>
-      <input value.bind="spell.description" />
+      <label for.bind="name">Name</label>
+      <input value.bind="spell.name" id.bind="name"/>
+      <label for.bind="school">School</label>
+      <input value.bind="spell.school" id.bind="school"/>
+      <label for.bind="castingTime">Casting Time</label>
+      <input value.bind="spell.castingTime" id.bind="castingTime"/>
+      <label for.bind="components">Components</label>
+      <input value.bind="spell.components" id.bind="components"/>
+      <label for.bind="range">Range</label>
+      <input value.bind="spell.range" id.bind="range"/>
+      <label for.bind="area">Area</label>
+      <input value.bind="spell.area" id.bind="area"/>
+      <label for.bind="duration">Duration</label>
+      <input value.bind="spell.duration" id.bind="duration"/>
+      <label for.bind="savingThrow">Saving Throw</label>
+      <input value.bind="spell.savingThrow" id.bind="savingThrow"/>
+      <label for.bind="spellResistance">Spell Resistance</label>
+      <input type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/>
+      <label for.bind="description">Description</label>
+      <input value.bind="spell.description" id.bind="description"/>
     </dialog-body>
 
     <dialog-footer>

@@ -63,4 +63,26 @@ export class spells {
       }
     }
   }
+
+  addSpell(level) {
+    let spell = {
+      "name": "",
+      "school": "",
+      "level": level,
+      "castingTime": "",
+      "components": "",
+      "range": "",
+      "area": "",
+      "duration": "",
+      "savingThrow": "",
+      "spellResistance": false,
+      "description": ""
+    }
+    this.dialogService.open({ viewModel: AddSpell, model: item }).then(response => {
+      if (!response.wasCancelled) {
+        this.loadedCharacter.spells.push(response);
+        assignSpellLevels();
+      }
+    });
+  }
 }

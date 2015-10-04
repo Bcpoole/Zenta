@@ -34,6 +34,8 @@ Input any valid dice roll string to generate results. Shows last 10 rolls histor
 - Classes - *Includes levels, if Prestige, and Archetype*
 - Characteristics
 - Stats - *Ability Scores, Offensive & Defensive Stats*
+- Spells
 
 ## TO-DO
 - Change fields to editable
+- Skills overhaul

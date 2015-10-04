@@ -5,6 +5,7 @@
       <li class="accordion-item">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells0" />
         <label for.bind="spells0" class="accordion-item-hd">0th Level Spells<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <button click.delegate="addSpell(0)" class="btn btn-primary">+</button>
         <div class="accordion-item-bd">
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="spell of spells0">

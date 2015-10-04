@@ -1,14 +1,17 @@
 import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
+import {DialogService} from 'aurelia-dialog';
+import {AddSpell} from './dialogs/addSpell';
 
-@inject(ApplicationState)
+@inject(ApplicationState, DialogService)
 export class spells {
   canActivate(params, routeConfig, navigationInstruction) {
     return (!!this.loadedCharacter);
   }
 
-  constructor(appState) {
+  constructor(appState, dialogService) {
     this.appState = appState;
+    this.dialogService = dialogService;
 
     this.loadedCharacter = this.appState.loadedCharacter;
     this.spells = this.loadedCharacter.spells;
@@ -78,7 +81,7 @@ export class spells {
       "spellResistance": false,
       "description": ""
     }
-    this.dialogService.open({ viewModel: AddSpell, model: item }).then(response => {
+    this.dialogService.open({ viewModel: AddSpell, model: spell }).then(response => {
       if (!response.wasCancelled) {
         this.loadedCharacter.spells.push(response);
         assignSpellLevels();

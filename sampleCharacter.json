@@ -467,7 +467,8 @@
 	],
   "spells": [
     {
-       "school": "evocation [fire]",
+      "name": "Fireball",
+      "school": "evocation [fire]",
       "level": 3,
       "castingTime": "1 standard action",
       "components": "V, S, M (a ball of bat guano and sulfur)",

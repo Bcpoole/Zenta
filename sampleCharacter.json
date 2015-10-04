@@ -1,470 +1,469 @@
 {
-	"name": "Isaac Araki",
-	"characteristics": {
-		"race": "Human",
-		"gender": "Male",
-		"alignment": "Chaotic Good",
-		"size": "Medium",
-		"hair": "Red-brown with white highlights on the side",
-		"eyes": "Brown",
-		"skin": "White",
-		"height": "6'3\"",
-		"weight": 180,
-		"age": 32,
-		"deity": "Desna",
-		"homeland": "Rozzaria",
-		"description": "A zealous for justice knight who switched to vigilante justice after executing his corrupt lord."
-	},
-	"abilityScores": {
-		"strength": 15,
-		"dexterity": 11,
-		"constitution": 12,
-		"intelligence": 10,
-		"wisdom": 7,
-		"charisma": 26
-	},
-	"stats": {
-		"offense": {
-			"bab": "+10/+5",
-			"cmb": 12
-		},
-		"defense": {
-			"currentHP": 73,
-			"maxHP": 73,
-			"ac": 26,
-			"touchAC": 10,
-			"cmd": 22,
-			"willSave": 3,
-			"fortSave": 7,
-			"reflexSave": 3,
-			"spellResistance": 17
-		}
-	},
-	"traits": {
-		"racial": [
-			{
-				"name": "Skilled",
-				"description": "Humans gain an additional skill rank at first level and one additional rank whenever they gain a level."
-			},
-			{
-				"name": "Focused Study",
-				"description": "All humans are skillful, but some, rather than being generalists, tend to specialize in a handful of skills. At 1st, 8th, and 16th level, such humans gain Skill Focus in a skill of their choice as a bonus feat. This racial trait replaces the bonus feat trait."
-			}
-		],
-		"selected": [
-			{
-				"name": "Necrotic Aura",
-				"description": "You gain a +1 trait bonus on saving throws against spells from the necromancy school or any effect that deals negative energy damage.",
-				"flavor": "Your exposure to the necromantic arts has strengthened your defenses against its vile rot.",
-				"type": "Faith"
-			},
-			{
-				"name": "Chip on the Shoulder",
-				"description": "Whenever a creature fails an Intimidate check against you, you gain a +2 trait bonus on your next Intimidate check against that creature and Intimidate is a class skill for you.",
-				"flavor": "When someone pushes you, you push back.",
-				"type": "Social"
-			},
-			{
-				"name": "Cold Heart",
-				"description": "You gain a +2 trait bonus on saving throws against spells and effects with the emotion descriptor.",
-				"type": "Regional"
-			}
-		],
-		"drawbacks": [
-			{
-				"name": "Provincial",
-				"description": "You take a –2 penalty on Diplomacy checks and Sense Motive checks made against all creatures whose religion or alignment differs from your own.",
-				"flavor": "You have only one way of looking at things: the right way."
-			}
-		]
-
-	},
-	"feats": {
-		"selected": [
-			{
-				"name": "Antagonize",
-				"benefit": "You can make Diplomacy and Intimidate checks to make creatures respond to you with hostility. No matter which skill you use, antagonizing a creature takes a standard action that does not provoke attacks of opportunity, and has a DC equal to 10 + the target’s Hit Dice + the target’s Wisdom modifier. You cannot make this check against a creature that does not understand you or has an Intelligence score of 3 or lower. Before you make these checks, you may make a Sense Motive check (DC 20) as a swift action to gain an insight bonus on these Diplomacy or Intimidate checks equal to your Charisma bonus until the end of your next turn. The benefits you gain for this check depend on the skill you use. This is a mind-affecting effect.\\n\\nDiplomacy: You fluster your enemy. For the next minute, the target takes a –2 penalty on all attacks rolls made against creatures other than you and has a 10% spell failure chance on all spells that do not target you or that have you within their area of effect.\\n\\nIntimidate: The creature flies into a rage. On its next turn, the target must attempt to make a melee attack against you, make a ranged attack against you, target you with a spell, or include you in the area of a spell. The effect ends if the creature is prevented from attacking you or attempting to do so would harm it (for example, if you are on the other side of a chasm or a wall of fire). If it cannot attack you on its turn, you may make the check again as an immediate action to extend the effect for 1 round (but cannot extend it thereafter). The effect ends as soon as the creature attacks you. Once you have targeted a creature with this ability, you cannot target it again for 1 day.",
-				"flavor": "Whether with biting remarks or hurtful words, you are adept at making creatures angry with you."
-			},
-			{
-				"name": "Power Attack",
-				"prerequisites": "Str 13, base attack bonus +1.",
-				"benefit": "You can choose to take a –1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (–50%) if you are making an attack with an off-hand weapon or secondary natural weapon.\\n\\nWhen your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by –1 and the bonus to damage increases by +2.\\n\\nYou must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.",
-				"flavor": "You can make exceptionally deadly melee attacks by sacrificing accuracy for strength."
-			},
-			{
-				"name": "Cleave",
-				"prerequisites": "Str 13, Power Attack, base attack bonus +1.",
-				"benefit": "As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the first and also within reach. You can only make one additional attack per round with this feat. When you use this feat, you take a –2 penalty to your Armor Class until your next turn.",
-				"flavor": "You can strike two adjacent foes with a single swing."
-			},
-			{
-				"name": "Call Out",
-				"benefit": "As a standard action, you can make an Intimidate check against a hostile target within 30 feet that can clearly see and hear you. The DC of this check is equal to 10 + your opponent’s Hit Dice + its Wisdom modifier. If the target is trained in Sense Motive, the DC is instead equal to 10 + your opponent’s Sense Motive bonus, if higher. If you succeed at this check, the target enters a duel with you. The target cannot withdraw from the duel for 1 round + 1 round for every 5 by which the check beat the DC.",
-				"flavor": "A well-crafted insult forces an opponent to duel you."
-			},
-			{
-				"name": "Cornugon Smash",
-				"prerequisites": "Power Attack, Intimidate 6 ranks.",
-				"benefit": "When you damage an opponent with a Power Attack, you may make an immediate Intimidate check as a free action to attempt to demoralize your opponent."
-			},
-			{
-				"name": "Signature Skill",
-				"prerequisites": "5 ranks in the chosen skill.",
-				"benefit": "Choose one skill. You gain the ability listed in that skill's 5 Ranks entry. As you gain more ranks in the chosen skill, you gain additional abilities. If you have 10 or more ranks in the chosen skill, you gain the appropriate abilities immediately. If your chosen skill is Craft, Knowledge, Perform, or Profession, you gain the listed powers only for one category of that skill, such as Craft (bows). This feat can be taken only once, but it stacks with the rogue's edge ability and the cutting edge rogue talent.",
-				"flavor": "Your ability with a particular skill is the stuff of legends, and you can do things with that skill that others cannot."
-			}
-		],
-		"flaws": [
-			{
-				"name": "Xiphiphilia",
-				"effect": "The character is fascinated by large sword-like blades of all types. When encountering such a weapon for the first time, the character must succeed at a will save DC 15 or become fascinated by the weapon for 1d4 rounds. If the weapon is for sale, then the character will purchase it. If he cannot afford it he will attempt to negotiate a lower price or offer trade. If the weapon is being wielded by an enemy, then the player fixates on that opponent exclusively, ignoring all other combatants until the opponent dies or the player is able to take the weapon in question.",
-				"benefit": "Bonus Feat",
-				"flavor": "An unhealthy fascination with swords and large bladed weapons."
-			}
-		]
-	},
-	"speed": {
-		"land": 30,
-		"swim": 0,
-		"fly": 0,
-		"burrow": 0
-	},
-	"languages": [
-		"Common",
-		"Elven"
-	],
-	"skills": [
-		{
-			"name": "Acrobatics",
-			"ranks": 5,
-			"classSkill": true
-		},
-		{
-			"name": "Appraise",
-			"ranks": 0
-		},
-		{
-			"name":"Bluff",
-			"ranks": 21
-		},
-		{
-			"name": "Climb",
-			"ranks": 10
-		},
-		{
-			"name": "Craft",
-			"ranks": 0
-		},
-		{
-			"name": "Diplomacy",
-			"ranks": 8
-		},
-		{
-			"name": "Disable Device",
-			"ranks": 0
-		},
-		{
-			"name": "Disguise",
-			"ranks": 21
-		},
-		{
-			"name": "Escape Artist",
-			"ranks": 0
-		},
-		{
-			"name": "Fly",
-			"ranks": 7
-		},
-		{
-			"name": "Handle Animal",
-			"ranks": 9
-		},
-		{
-			"name": "Heal",
-			"ranks": 2
-		},
-		{
-			"name": "Intimidate",
-			"ranks": 27
-		},
-		{
-			"name": "Knowledge Arcana",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Dungeoneering",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Engineering",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Geography",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge History",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Local",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Nature",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Nobility",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Planes",
-			"ranks": 0
-		},
-		{
-			"name": "Knowledge Religion",
-			"ranks": 0
-		},
-		{
-			"name": "Linguistics",
-			"ranks": 0
-		},
-		{
-			"name": "Perception",
-			"ranks": 1
-		},
-		{
-			"name": "Perform",
-			"ranks": 8
-		},
-		{
-			"name": "Profession",
-			"ranks": 0
-		},
-		{
-			"name": "Ride",
-			"ranks": 0
-		},
-		{
-			"name": "Sense Motive",
-			"ranks": 2
-		},
-		{
-			"name": "Sleight of Hand",
-			"ranks": 0
-		},
-		{
-			"name": "Spellcraft",
-			"ranks": 0
-		},
-		{
-			"name": "Stealth",
-			"ranks": 3
-		},
-		{
-			"name": "Survival",
-			"ranks": 2
-		},
-		{
-			"name": "Swim",
-			"ranks": 2
-		},
-		{
-			"name": "Use Magic Device",
-			"ranks": 27
-		}
-	],
-	"weapons": [
-		{
-			"name": "Nodachi",
-			"damage": "1d10",
-			"crit": "18-20/x2",
-			"weight": 8,
-			"value": 3060,
-			"isMasterwork": true,
-			"weaponBonus": "+1 weapon with two +1 special abilities",
-			"material": {
-				"name": "Adamantine",
-				"hpIn": 40,
-				"hardness": 20,
-				"description": "Adamantine is extremely strong and favored by weapon and armor smiths alike for its ability to cut through solid barriers with ease and endure heavy blows.\\n\\nWeapons fashioned from adamantine have a natural ability to bypass hardness when sundering weapons or attacking objects, ignoring hardness less than 20.\\n\\nArmor made from adamantine grants its wearer damage reduction of 1/— if it's light armor, 2/— if it's medium armor, and 3/— if it's heavy armor. Adamantine is so costly that weapons and armor made from it are always of masterwork quality; the masterwork cost is included in the prices given. Thus, adamantine weapons and ammunition have a +1 enhancement bonus on attack rolls, and the armor check penalty of adamantine armor is lessened by 1 compared to ordinary armor of its type. Items without metal parts cannot be made from adamantine. An arrow could be made of adamantine, but a quarterstaff could not."
-			},
-			"enchantments": [
-				{
-					"name": "Cruel",
-					"description": "When the wielder strikes a creature that is frightened, shaken, or panicked with a cruel weapon, that creature becomes sickened for 1 round. When the wielder uses the weapon to knock unconscious or kill a creature, he gains 5 temporary hit points that last for 10 minutes.",
-					"aura": "faint necromancy"
-				},
-				{
-					"name": "Defending",
-					"description": "A defending weapon allows the wielder to transfer some or all of the weapon's enhancement bonus to his AC as a bonus that stacks with all others. As a free action, the wielder chooses how to allocate the weapon's enhancement bonus at the start of his turn before using the weapon, and the bonus to AC lasts until his next turn. This ability can only be placed on melee weapons.",
-					"aura": "moderate abjuration"
-				}
-			]
-		}
-	],
-	"armor": {
-		"name": "Hellknight Plate",
-		"ac": 9,
-		"maxDexBonus": 1,
-		"armorCheckPenalty": -5,
-		"arcaneSpellFailureChance": 35,
-		"speed": "20/15",
-		"weight": 50,
-		"value": 19650,
-		"isMasterwork": true,
-		"armorBonus": "+5 armor with one +4 special ability",
-		"material": {
-			"name": "Living Steel",
-			"hpIn": 35,
-			"hardness": 15,
-			"description": "Some trees suck up potent minerals through their roots the same way others draw water from the ground. Though these trees blunt saws and axes used to hew them and shrug off fire, they eventually succumb to time or the elements. When properly harvested, these fallen trees produce nuggets of a metal called living steel. This glossy green metal slowly repairs itself. An item made from living steel repairs damage to itself at a rate of 2 hit points per day, or 1 hit point per day if it has the broken condition. Items not primarily of metal are not meaningfully affected by being partially made of living steel.\\n\\nArmor and shields made from living steel can damage metal weapons that strike them. Whenever the wielder of a metal weapon rolls a natural 1 on an attack roll against a creature wearing living steel armor or wielding a living steel shield, the item must make a DC 20 Fortitude save or gain the broken condition. If the weapon already has the broken condition, it is instead destroyed. Living steel cannot damage adamantine weapons in this way."
-		},
-		"enchantments": [
-			{
-				"name": "Invulnerability",
-				"description": "This suit of armor grants the wearer damage reduction 5/magic. Invulnerable armor emits a strong aura of abjuration (and evocation if miracle is used).",
-				"aura": "strong varies"
-			}
-		]
-	},
-	"wondrousItems": [
-		{
-			"slot": "Belt",
-			"name": "Belt of Physical Perfection +2",
-			"value": 16000,
-			"aura": "strong transmutation",
-			"weight": 1,
-			"description": "This belt has a large platinum buckle and grants the wearer an enhancement bonus to all physical ability scores (Strength, Dexterity, and Constitution) of +2, +4, or +6. Treat this as a temporary ability bonus for the first 24 hours the belt is worn."
-		},
-		{
-			"slot": "Body",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		},
-		{
-			"slot": "Chest",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		},
-		{
-			"slot": "Eyes",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		},
-		{
-			"slot": "Feet",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		},
-		{
-			"slot": "Hand",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		},
-		{
-			"slot": "Head",
-			"name": "Jingasa of the Fortunate Soldier",
-			"value": 5000,
-			"aura": "strong divination",
-			"weight": 3,
-			"description": "This conical iron jingasa, or war hat, grants the wearer a +1 luck bonus to AC. Once per day when struck by a critical hit or sneak attack, the wearer can spend an immediate action to negate the critical hit or sneak attack (similar to the fortification armor special ability, but without requiring a roll). The damage is instead rolled normally."
-		},
-		{
-			"slot": "Headband",
-			"name": "Headband of Alluring Charisma +4",
-			"value": 16000,
-			"aura": "moderate transmutation",
-			"weight": 1,
-			"description": "This attractive silver headband is decorated with a number of small red and orange gemstones.\\n\\nThe headband grants the wearer an enhancement bonus to Charisma of +2, +4, or +6. Treat this as a temporary ability bonus for the first 24 hours the headband is worn."
-		},
-		{
-			"slot": "Neck",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		},
-		{
-			"slot": "Shoulders",
-			"name": "Cloak of Resistance +1",
-			"value": 1000,
-			"aura": "faint abjuration",
-			"weight": 1,
-			"description": "Flecks of silver or steel are often sown amid the fabric of these magical cloaks. This garment offers magic protection in the form of a +1 to +5 resistance bonus on all saving throws (Fortitude, Reflex, and Will)."
-		},
-		{
-			"slot": "Wrists",
-			"name": "",
-			"value": 0,
-			"aura": "",
-			"weight": 0,
-			"description": ""
-		}
-	],
-	"rings": [
-		{
-			"name": "Ring of Arcane Signets",
-			"aura": "faint universal",
-			"value": 1000,
-			"description": "The approximately 1-inch-diameter pentagon of emerald green crystal that dominates this otherwise plain silver ring forms itself into a specific rune, sigil, or similar identifying marker each time a person first puts it on. If the wearer expects this to occur, she can cause the crystal to adopt any shape she wishes. If the wearer does not expect this to occur, the crystal instead molds itself into an image that symbolizes the wearer or some dominant facet of her personality. Once the crystal assumes this initial form, it always takes that form whenever the same wearer puts on the ring. The wearer can, as a standard action, embed this image on any object (as if using arcane mark) simply by pressing the ring against it. The wearer may choose the color and other cosmetic features of the image each time she uses the ring. The brand is otherwise permanent unless removed by dispel magic, erase, or a more powerful spell."
-		},
-		{
-			"name": "Ring of Transposition",
-			"aura": "moderate conjuration",
-			"value": 10800,
-			"description": "On command, the wearer of this ring can touch it to another ring, magical or mundane, and bind it to the ring of transposition.\\n\\nOnce per day, the wearer of the ring of transposition can speak a command word to exchange places with the creature wearing the bonded ring, which must be within 800 feet, as though using a dimension door spell against a willing target. In the process, the ring of transposition trades places with the ring on the other creature’s hand, and the bond between the rings is broken.\\n\\nThe bonding property of the ring of transposition can be used as often as desired, breaking any existing bond each time it is used. An existing bond can be broken by a successful dispel check against the caster level of the ring."
-		}
-	],
-	"inventory": [
-		{
-			"name": "bag of cheap rings",
-			"weight": 1,
-            "description": "Cheaply made rings to be linked with Ring of Transposition",
-            "quantity": 1,
-			"equipped" : true
-		},
-		{
-			"name": "book of laws",
-			"weight": 1,
-            "quantity": 1,
-			"equipped" : false
-		},
+  "name": "Isaac Araki",
+  "characteristics": {
+    "race": "Human",
+    "gender": "Male",
+    "alignment": "Chaotic Good",
+    "size": "Medium",
+    "hair": "Red-brown with white highlights on the side",
+    "eyes": "Brown",
+    "skin": "White",
+    "height": "6'3\"",
+    "weight": 180,
+    "age": 32,
+    "deity": "Desna",
+    "homeland": "Rozzaria",
+    "description": "A zealous for justice knight who switched to vigilante justice after executing his corrupt lord."
+  },
+  "abilityScores": {
+    "strength": 15,
+    "dexterity": 11,
+    "constitution": 12,
+    "intelligence": 10,
+    "wisdom": 7,
+    "charisma": 26
+  },
+  "stats": {
+    "offense": {
+      "bab": "+10/+5",
+      "cmb": 12
+    },
+    "defense": {
+      "currentHP": 73,
+      "maxHP": 73,
+      "ac": 26,
+      "touchAC": 10,
+      "cmd": 22,
+      "willSave": 3,
+      "fortSave": 7,
+      "reflexSave": 3,
+      "spellResistance": 17
+    }
+  },
+  "traits": {
+    "racial": [
       {
-        "name": "Masterwork Manacles",
-        "weight": 2,
-        "description": "Manacles can bind a Medium creature. A manacled creature can use the Escape Artist skill to slip free (DC 35). Breaking the manacles requires a Strength check (DC 28). Manacles have hardness 10 and 10 hit points.",
-        "quantity": 3,
-        "equipped" : true
+        "name": "Skilled",
+        "description": "Humans gain an additional skill rank at first level and one additional rank whenever they gain a level."
+      },
+      {
+        "name": "Focused Study",
+        "description": "All humans are skillful, but some, rather than being generalists, tend to specialize in a handful of skills. At 1st, 8th, and 16th level, such humans gain Skill Focus in a skill of their choice as a bonus feat. This racial trait replaces the bonus feat trait."
       }
-	],
-	"classes": [
-		{
-			"name": "Dark Knight",
-			"levels": 10,
-			"isPrestige": false,
-			"archetype": null
-		}
-	],
+    ],
+    "selected": [
+      {
+        "name": "Necrotic Aura",
+        "description": "You gain a +1 trait bonus on saving throws against spells from the necromancy school or any effect that deals negative energy damage.",
+        "flavor": "Your exposure to the necromantic arts has strengthened your defenses against its vile rot.",
+        "type": "Faith"
+      },
+      {
+        "name": "Chip on the Shoulder",
+        "description": "Whenever a creature fails an Intimidate check against you, you gain a +2 trait bonus on your next Intimidate check against that creature and Intimidate is a class skill for you.",
+        "flavor": "When someone pushes you, you push back.",
+        "type": "Social"
+      },
+      {
+        "name": "Cold Heart",
+        "description": "You gain a +2 trait bonus on saving throws against spells and effects with the emotion descriptor.",
+        "type": "Regional"
+      }
+    ],
+    "drawbacks": [
+      {
+        "name": "Provincial",
+        "description": "You take a –2 penalty on Diplomacy checks and Sense Motive checks made against all creatures whose religion or alignment differs from your own.",
+        "flavor": "You have only one way of looking at things: the right way."
+      }
+    ]
+  },
+  "feats": {
+    "selected": [
+      {
+        "name": "Antagonize",
+        "benefit": "You can make Diplomacy and Intimidate checks to make creatures respond to you with hostility. No matter which skill you use, antagonizing a creature takes a standard action that does not provoke attacks of opportunity, and has a DC equal to 10 + the target’s Hit Dice + the target’s Wisdom modifier. You cannot make this check against a creature that does not understand you or has an Intelligence score of 3 or lower. Before you make these checks, you may make a Sense Motive check (DC 20) as a swift action to gain an insight bonus on these Diplomacy or Intimidate checks equal to your Charisma bonus until the end of your next turn. The benefits you gain for this check depend on the skill you use. This is a mind-affecting effect.\\n\\nDiplomacy: You fluster your enemy. For the next minute, the target takes a –2 penalty on all attacks rolls made against creatures other than you and has a 10% spell failure chance on all spells that do not target you or that have you within their area of effect.\\n\\nIntimidate: The creature flies into a rage. On its next turn, the target must attempt to make a melee attack against you, make a ranged attack against you, target you with a spell, or include you in the area of a spell. The effect ends if the creature is prevented from attacking you or attempting to do so would harm it (for example, if you are on the other side of a chasm or a wall of fire). If it cannot attack you on its turn, you may make the check again as an immediate action to extend the effect for 1 round (but cannot extend it thereafter). The effect ends as soon as the creature attacks you. Once you have targeted a creature with this ability, you cannot target it again for 1 day.",
+        "flavor": "Whether with biting remarks or hurtful words, you are adept at making creatures angry with you."
+      },
+      {
+        "name": "Power Attack",
+        "prerequisites": "Str 13, base attack bonus +1.",
+        "benefit": "You can choose to take a –1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (–50%) if you are making an attack with an off-hand weapon or secondary natural weapon.\\n\\nWhen your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by –1 and the bonus to damage increases by +2.\\n\\nYou must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.",
+        "flavor": "You can make exceptionally deadly melee attacks by sacrificing accuracy for strength."
+      },
+      {
+        "name": "Cleave",
+        "prerequisites": "Str 13, Power Attack, base attack bonus +1.",
+        "benefit": "As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the first and also within reach. You can only make one additional attack per round with this feat. When you use this feat, you take a –2 penalty to your Armor Class until your next turn.",
+        "flavor": "You can strike two adjacent foes with a single swing."
+      },
+      {
+        "name": "Call Out",
+        "benefit": "As a standard action, you can make an Intimidate check against a hostile target within 30 feet that can clearly see and hear you. The DC of this check is equal to 10 + your opponent’s Hit Dice + its Wisdom modifier. If the target is trained in Sense Motive, the DC is instead equal to 10 + your opponent’s Sense Motive bonus, if higher. If you succeed at this check, the target enters a duel with you. The target cannot withdraw from the duel for 1 round + 1 round for every 5 by which the check beat the DC.",
+        "flavor": "A well-crafted insult forces an opponent to duel you."
+      },
+      {
+        "name": "Cornugon Smash",
+        "prerequisites": "Power Attack, Intimidate 6 ranks.",
+        "benefit": "When you damage an opponent with a Power Attack, you may make an immediate Intimidate check as a free action to attempt to demoralize your opponent."
+      },
+      {
+        "name": "Signature Skill",
+        "prerequisites": "5 ranks in the chosen skill.",
+        "benefit": "Choose one skill. You gain the ability listed in that skill's 5 Ranks entry. As you gain more ranks in the chosen skill, you gain additional abilities. If you have 10 or more ranks in the chosen skill, you gain the appropriate abilities immediately. If your chosen skill is Craft, Knowledge, Perform, or Profession, you gain the listed powers only for one category of that skill, such as Craft (bows). This feat can be taken only once, but it stacks with the rogue's edge ability and the cutting edge rogue talent.",
+        "flavor": "Your ability with a particular skill is the stuff of legends, and you can do things with that skill that others cannot."
+      }
+    ],
+    "flaws": [
+      {
+        "name": "Xiphiphilia",
+        "effect": "The character is fascinated by large sword-like blades of all types. When encountering such a weapon for the first time, the character must succeed at a will save DC 15 or become fascinated by the weapon for 1d4 rounds. If the weapon is for sale, then the character will purchase it. If he cannot afford it he will attempt to negotiate a lower price or offer trade. If the weapon is being wielded by an enemy, then the player fixates on that opponent exclusively, ignoring all other combatants until the opponent dies or the player is able to take the weapon in question.",
+        "benefit": "Bonus Feat",
+        "flavor": "An unhealthy fascination with swords and large bladed weapons."
+      }
+    ]
+  },
+  "speed": {
+    "land": 30,
+    "swim": 0,
+    "fly": 0,
+    "burrow": 0
+  },
+  "languages": [
+    "Common",
+    "Elven"
+  ],
+  "skills": [
+    {
+        "name": "Acrobatics",
+        "ranks": 5,
+        "classSkill": true
+    },
+    {
+        "name": "Appraise",
+        "ranks": 0
+    },
+    {
+        "name":"Bluff",
+        "ranks": 21
+    },
+    {
+        "name": "Climb",
+        "ranks": 10
+    },
+    {
+        "name": "Craft",
+        "ranks": 0
+    },
+    {
+        "name": "Diplomacy",
+        "ranks": 8
+    },
+    {
+        "name": "Disable Device",
+        "ranks": 0
+    },
+    {
+        "name": "Disguise",
+        "ranks": 21
+    },
+    {
+        "name": "Escape Artist",
+        "ranks": 0
+    },
+    {
+        "name": "Fly",
+        "ranks": 7
+    },
+    {
+        "name": "Handle Animal",
+        "ranks": 9
+    },
+    {
+        "name": "Heal",
+        "ranks": 2
+    },
+    {
+        "name": "Intimidate",
+        "ranks": 27
+    },
+    {
+        "name": "Knowledge Arcana",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Dungeoneering",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Engineering",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Geography",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge History",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Local",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Nature",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Nobility",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Planes",
+        "ranks": 0
+    },
+    {
+        "name": "Knowledge Religion",
+        "ranks": 0
+    },
+    {
+        "name": "Linguistics",
+        "ranks": 0
+    },
+    {
+        "name": "Perception",
+        "ranks": 1
+    },
+    {
+        "name": "Perform",
+        "ranks": 8
+    },
+    {
+        "name": "Profession",
+        "ranks": 0
+    },
+    {
+        "name": "Ride",
+        "ranks": 0
+    },
+    {
+        "name": "Sense Motive",
+        "ranks": 2
+    },
+    {
+        "name": "Sleight of Hand",
+        "ranks": 0
+    },
+    {
+        "name": "Spellcraft",
+        "ranks": 0
+    },
+    {
+        "name": "Stealth",
+        "ranks": 3
+    },
+    {
+        "name": "Survival",
+        "ranks": 2
+    },
+    {
+        "name": "Swim",
+        "ranks": 2
+    },
+    {
+        "name": "Use Magic Device",
+        "ranks": 27
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Nodachi",
+      "damage": "1d10",
+      "crit": "18-20/x2",
+      "weight": 8,
+      "value": 3060,
+      "isMasterwork": true,
+      "weaponBonus": "+1 weapon with two +1 special abilities",
+      "material": {
+        "name": "Adamantine",
+        "hpIn": 40,
+        "hardness": 20,
+        "description": "Adamantine is extremely strong and favored by weapon and armor smiths alike for its ability to cut through solid barriers with ease and endure heavy blows.\\n\\nWeapons fashioned from adamantine have a natural ability to bypass hardness when sundering weapons or attacking objects, ignoring hardness less than 20.\\n\\nArmor made from adamantine grants its wearer damage reduction of 1/— if it's light armor, 2/— if it's medium armor, and 3/— if it's heavy armor. Adamantine is so costly that weapons and armor made from it are always of masterwork quality; the masterwork cost is included in the prices given. Thus, adamantine weapons and ammunition have a +1 enhancement bonus on attack rolls, and the armor check penalty of adamantine armor is lessened by 1 compared to ordinary armor of its type. Items without metal parts cannot be made from adamantine. An arrow could be made of adamantine, but a quarterstaff could not."
+      },
+      "enchantments": [
+        {
+          "name": "Cruel",
+          "description": "When the wielder strikes a creature that is frightened, shaken, or panicked with a cruel weapon, that creature becomes sickened for 1 round. When the wielder uses the weapon to knock unconscious or kill a creature, he gains 5 temporary hit points that last for 10 minutes.",
+          "aura": "faint necromancy"
+        },
+        {
+          "name": "Defending",
+          "description": "A defending weapon allows the wielder to transfer some or all of the weapon's enhancement bonus to his AC as a bonus that stacks with all others. As a free action, the wielder chooses how to allocate the weapon's enhancement bonus at the start of his turn before using the weapon, and the bonus to AC lasts until his next turn. This ability can only be placed on melee weapons.",
+          "aura": "moderate abjuration"
+        }
+      ]
+    }
+  ],
+  "armor": {
+    "name": "Hellknight Plate",
+    "ac": 9,
+    "maxDexBonus": 1,
+    "armorCheckPenalty": -5,
+    "arcaneSpellFailureChance": 35,
+    "speed": "20/15",
+    "weight": 50,
+    "value": 19650,
+    "isMasterwork": true,
+    "armorBonus": "+5 armor with one +4 special ability",
+    "material": {
+      "name": "Living Steel",
+      "hpIn": 35,
+      "hardness": 15,
+      "description": "Some trees suck up potent minerals through their roots the same way others draw water from the ground. Though these trees blunt saws and axes used to hew them and shrug off fire, they eventually succumb to time or the elements. When properly harvested, these fallen trees produce nuggets of a metal called living steel. This glossy green metal slowly repairs itself. An item made from living steel repairs damage to itself at a rate of 2 hit points per day, or 1 hit point per day if it has the broken condition. Items not primarily of metal are not meaningfully affected by being partially made of living steel.\\n\\nArmor and shields made from living steel can damage metal weapons that strike them. Whenever the wielder of a metal weapon rolls a natural 1 on an attack roll against a creature wearing living steel armor or wielding a living steel shield, the item must make a DC 20 Fortitude save or gain the broken condition. If the weapon already has the broken condition, it is instead destroyed. Living steel cannot damage adamantine weapons in this way."
+    },
+    "enchantments": [
+      {
+        "name": "Invulnerability",
+        "description": "This suit of armor grants the wearer damage reduction 5/magic. Invulnerable armor emits a strong aura of abjuration (and evocation if miracle is used).",
+        "aura": "strong varies"
+      }
+    ]
+  },
+  "wondrousItems": [
+  {
+      "slot": "Belt",
+      "name": "Belt of Physical Perfection +2",
+      "value": 16000,
+      "aura": "strong transmutation",
+      "weight": 1,
+      "description": "This belt has a large platinum buckle and grants the wearer an enhancement bonus to all physical ability scores (Strength, Dexterity, and Constitution) of +2, +4, or +6. Treat this as a temporary ability bonus for the first 24 hours the belt is worn."
+    },
+    {
+      "slot": "Body",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    },
+    {
+      "slot": "Chest",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    },
+    {
+      "slot": "Eyes",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    },
+    {
+      "slot": "Feet",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    },
+    {
+      "slot": "Hand",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    },
+    {
+      "slot": "Head",
+      "name": "Jingasa of the Fortunate Soldier",
+      "value": 5000,
+      "aura": "strong divination",
+      "weight": 3,
+      "description": "This conical iron jingasa, or war hat, grants the wearer a +1 luck bonus to AC. Once per day when struck by a critical hit or sneak attack, the wearer can spend an immediate action to negate the critical hit or sneak attack (similar to the fortification armor special ability, but without requiring a roll). The damage is instead rolled normally."
+    },
+    {
+      "slot": "Headband",
+      "name": "Headband of Alluring Charisma +4",
+      "value": 16000,
+      "aura": "moderate transmutation",
+      "weight": 1,
+      "description": "This attractive silver headband is decorated with a number of small red and orange gemstones.\\n\\nThe headband grants the wearer an enhancement bonus to Charisma of +2, +4, or +6. Treat this as a temporary ability bonus for the first 24 hours the headband is worn."
+    },
+    {
+      "slot": "Neck",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    },
+    {
+      "slot": "Shoulders",
+      "name": "Cloak of Resistance +1",
+      "value": 1000,
+      "aura": "faint abjuration",
+      "weight": 1,
+      "description": "Flecks of silver or steel are often sown amid the fabric of these magical cloaks. This garment offers magic protection in the form of a +1 to +5 resistance bonus on all saving throws (Fortitude, Reflex, and Will)."
+    },
+    {
+      "slot": "Wrists",
+      "name": "",
+      "value": 0,
+      "aura": "",
+      "weight": 0,
+      "description": ""
+    }
+  ],
+  "rings": [
+    {
+      "name": "Ring of Arcane Signets",
+      "aura": "faint universal",
+      "value": 1000,
+      "description": "The approximately 1-inch-diameter pentagon of emerald green crystal that dominates this otherwise plain silver ring forms itself into a specific rune, sigil, or similar identifying marker each time a person first puts it on. If the wearer expects this to occur, she can cause the crystal to adopt any shape she wishes. If the wearer does not expect this to occur, the crystal instead molds itself into an image that symbolizes the wearer or some dominant facet of her personality. Once the crystal assumes this initial form, it always takes that form whenever the same wearer puts on the ring. The wearer can, as a standard action, embed this image on any object (as if using arcane mark) simply by pressing the ring against it. The wearer may choose the color and other cosmetic features of the image each time she uses the ring. The brand is otherwise permanent unless removed by dispel magic, erase, or a more powerful spell."
+    },
+    {
+      "name": "Ring of Transposition",
+      "aura": "moderate conjuration",
+      "value": 10800,
+      "description": "On command, the wearer of this ring can touch it to another ring, magical or mundane, and bind it to the ring of transposition.\\n\\nOnce per day, the wearer of the ring of transposition can speak a command word to exchange places with the creature wearing the bonded ring, which must be within 800 feet, as though using a dimension door spell against a willing target. In the process, the ring of transposition trades places with the ring on the other creature’s hand, and the bond between the rings is broken.\\n\\nThe bonding property of the ring of transposition can be used as often as desired, breaking any existing bond each time it is used. An existing bond can be broken by a successful dispel check against the caster level of the ring."
+    }
+  ],
+  "inventory": [
+    {
+      "name": "bag of cheap rings",
+      "weight": 1,
+      "description": "Cheaply made rings to be linked with Ring of Transposition",
+      "quantity": 1,
+      "equipped" : true
+    },
+    {
+      "name": "book of laws",
+      "weight": 1,
+      "quantity": 1,
+      "equipped" : false
+    },
+    {
+      "name": "Masterwork Manacles",
+      "weight": 2,
+      "description": "Manacles can bind a Medium creature. A manacled creature can use the Escape Artist skill to slip free (DC 35). Breaking the manacles requires a Strength check (DC 28). Manacles have hardness 10 and 10 hit points.",
+      "quantity": 3,
+      "equipped" : true
+    }
+  ],
+  "classes": [
+    {
+      "name": "Dark Knight",
+      "levels": 10,
+      "isPrestige": false,
+      "archetype": null
+    }
+  ],
   "spells": [
     {
       "name": "Fireball",
@@ -477,7 +476,7 @@
       "duration": "instantaneous",
       "savingThrow": "Reflex half",
       "spellResistance": true,
-      "description}": "A fireball spell generates a searing explosion of flame that detonates with a low roar and deals 1d6 points of fire damage per caster level (maximum 10d6) to every creature within the area. Unattended objects also take this damage. The explosion creates almost no pressure.\n\nYou point your finger and determine the range (distance and height) at which the fireball is to burst. A glowing, pea-sized bead streaks from the pointing digit and, unless it impacts upon a material body or solid barrier prior to attaining the prescribed range, blossoms into the fireball at that point. An early impact results in an early detonation. If you attempt to send the bead through a narrow passage, such as through an arrow slit, you must \"hit\" the opening with a ranged touch attack, or else the bead strikes the barrier and detonates prematurely.\n\n\n\nThe fireball sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the fireball may continue beyond the barrier if the area permits; otherwise it stops at the barrier just as any other spell effect does."
+      "description": "A fireball spell generates a searing explosion of flame that detonates with a low roar and deals 1d6 points of fire damage per caster level (maximum 10d6) to every creature within the area. Unattended objects also take this damage. The explosion creates almost no pressure.\\n\\nYou point your finger and determine the range (distance and height) at which the fireball is to burst. A glowing, pea-sized bead streaks from the pointing digit and, unless it impacts upon a material body or solid barrier prior to attaining the prescribed range, blossoms into the fireball at that point. An early impact results in an early detonation. If you attempt to send the bead through a narrow passage, such as through an arrow slit, you must \"hit\" the opening with a ranged touch attack, or else the bead strikes the barrier and detonates prematurely.\\n\\nThe fireball sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver, and bronze. If the damage caused to an interposing barrier shatters or breaks through it, the fireball may continue beyond the barrier if the area permits; otherwise it stops at the barrier just as any other spell effect does."
     }
   ]
 }

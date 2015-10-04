@@ -1,0 +1,15 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="spell.name" />
+      <h2>Description</h2>
+      <input value.bind="spell.description" />
+    </dialog-body>
+
+    <dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(spell)">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

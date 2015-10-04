@@ -84,7 +84,7 @@ export class spells {
     this.dialogService.open({ viewModel: AddSpell, model: spell }).then(response => {
       if (!response.wasCancelled) {
         this.loadedCharacter.spells.push(response);
-        assignSpellLevels();
+        this.assignSpellLevels();
       }
     });
   }

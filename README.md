@@ -1,4 +1,8 @@
-Included is sampleCharacter.json as a guideline (mostly done but needs some additions).
+#Zenta
+
+Zenta is built with [Aurelia](http://www.aurelia.io/).
+
+*Included is sampleCharacter.json as a guideline (mostly done but needs some additions).*
 # Running The App
 
 To run the app, follow these steps.

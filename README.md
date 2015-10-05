@@ -1,6 +1,6 @@
 #Zenta
 
-Zenta is built with [Aurelia](http://www.aurelia.io/).
+Zenta is built with [Aurelia](http://www.aurelia.io/). Its purpose is to serve as an organized display of all your character's data for the [Pathfinder Roleplaying Game](http://paizo.com/pathfinder/), and to provide additional useful tools.
 
 *Included is sampleCharacter.json as a guideline (mostly done but needs some additions).*
 # Running The App
@@ -42,7 +42,7 @@ To run the app, follow these steps.
 Uploads character info from valid .json file into app. Adds additional submenu items in nav-right and shows Ability Scores on the Welcome page.
 
 ## Carry Capacity Calculator
-Generates a table based on size and biped/quadraped and highlights your relevant row.
+Generates a table based on size and biped/quadruped and highlights your relevant row.
 
 *Special thanks to Cevah from the Pazio forums for the base value formula*
 

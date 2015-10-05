@@ -1,25 +1,24 @@
 <template>
-  <dialog>
+  <dialog style="width:700px">
     <dialog-body>
-      <label for.bind="name">Name</label>
+      <h4 for.bind="name">Name</h4>
       <input value.bind="spell.name" id.bind="name"/>
-      <label for.bind="school">School</label>
+      <h4 for.bind="school">School</h4>
       <input value.bind="spell.school" id.bind="school"/>
-      <label for.bind="castingTime">Casting Time</label>
+      <h4 for.bind="castingTime">Casting Time</h4>
       <input value.bind="spell.castingTime" id.bind="castingTime"/>
-      <label for.bind="components">Components</label>
+      <h4 for.bind="components">Components</h4>
       <input value.bind="spell.components" id.bind="components"/>
-      <label for.bind="range">Range</label>
+      <h4 for.bind="range">Range</h4>
       <input value.bind="spell.range" id.bind="range"/>
-      <label for.bind="area">Area</label>
+      <h4 for.bind="area">Area</h4>
       <input value.bind="spell.area" id.bind="area"/>
-      <label for.bind="duration">Duration</label>
+      <h4 for.bind="duration">Duration</h4>
       <input value.bind="spell.duration" id.bind="duration"/>
-      <label for.bind="savingThrow">Saving Throw</label>
+      <h4 for.bind="savingThrow">Saving Throw</h4>
       <input value.bind="spell.savingThrow" id.bind="savingThrow"/>
-      <label for.bind="spellResistance">Spell Resistance</label>
-      <input type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/>
-      <label for.bind="description">Description</label>
+      <h4 for.bind="spellResistance">Spell Resistance <input type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/></h4>
+      <h4 for.bind="description">Description</h4>
       <input value.bind="spell.description" id.bind="description"/>
     </dialog-body>
 

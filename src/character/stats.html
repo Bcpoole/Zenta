@@ -20,21 +20,32 @@
     <hr>
     <div>
       <h2>Offensive</h2>
-      <strong>BAB: </strong>${offenseStats.bab}<br>
-      <strong>CMB: </strong>${offenseStats.cmb}<br>
+      <label for.bind="bab">BAB</label>
+      <input class="form-control" type="text" id.bind="bab" value.bind="offenseStats.bab">
+      <label for.bind="cmb">CMB</label>
+      <input class="form-control" type="number" id.bind="cmb" value.bind="offenseStats.cmb">
     </div>
     <hr>
     <div>
       <h2>Defensive</h2>
-      <strong>Current HP: </strong>${defenseStats.currentHP}
-      <strong>Max HP: </strong>${defenseStats.maxHP}<br>
-      <strong>AC: </strong>${defenseStats.ac}
-      <strong>Touch AC: </strong>${defenseStats.touchAC}<br>
-      <strong>CMD: </strong>${defenseStats.cmd}<br>
-      <strong>Will Save: </strong>${defenseStats.willSave}
-      <strong>Fort Save: </strong>${defenseStats.fortSave}
-      <strong>Reflex Save: </strong>${defenseStats.reflexSave}<br>
-      <strong>Spell Resistance: </strong>${defenseStats.spellResistance}
+      <label for.bind="currHP">Current HP</label>
+      <input class="form-control" type="number" id.bind="currHP" value.bind="defenseStats.currentHP">
+      <label for.bind="maxHP">Max HP</label>
+      <input class="form-control" type="number" id.bind="maxHP" value.bind="defenseStats.maxHP">
+      <label for.bind="ac">AC</label>
+      <input class="form-control" type="number" id.bind="ac" value.bind="defenseStats.ac">
+      <label for.bind="touchAC">Touch AC</label>
+      <input class="form-control" type="number" id.bind="touchAC" value.bind="defenseStats.touchAC">
+      <label for.bind="cmd">CMD</label>
+      <input class="form-control" type="number" id.bind="cmd" value.bind="defenseStats.cmd">
+      <label for.bind="willSave">Will Save</label>
+      <input class="form-control" type="number" id.bind="willSave" value.bind="defenseStats.willSave">
+      <label for.bind="fortSave">Fort Save</label>
+      <input class="form-control" type="number" id.bind="fortSave" value.bind="defenseStats.fortSave">
+      <label for.bind="reflexSave">Reflex Save</label>
+      <input class="form-control" type="number" id.bind="reflexSave" value.bind="defenseStats.reflexSave">
+      <label for.bind="spellResist">Spell Resistance</label>
+      <input class="form-control" type="number" id.bind="spellResist" value.bind="defenseStats.spellResistance">
     </div>
   </section>
 </template>

@@ -2,8 +2,8 @@
 
 Zenta is built with [Aurelia](http://www.aurelia.io/). Its purpose is to serve as an organized display of all your character's data for the [Pathfinder Roleplaying Game](http://paizo.com/pathfinder/), and to provide additional useful tools.
 
-*Included is sampleCharacter.json as a guideline (mostly done but needs some additions).*
-# Running The App
+*Included is sampleCharacter.json as a guideline (mostly done but needs some revisions).*
+## Running The App
 
 To run the app, follow these steps.
 
@@ -37,22 +37,23 @@ To run the app, follow these steps.
   ```
 7. Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
 
-# Features
-## Upload Character
+## Features
+### Upload Character
 Uploads character info from valid .json file into app. Adds additional submenu items in nav-right and shows Ability Scores on the Welcome page.
 
-## Carry Capacity Calculator
-Generates a table based on size and biped/quadruped and highlights your relevant row.
+### Carry Capacity Calculator
+Generates a table based on size and biped/quadruped and highlights your relevant row. Supports [Ant Haul](http://www.d20pfsrd.com/magic/all-spells/a/ant-haul) and [Muleback Cords](http://www.d20pfsrd.com/magic-items/wondrous-items/wondrous-items/m-p/muleback-cords).
 
 *Special thanks to Cevah from the Pazio forums for the base value formula*
 
-## Character Creation
-Creates a new character based on input name and using a point-buy stat calculator.
+### Character Creation
+Creates a new character based on input name and using a point-buy stat calculator (budget isn't enforced so you can use other systems to generate your stats).
 
-## Dice Roller
+### Dice Roller
 Input any valid dice roll string to generate results. Shows last 10 rolls history.
 
-## Displays
+### Displays
+Displays are listed on the character name dropdown in the nav-right once a character is loaded.
 - Feats and Flaws
 - Traits & Drawbacks
 - Equipment - *Displays Weapons, Armor, Wondrous Items, and Rings and their details.*
@@ -62,6 +63,6 @@ Input any valid dice roll string to generate results. Shows last 10 rolls histor
 - Stats - *Ability Scores, Offensive & Defensive Stats*
 - Spells
 
-# TO-DO
-- Change fields to editable
+## TO-DO
+- Convert additional fields to editable input
 - Skills overhaul

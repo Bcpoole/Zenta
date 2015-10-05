@@ -1,9 +1,9 @@
 <template>
   <section>
+    <h2>Feats</h2>
     <div class="alert alert-info" role="alert" if.bind="err">
       <strong>${err}</strong>
     </div>
-    <h2>Feats</h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="feat of feats">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="feat.name" />
@@ -13,7 +13,7 @@
             <i>${feat.flavor}</i><br>
           </p>
           <p if.bind="feat.prerequisites">
-            <strong>Prequisites: </strong>${feat.prerequisites}<br>
+            <strong>Prerequisites: </strong>${feat.prerequisites}<br>
           </p>
           <p if.bind="feat.benefit">
             ${feat.benefit}
@@ -32,7 +32,7 @@
             <i>${flaw.flavor}</i>
           </p>
           <p if.bind="flaw.prerequisites">
-            <strong>Prequisites: </strong>${flaw.prerequisites}
+            <strong>Prerequisites: </strong>${flaw.prerequisites}
           </p>
           <p if.bind="flaw.effect">
             <strong>Effect: </strong>${flaw.effect}

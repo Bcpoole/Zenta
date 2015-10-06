@@ -13,29 +13,25 @@ describe('aurelia skeleton app', function() {
   });
 
   it('should load the page and display the initial page title', () => {
-    expect(po_skeleton.getCurrentPageTitle()).toBe('Welcome | Aurelia');
+    expect(po_skeleton.getCurrentPageTitle()).toBe('Welcome | Zenta');
   });
 
   it('should display greeting', () => {
-    expect(po_welcome.getGreeting()).toBe('Welcome to the Aurelia Navigation App!');
+    expect(po_welcome.getHeading()).toBe('Zenta - A Pathfinder Utility App!');
   });
 
-  it('should automatically write down the fullname', () => {
-    po_welcome.setFirstname('Rob');
-    po_welcome.setLastname('Eisenberg');
-
-    // For now there is a timing issue with the binding.
-    // Until resolved we will use a short sleep to overcome the issue.
-    browser.sleep(200);
-    expect(po_welcome.getFullname()).toBe('ROB EISENBERG');
+  it('should navigate to Carry Capacity page', () => {
+    po_skeleton.navigateTo('#/carryCapacity');
+    expect(po_skeleton.getCurrentPageTitle()).toBe('Carry Capacity | Zenta');
   });
 
-  it('should show alert message when clicking submit button', () => {
-    expect(po_welcome.openAlertDialog()).toBe(true);
+  it('should navigate to Character Creation page', () => {
+    po_skeleton.navigateTo('#/characterCreation');
+    expect(po_skeleton.getCurrentPageTitle()).toBe('Character Creation | Zenta');
   });
 
-  it('should navigate to users page', () => {
-    po_skeleton.navigateTo('#/users');
-    expect(po_skeleton.getCurrentPageTitle()).toBe('Github Users | Aurelia');
+  it('should navigate to Dice Roller page', () => {
+    po_skeleton.navigateTo('#/diceRoller');
+    expect(po_skeleton.getCurrentPageTitle()).toBe('Dice Roller | Zenta');
   });
 });

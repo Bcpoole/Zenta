@@ -1,295 +1,39 @@
 <template>
   <section>
     <h2>Spells</h2>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells0" />
-        <label for.bind="spells0" class="accordion-item-hd">0th Level Spells&#09;<button click.delegate="addSpell(0)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells0">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells1" />
-        <label for.bind="spells1" class="accordion-item-hd">1st Level Spells&#09;<button click.delegate="addSpell(1)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells1">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells2" />
-        <label for.bind="spells2" class="accordion-item-hd">2nd Level Spells&#09;<button click.delegate="addSpell(2)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells2">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells3" />
-        <label for.bind="spells3" class="accordion-item-hd">3rd Level Spells&#09;<button click.delegate="addSpell(3)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells3">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells4" />
-        <label for.bind="spells4" class="accordion-item-hd">4th Level Spells&#09;<button click.delegate="addSpell(4)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells4">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells5" />
-        <label for.bind="spells5" class="accordion-item-hd">5th Level Spells&#09;<button click.delegate="addSpell(5)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells5">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells6" />
-        <label for.bind="spells6" class="accordion-item-hd">6th Level Spells&#09;<button click.delegate="addSpell(6)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells6">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells7" />
-        <label for.bind="spells7" class="accordion-item-hd">7th Level Spells&#09;<button click.delegate="addSpell(7)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells7">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells8" />
-        <label for.bind="spells8" class="accordion-item-hd">8th Level Spells&#09;<button click.delegate="addSpell(8)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells8">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="accordion css-accordion">
-      <li class="accordion-item">
-        <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spells9" />
-        <label for.bind="spells9" class="accordion-item-hd">9th Level Spells&#09;<button click.delegate="addSpell(9)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-        <div class="accordion-item-bd">
-          <ul class="accordion css-accordion">
-            <li class="accordion-item" repeat.for="spell of spells9">
-              <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-              <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-              <div class="accordion-item-bd">
-                <strong>School: </strong>${spell.school}<br>
-                <h3>Casting</h3>
-                <strong>Casting Time: </strong>${spell.castingTime}<br>
-                <strong>Components: </strong>${spell.components}
-                <h3>Effect</h3>
-                <strong>Range: </strong>${spell.range}<br>
-                <strong>Area: </strong>${spell.area}<br>
-                <strong>Duration: </strong>${spell.duration}<br>
-                <strong>Saving Throw: </strong>${spell.savingThrow}<br>
-                <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
-                <p>
-                  ${spell.description}
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
+    <div repeat.for="i of 10">
+      <ul class="accordion css-accordion">
+        <li class="accordion-item">
+          <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="i" />
+          <label for.bind="i" if.bind="i != 1 && i != 2 && i != 3" class="accordion-item-hd">${i}th Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i == 1" class="accordion-item-hd">1st Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i == 2" class="accordion-item-hd">2nd Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i == 3" class="accordion-item-hd">3rd Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <div class="accordion-item-bd">
+            <ul class="accordion css-accordion">
+              <li class="accordion-item" repeat.for="spell of $parent.spells" if.bind="spell.level == $parent.i">
+                <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
+                <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+                <div class="accordion-item-bd">
+                  <strong>School: </strong>${spell.school}<br>
+                  <h3>Casting</h3>
+                  <strong>Casting Time: </strong>${spell.castingTime}<br>
+                  <strong>Components: </strong>${spell.components}
+                  <h3>Effect</h3>
+                  <strong>Range: </strong>${spell.range}<br>
+                  <strong>Area: </strong>${spell.area}<br>
+                  <strong>Duration: </strong>${spell.duration}<br>
+                  <strong>Saving Throw: </strong>${spell.savingThrow}<br>
+                  <strong>Spell Resistance: </strong>${spell.spellResistance}<br>
+                  <p>
+                    ${spell.description}
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>

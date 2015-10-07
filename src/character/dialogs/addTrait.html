@@ -1,0 +1,21 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="trait.name" />
+      <h2>Flavor</h2>
+      <input value.bind="trait.flavor" />
+      <h2>Description</h2>
+      <input value.bind="trait.description" />
+      <div if.bind="trait.type != undefined">
+        <h2>Type</h2>
+        <input value.bind="trait.type" />
+      </div>
+    </dialog-body>
+
+    <dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(trait)">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

@@ -10,7 +10,7 @@
       <tr repeat.for="score of scores">
         <td>${score.name.charAt(0).toUpperCase()  + score.name.slice(1)}</td>
         <td>
-          <div class="col-md-1">
+          <div class="col-md-2">
             <input type="number" class="form-control" value.bind="score.score" min="0">
           </div>
         </td>

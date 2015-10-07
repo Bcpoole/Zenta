@@ -1,0 +1,23 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="feat.name" />
+      <h2>Prerequisites</h2>
+      <input value.bind="feat.prerequisites" />
+      <h2>Flavor</h2>
+      <input value.bind="feat.flavor" />
+      <div if.bind="feat.effect != undefined">
+        <h2>Effect</h2>
+        <input value.bind="feat.effect" />
+      </div>
+      <h2>Benefit</h2>
+      <input value.bind="feat.benefit" />
+    </dialog-body>
+
+    <dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(feat)">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

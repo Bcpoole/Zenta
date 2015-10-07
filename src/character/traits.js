@@ -20,24 +20,24 @@ export class traits {
   }
 
   addTrait(sender) {
-      let trait = {
-        name: '',
-        description: '',
-        flavor: ''
-      };
-      if (sender === 'selected') {
-        trait.type = '';
-      }
-      this.dialogService.open({ viewModel: AddTrait, model: trait }).then(response => {
-        if (!response.wasCancelled) {
-          if (sender === 'selected') {
-            this.traits.push(response);
-          } else if (sender === 'racial') {
-            this.racialTraits.push(response);
-          } else if (sender === 'drawback') {
-            this.drawbacks.push(response);
-          }
-        }
-      });
+    let trait = {
+      name: '',
+      description: '',
+      flavor: ''
+    };
+    if (sender === 'selected') {
+      trait.type = '';
     }
+    this.dialogService.open({ viewModel: AddTrait, model: trait }).then(response => {
+      if (!response.wasCancelled) {
+        if (sender === 'selected') {
+          this.traits.push(response);
+        } else if (sender === 'racial') {
+          this.racialTraits.push(response);
+        } else if (sender === 'drawback') {
+          this.drawbacks.push(response);
+        }
+      }
+    });
+  }
 }

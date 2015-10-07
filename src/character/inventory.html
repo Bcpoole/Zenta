@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Inventory</h2>
+    <h2>Inventory <button click.delegate="addItem('inventory')" class="btn btn-primary">+</button></h2>
     <div class="alert alert-info" role="alert" if.bind="characterInventory.length == 0">
       <strong>${loadedCharacter.name}</strong> doesn't have anything in their inventory.
     </div>
@@ -22,9 +22,8 @@
         </li>
       </ul>
     </p>
-    <button click.delegate="addItem('inventory')" class="btn btn-primary">+</button>
     <hr>
-    <h2>Storage</h2>
+    <h2>Storage <button click.delegate="addItem('storage')" class="btn btn-primary">+</button></h2>
     <p>
       <ul class="accordion css-accordion">
         <li class="accordion-item" repeat.for="item of characterInventory">
@@ -42,6 +41,5 @@
         </li>
       </ul>
     </p>
-    <button click.delegate="addItem('storage')" class="btn btn-primary">+</button>
   </section>
 </template>

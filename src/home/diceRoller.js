@@ -19,6 +19,8 @@ export class diceRoller {
       .hasMinLength(1);
 
     this.rollHistory = [];
+
+    this.hasFocus = true;
   }
 
   roll() {

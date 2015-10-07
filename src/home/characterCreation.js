@@ -16,11 +16,13 @@ export class characterCreation {
       .isNotEmpty()
       .hasMinLength(1);
 
-		this.generateScores();
+    this.generateScores();
 
-		let defaultBudget = 15;
-		this.remainingBudget= defaultBudget;
-		this.setTotalBudget(defaultBudget); //Do standard by default
+    let defaultBudget = 15;
+    this.remainingBudget= defaultBudget;
+    this.setTotalBudget(defaultBudget); //Do standard by default
+
+    this.hasFocus = true;
   }
 
   createCharacter() {
@@ -40,73 +42,73 @@ export class characterCreation {
   }
   
   generateCharacter() {
-  	var characterName = this.characterName;
-  	var strength = this.getScore('Strength');
-		var dexterity = this.getScore('Dexterity');
-		var constitution = this.getScore('Constitution');
-		var intelligence = this.getScore('Intelligence');
-		var wisdom = this.getScore('Wisdom');
-		var charisma = this.getScore('Charisma');
+    var characterName = this.characterName;
+    var strength = this.getScore('Strength');
+    var dexterity = this.getScore('Dexterity');
+    var constitution = this.getScore('Constitution');
+    var intelligence = this.getScore('Intelligence');
+    var wisdom = this.getScore('Wisdom');
+    var charisma = this.getScore('Charisma');
 
-		let reader = new FileReader();
+    let reader = new FileReader();
 
-		let client = new XMLHttpRequest();
+    let client = new XMLHttpRequest();
     client.open('GET', '/characterTemplate.json');
-		client.send();
+    client.send();
     client.onreadystatechange = function() {
-    	if (client.readyState == 4) {
-				let character = JSON.parse(client.response);
-				character.name = characterName;
+      if (client.readyState == 4) {
+        let character = JSON.parse(client.response);
+        character.name = characterName;
 
-				character.abilityScores.strength = strength;
-				character.abilityScores.dexterity = dexterity;
-				character.abilityScores.constitution = constitution;
-				character.abilityScores.intelligence = intelligence;
-				character.abilityScores.wisdom = wisdom;
-				character.abilityScores.charisma = charisma;
+        character.abilityScores.strength = strength;
+        character.abilityScores.dexterity = dexterity;
+        character.abilityScores.constitution = constitution;
+        character.abilityScores.intelligence = intelligence;
+        character.abilityScores.wisdom = wisdom;
+        character.abilityScores.charisma = charisma;
 
-				let element = document.createElement('a');
-				element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(character)));
-				element.setAttribute('download', characterName + ".json");
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(character)));
+        element.setAttribute('download', characterName + ".json");
 
-				element.style.display = 'none';
-				document.body.appendChild(element);
+        element.style.display = 'none';
+        document.body.appendChild(element);
 
-				element.click();
+        element.click();
 
-				document.body.removeChild(element);
-			}
+        document.body.removeChild(element);
+      }
     }
-	}
+  }
 
-	getScore(name) {
-		var score = this.scores.filter(function (score) {
+  getScore(name) {
+    var score = this.scores.filter(function (score) {
         return score.name === name;
     })[0];
     return score.points;
-	}
+  }
 
-	generateScores() {
-		this.scores = [];
-		let scoreNames = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
+  generateScores() {
+    this.scores = [];
+    let scoreNames = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
 
-		for (let name of scoreNames) {
-			this.scores.push(
-				{
-					name: name,
-					points: 10,
-					mod: 0,
-					cost: 0
-				}
-			)
-		}
-	}
+    for (let name of scoreNames) {
+      this.scores.push(
+        {
+          name: name,
+          points: 10,
+          mod: 0,
+          cost: 0
+        }
+      )
+    }
+  }
 
-	setTotalBudget(totalBudget) {
-		this.totalBudget = totalBudget;
+  setTotalBudget(totalBudget) {
+    this.totalBudget = totalBudget;
 
-		this.updateBudget();
-	}
+    this.updateBudget();
+  }
 
   setCustomBudget() {
     this.dialogService.open({ viewModel: Prompt, model: 'Insert Total Points'}).then((result) => {
@@ -118,28 +120,28 @@ export class characterCreation {
     });
   }
 
-	determineMod(points) {
-		return Math.floor((points - 10) / 2);
-	}
+  determineMod(points) {
+    return Math.floor((points - 10) / 2);
+  }
 
-	determineCost(points) {
-		let values = [-4, -2, -1, 0, 1, 2, 3, 5, 7, 10, 13, 17];
-		return values[points-10+3];
-	}
+  determineCost(points) {
+    let values = [-4, -2, -1, 0, 1, 2, 3, 5, 7, 10, 13, 17];
+    return values[points-10+3];
+  }
 
-	updateScores() {
-		for (let score of this.scores) {
-			score.mod = this.determineMod(score.points);
-			score.cost = this.determineCost(score.points);
-		}
+  updateScores() {
+    for (let score of this.scores) {
+      score.mod = this.determineMod(score.points);
+      score.cost = this.determineCost(score.points);
+    }
 
-		this.updateBudget();
-	}
+    this.updateBudget();
+  }
 
-	updateBudget() {
-		this.remainingBudget = this.totalBudget;
-		for (let score of this.scores) {
-			this.remainingBudget -= score.cost;
-		}
-	}
+  updateBudget() {
+    this.remainingBudget = this.totalBudget;
+    for (let score of this.scores) {
+      this.remainingBudget -= score.cost;
+    }
+  }
 }

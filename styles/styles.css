@@ -16,11 +16,11 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.splash .fa-spinner {
-    text-align: center;
-    display: inline-block;
-    font-size: 102px;
-    margin-top: 50px;
+.splash .fa-cog {
+   text-align: center;
+   display: inline-block;
+   font-size: 102px;
+   margin-top: 50px;
 }
 
 .page-host {

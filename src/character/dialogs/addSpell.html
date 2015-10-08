@@ -1,25 +1,27 @@
 <template>
-  <dialog style="width:700px">
+  <dialog style="width:700px;">
     <dialog-body>
       <h4 for.bind="name">Name</h4>
       <input value.bind="spell.name" id.bind="name" autofocus />
-      <h4 for.bind="school">School</h4>
-      <input value.bind="spell.school" id.bind="school"/>
-      <h4 for.bind="castingTime">Casting Time</h4>
-      <input value.bind="spell.castingTime" id.bind="castingTime"/>
-      <h4 for.bind="components">Components</h4>
-      <input value.bind="spell.components" id.bind="components"/>
-      <h4 for.bind="range">Range</h4>
-      <input value.bind="spell.range" id.bind="range"/>
-      <h4 for.bind="area">Area</h4>
-      <input value.bind="spell.area" id.bind="area"/>
-      <h4 for.bind="duration">Duration</h4>
-      <input value.bind="spell.duration" id.bind="duration"/>
-      <h4 for.bind="savingThrow">Saving Throw</h4>
-      <input value.bind="spell.savingThrow" id.bind="savingThrow"/>
-      <h4 for.bind="spellResistance">Spell Resistance <input type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/></h4>
-      <h4 for.bind="description">Description</h4>
-      <input value.bind="spell.description" id.bind="description"/>
+      <div style="overflow:auto; height:500px;">
+        <h4 for.bind="school">School</h4>
+        <input value.bind="spell.school" id.bind="school"/>
+        <h4 for.bind="castingTime">Casting Time</h4>
+        <input value.bind="spell.castingTime" id.bind="castingTime"/>
+        <h4 for.bind="components">Components</h4>
+        <input value.bind="spell.components" id.bind="components"/>
+        <h4 for.bind="range">Range</h4>
+        <input value.bind="spell.range" id.bind="range"/>
+        <h4 for.bind="area">Area</h4>
+        <input value.bind="spell.area" id.bind="area"/>
+        <h4 for.bind="duration">Duration</h4>
+        <input value.bind="spell.duration" id.bind="duration"/>
+        <h4 for.bind="savingThrow">Saving Throw</h4>
+        <input value.bind="spell.savingThrow" id.bind="savingThrow"/>
+        <h4 for.bind="spellResistance">Spell Resistance <input type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/></h4>
+        <h4 for.bind="description">Description</h4>
+        <textarea class="form-control" rows="5" value.bind="spell.description" id.bind="description"></textarea>
+      </div>
     </dialog-body>
 
     <dialog-footer>

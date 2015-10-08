@@ -1,27 +1,66 @@
 <template>
   <dialog>
     <dialog-body>
-      <h4 for.bind="name">Name</h4>
-      <input value.bind="spell.name" id.bind="name" autofocus />
-      <div style="overflow:auto; height:400px;">
-        <h4 for.bind="school">School</h4>
-        <input value.bind="spell.school" id.bind="school"/>
-        <h4 for.bind="castingTime">Casting Time</h4>
-        <input value.bind="spell.castingTime" id.bind="castingTime"/>
-        <h4 for.bind="components">Components</h4>
-        <input value.bind="spell.components" id.bind="components"/>
-        <h4 for.bind="range">Range</h4>
-        <input value.bind="spell.range" id.bind="range"/>
-        <h4 for.bind="area">Area</h4>
-        <input value.bind="spell.area" id.bind="area"/>
-        <h4 for.bind="duration">Duration</h4>
-        <input value.bind="spell.duration" id.bind="duration"/>
-        <h4 for.bind="savingThrow">Saving Throw</h4>
-        <input value.bind="spell.savingThrow" id.bind="savingThrow"/>
-        <h4 for.bind="spellResistance">Spell Resistance <input type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/></h4>
-        <h4 for.bind="description">Description</h4>
-        <textarea class="form-control" rows="5" value.bind="spell.description" id.bind="description"></textarea>
-      </div>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="name">Name</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.name" id.bind="name" autofocus/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="school">School</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.school" id.bind="school"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="castingTime">Casting Time</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.castingTime" id.bind="castingTime"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="components">Components</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.components" id.bind="components"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="range">Range</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.range" id.bind="range"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="area">Area</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.area" id.bind="area"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="duration">Duration</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.duration" id.bind="duration"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="savingThrow">Saving Throw</label>
+          <div class="col-sm-9">
+            <input class="form-control" value.bind="spell.savingThrow" id.bind="savingThrow"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="spellResistance">Spell Resistance</label>
+          <div class="col-sm-2">
+            <input class="form-control" type="checkbox" checked.bind="spell.spellResistance" id.bind="spellResistance"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for.bind="description">Description</label>
+          <textarea class="form-control" rows="5" value.bind="spell.description" id.bind="description"></textarea>
+        </div>
+      </form>
     </dialog-body>
 
     <dialog-footer>

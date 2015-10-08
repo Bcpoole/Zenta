@@ -50,6 +50,10 @@ section {
     margin: 0 20px;
 }
 
+dialog {
+  width: 500px;
+}
+
 .navbar-nav li.loader {
     margin: 12px 24px 0 6px;
 }

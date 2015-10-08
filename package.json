@@ -1,6 +1,6 @@
 {
   "name": "Zenta",
-  "version": "0.3.0",
+  "version": "0.7.0",
   "description": "A Pathfinder character JSON data viewer app with Aurelia.",
   "keywords": [
     "aurelia",
@@ -57,7 +57,7 @@
       "aurelia-binding": "github:aurelia/binding@^0.9.0",
       "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.17.0",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.10.0",
-      "aurelia-dialog": "github:aurelia/dialog@^0.2.1",
+      "aurelia-dialog": "github:aurelia/dialog@^0.3.0",
       "aurelia-event-aggregator": "github:aurelia/event-aggregator@^0.8.0",
       "aurelia-fetch-client": "github:aurelia/fetch-client@^0.2.0",
       "aurelia-framework": "github:aurelia/framework@^0.16.0",

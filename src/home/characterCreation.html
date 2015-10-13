@@ -4,7 +4,7 @@
     <form role="form" validate.bind="validation">
       <div class="form-group">
         <label>Name</label>
-        <input type="text" class="form-control" value.bind="characterName" focus.bind="hasFocus">
+        <input type="text" class="form-control translucent" value.bind="characterName" focus.bind="hasFocus">
       </div>
     </form>
     <p>
@@ -25,7 +25,7 @@
         <tr repeat.for="score of scores">
           <td>${score.name}</td>
           <td>
-            <input type="number" class="form-control" value.bind="score.points" min="7" max="18">
+            <input type="number" class="form-control translucent" value.bind="score.points" min="7" max="18">
           </td>
           <td>${score.mod}</td>
           <td>${score.cost}</td>

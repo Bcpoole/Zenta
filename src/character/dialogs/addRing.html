@@ -1,0 +1,19 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="ring.name" autofocus/>
+      <h2>Aura</h2>
+      <input value.bind="ring.aura" />
+      <h2>Value</h2>
+      <input value.bind="ring.value" />
+      <h2>Description</h2>
+      <textarea class="form-control translucent" rows="5" value.bind="ring.description"></textarea>
+    </dialog-body>
+
+    <dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(ring)">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

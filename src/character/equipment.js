@@ -1,14 +1,17 @@
 import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
+import {DialogService} from 'aurelia-dialog';
+import {AddRing} from './dialogs/addRing';
 
-@inject(ApplicationState)
+@inject(ApplicationState, DialogService)
 export class equipment {
   canActivate(params, routeConfig, navigationInstruction) {
     return (!!this.loadedCharacter);
   }
 
-  constructor(appState) {
+  constructor(appState, dialogService) {
     this.appState = appState;
+    this.dialogService = dialogService;
 
     this.loadedCharacter = this.appState.loadedCharacter;
     this.armor = this.loadedCharacter.armor;
@@ -26,4 +29,18 @@ export class equipment {
       this.totalWeight += item.weight;
     }
   }
+
+  addRing() {
+      let ring = {
+        name: '',
+        aura: '',
+        value: 0,
+        description: ''
+      };
+      this.dialogService.open({ viewModel: AddRing, model: ring }).then(response => {
+        if (!response.wasCancelled) {
+          this.loadedCharacter.rings.push(response.output);
+        }
+      });
+    }
 }

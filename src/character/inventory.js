@@ -41,8 +41,8 @@ export class inventory {
     }
     this.dialogService.open({ viewModel: AddItem, model: item }).then(response => {
       if (!response.wasCancelled) {
-        this.characterInventory.push(response);
-        if (response.equipped) {
+        this.characterInventory.push(response.output);
+        if (response.output.equipped) {
           this.computeTotalWeight();
         }
       }

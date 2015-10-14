@@ -22,7 +22,7 @@ export class characteristics {
       let lang = '';
       this.dialogService.open({ viewModel: Prompt, model: lang }).then(response => {
         if (!response.wasCancelled) {
-          this.loadedCharacter.languages.push(response);
+          this.loadedCharacter.languages.push(response.output);
         }
       });
     }

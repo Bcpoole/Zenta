@@ -31,11 +31,11 @@ export class traits {
     this.dialogService.open({ viewModel: AddTrait, model: trait }).then(response => {
       if (!response.wasCancelled) {
         if (sender === 'selected') {
-          this.traits.push(response);
+          this.traits.push(response.output);
         } else if (sender === 'racial') {
-          this.racialTraits.push(response);
+          this.racialTraits.push(response.output);
         } else if (sender === 'drawback') {
-          this.drawbacks.push(response);
+          this.drawbacks.push(response.output);
         }
       }
     });

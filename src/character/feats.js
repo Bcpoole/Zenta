@@ -35,9 +35,9 @@ export class feats {
     this.dialogService.open({ viewModel: AddFeat, model: feat }).then(response => {
       if (!response.wasCancelled) {
         if (sender === 'feat') {
-          this.feats.push(response);
+          this.feats.push(response.output);
         } else if (sender === 'flaw') {
-          this.flaws.push(response);
+          this.flaws.push(response.output);
         }
       }
     });

@@ -8,5 +8,9 @@ export class AddSpell {
   }
   activate(spell){
     this.spell = spell;
+
+    if (this.spell.name == '') {
+      this.isNew = true;
+    }
   }
 }

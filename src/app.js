@@ -21,7 +21,30 @@ export class App {
       { route: 'classes', name: 'classes', moduleId: 'character/classes', nav: false, title: 'Classes' }
     ]);
 
-    var pattern = Trianglify({
+    window.addEventListener('resize', this.onWindowResize, false);
+    this.drawBackground();
+
+    this.router = router;
+  }
+
+  onWindowResize() {
+    let pattern = Trianglify({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      cell_size: 52,
+      color_space: 'hsl',
+      variance: '100',
+      seed: 'Zenta',
+      x_colors: 'PuBu',
+      y_colors: 'PuBuGn'
+    });
+
+    let oldCanvas = document.getElementsByTagName("CANVAS")[0];
+    document.body.replaceChild(pattern.canvas(), oldCanvas);
+  }
+
+  drawBackground() {
+      let pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight,
         cell_size: 52,
@@ -30,9 +53,8 @@ export class App {
         seed: 'Zenta',
         x_colors: 'PuBu',
         y_colors: 'PuBuGn'
-    });
-    document.body.appendChild(pattern.canvas())
+      });
 
-    this.router = router;
+      document.body.appendChild(pattern.canvas());
   }
 }

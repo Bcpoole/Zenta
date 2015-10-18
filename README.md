@@ -65,4 +65,5 @@ Displays are listed on the character name dropdown in the nav-right once a chara
 
 ## TO-DO
 - Convert additional fields to editable input
+- Add dialogs (with edit versions)
 - Skills overhaul

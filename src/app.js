@@ -44,17 +44,17 @@ export class App {
   }
 
   drawBackground() {
-      let pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight,
-        cell_size: 52,
-        color_space: 'hsl',
-        variance: '100',
-        seed: 'Zenta',
-        x_colors: 'PuBu',
-        y_colors: 'PuBuGn'
-      });
+    let pattern = Trianglify({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      cell_size: 52,
+      color_space: 'hsl',
+      variance: '100',
+      seed: 'Zenta',
+      x_colors: 'PuBu',
+      y_colors: 'PuBuGn'
+    });
 
-      document.body.appendChild(pattern.canvas());
+    document.body.appendChild(pattern.canvas());
   }
 }

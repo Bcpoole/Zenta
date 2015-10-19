@@ -31,16 +31,20 @@ export class equipment {
   }
 
   addRing() {
-      let ring = {
-        name: '',
-        aura: '',
-        value: 0,
-        description: ''
-      };
-      this.dialogService.open({ viewModel: AddRing, model: ring }).then(response => {
-        if (!response.wasCancelled) {
-          this.loadedCharacter.rings.push(response.output);
-        }
-      });
-    }
+    let ring = {
+      name: '',
+      aura: '',
+      value: 0,
+      description: ''
+    };
+    this.dialogService.open({ viewModel: AddRing, model: ring }).then(response => {
+      if (!response.wasCancelled) {
+        this.loadedCharacter.rings.push(response.output);
+      }
+    });
+  }
+
+  editRing(ring) {
+    this.dialogService.open({ viewModel: AddRing, model: ring });
+  }
 }

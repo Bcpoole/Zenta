@@ -6,7 +6,12 @@ export class AddRing {
   constructor(controller){
     this.controller = controller;
   }
+
   activate(ring){
     this.ring = ring;
+
+    if (this.ring.name == '') {
+      this.isNew = true;
+    }
   }
 }

@@ -48,4 +48,8 @@ export class inventory {
       }
     });
   }
+
+  editItem(item) {
+    this.dialogService.open({ viewModel: AddItem, model: item });
+  }
 }

@@ -6,7 +6,12 @@ export class AddFeat {
   constructor(controller){
     this.controller = controller;
   }
+
   activate(feat){
     this.feat = feat;
+
+    if (this.feat.name == '') {
+      this.isNew = true;
+    }
   }
 }

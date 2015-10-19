@@ -135,7 +135,7 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="ring of loadedCharacter.rings">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="ring.name" />
-        <label for.bind="ring.name" class="accordion-item-hd">${ring.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label for.bind="ring.name" class="accordion-item-hd">${ring.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editRing(ring)"></i></label>
         <div class="accordion-item-bd">
           <p>
             <strong>Aura: </strong>${ring.aura}

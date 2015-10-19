@@ -42,4 +42,8 @@ export class feats {
       }
     });
   }
+
+  editFeat(feat) {
+    this.dialogService.open({ viewModel: AddFeat, model: feat });
+  }
 }

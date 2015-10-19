@@ -42,6 +42,6 @@ export class traits {
   }
 
   editTrait(trait) {
-      this.dialogService.open({ viewModel: AddTrait, model: trait });
-    }
+    this.dialogService.open({ viewModel: AddTrait, model: trait });
+  }
 }

@@ -2,6 +2,7 @@ import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 import {DialogService} from 'aurelia-dialog';
 import {AddTrait} from './dialogs/addTrait';
+import {Prompt} from 'aurelia-dialog/examples/prompt';
 
 @inject(ApplicationState, DialogService)
 export class traits {
@@ -43,5 +44,20 @@ export class traits {
 
   editTrait(trait) {
     this.dialogService.open({ viewModel: AddTrait, model: trait });
+  }
+
+  deleteTrait(sender, trait) {
+    if(confirm('Do you really want to delete "' + trait.name + '"?')) {
+      if (sender === 'selected') {
+        let idx = this.traits.indexOf(trait);
+        this.traits.splice(idx, 1);
+      } else if (sender === 'racial') {
+        let idx = this.racialTraits.indexOf(trait);
+        this.racialTraits.splice(idx, 1);
+      } else if (sender === 'drawback') {
+        let idx = this.drawbacks.indexOf(trait);
+        this.drawbacks.splice(idx, 1);
+      }
+    }
   }
 }

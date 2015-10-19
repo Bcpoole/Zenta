@@ -19,11 +19,10 @@ export class characteristics {
   }
 
   addLanguage() {
-      let lang = '';
-      this.dialogService.open({ viewModel: Prompt, model: lang }).then(response => {
-        if (!response.wasCancelled) {
-          this.loadedCharacter.languages.push(response.output);
-        }
-      });
-    }
+    this.dialogService.open({ viewModel: Prompt, model: 'Enter language name:' }).then(response => {
+      if (!response.wasCancelled) {
+        this.loadedCharacter.languages.push(response.output);
+      }
+    });
+  }
 }

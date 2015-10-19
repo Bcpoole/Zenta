@@ -25,13 +25,12 @@
     <input class="form-control translucent" type="text" value.bind="characteristics.deity"><br>
     <strong>Homeland</strong>
     <input class="form-control translucent" type="text" value.bind="characteristics.homeland"><br>
-
     <p>
       <textarea class="form-control translucent" rows="5" value.bind="characteristics.description"></textarea>
     </p>
     <hr>
     <div>
-      <h2>Languages <button click.delegate="addLanguage()" class="btn btn-primary">+</button></h2>
+      <h2>Languages<i click.delegate="addLanguage" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
       <table class="table table-alt">
         <tr repeat.for="language of loadedCharacter.languages">
           <td>${language}</td>

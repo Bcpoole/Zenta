@@ -251,6 +251,7 @@ div.au-stagger {
 
 .accordion-item-hd-option {
   float: right;
+  margin: 5px;
 }
 
 .footer {

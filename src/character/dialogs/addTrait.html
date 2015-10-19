@@ -14,7 +14,7 @@
     </dialog-body>
 
     <dialog-footer>
-      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
       <button click.trigger="controller.ok(trait)">Ok</button>
     </dialog-footer>
   </dialog>

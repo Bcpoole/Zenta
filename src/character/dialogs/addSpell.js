@@ -6,6 +6,7 @@ export class AddSpell {
   constructor(controller){
     this.controller = controller;
   }
+
   activate(spell){
     this.spell = spell;
 

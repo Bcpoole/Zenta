@@ -6,7 +6,12 @@ export class AddTrait {
   constructor(controller){
     this.controller = controller;
   }
+
   activate(trait){
     this.trait = trait;
+
+    if (this.trait.name == '') {
+      this.isNew = true;
+    }
   }
 }

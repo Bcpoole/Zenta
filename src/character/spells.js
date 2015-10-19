@@ -39,7 +39,6 @@ export class spells {
   }
 
   editSpell(spell) {
-    let originalSpell = Object.assign({}, spell);
     this.dialogService.open({ viewModel: AddSpell, model: spell });
   }
 }

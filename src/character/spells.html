@@ -13,7 +13,7 @@
             <ul class="accordion css-accordion">
               <li class="accordion-item" repeat.for="spell of $parent.spells" if.bind="spell.level == $parent.i">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-                <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span><span class="fa fa-pencil" click.delegate="$parent.$parent.editSpell(spell)"></span></label>
+                <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.$parent.editSpell(spell)"></i></label>
                 <div class="accordion-item-bd">
                   <strong>School: </strong>${spell.school}<br>
                   <h3>Casting</h3>

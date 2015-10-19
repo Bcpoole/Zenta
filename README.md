@@ -54,16 +54,17 @@ Input any valid dice roll string to generate results. Shows last 10 rolls histor
 
 ### Displays
 Displays are listed on the character name dropdown in the nav-right once a character is loaded.
-- Feats and Flaws
-- Traits & Drawbacks
-- Equipment - *Displays Weapons, Armor, Wondrous Items, and Rings and their details.*
-- Inventory
 - Classes - *Includes levels, if Prestige, and Archetype*
 - Characteristics
-- Stats - *Ability Scores, Offensive & Defensive Stats*
+- Equipment - *Displays Weapons, Armor, Wondrous Items, and Rings and their details*
+- Feats and Flaws
+- Inventory
 - Spells
+- Stats - *Ability Scores, Offensive & Defensive Stats*
+- Traits & Drawbacks
 
 ## TO-DO
-- Convert additional fields to editable input
 - Add dialogs (with edit versions)
+- Delete options
 - Skills overhaul
+- Class/Class UI overhaul

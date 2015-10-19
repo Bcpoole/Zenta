@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Inventory<i click.delegate="addItem('inventory')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
+    <h2>Inventory<i click.delegate="addItem('inventory')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
     <div class="alert alert-info" role="alert" if.bind="characterInventory.length == 0">
       <strong>${loadedCharacter.name}</strong> doesn't have anything in their inventory.
     </div>
@@ -13,7 +13,7 @@
             <label for.bind="item.name" class="accordion-item-hd">
               ${item.name}
               <span class="accordion-item-hd-cta">&#9650;</span>
-              <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editItem(item)"></i>
+              <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editItem(item)"></i>
             </label>
             <div class="accordion-item-bd">
               <strong>Weight: </strong>${item.weight}<br>
@@ -27,7 +27,7 @@
       </ul>
     </p>
     <hr>
-    <h2>Storage<i click.delegate="addItem('storage')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
+    <h2>Storage<i click.delegate="addItem('storage')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
     <p>
       <ul class="accordion css-accordion">
         <li class="accordion-item" repeat.for="item of characterInventory">
@@ -36,7 +36,7 @@
             <label for.bind="item.name" class="accordion-item-hd">
               ${item.name}
               <span class="accordion-item-hd-cta">&#9650;</span>
-              <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editItem(item)"></i>
+              <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editItem(item)"></i>
             </label>
             <div class="accordion-item-bd">
               <strong>Weight: </strong>${item.weight}<br>

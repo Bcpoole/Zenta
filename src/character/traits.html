@@ -1,14 +1,14 @@
 <template>
   <section>
-    <h2>Racial Traits<i click.delegate="addTrait('racial')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
+    <h2>Racial Traits<i click.delegate="addTrait('racial')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of racialTraits">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
         <label for.bind="trait.name" class="accordion-item-hd">
           ${trait.name}
           <span class="accordion-item-hd-cta">&#9650;</span>
-          <i class="fa fa-trash accordion-item-hd-option" click.delegate="$parent.deleteTrait('racial', trait)"></i>
-          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteTrait('racial', trait)"></i>
+          <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editTrait(trait)"></i>
         </label>
         <div class="accordion-item-bd">
           <p if.bind="trait.flavor">
@@ -21,15 +21,15 @@
       </li>
     </ul>
     <hr>
-    <h2>Traits<i click.delegate="addTrait('selected')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
+    <h2>Traits<i click.delegate="addTrait('selected')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of traits">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
         <label for.bind="trait.name" class="accordion-item-hd">
           ${trait.name}
           <span class="accordion-item-hd-cta">&#9650;</span>
-          <i class="fa fa-trash accordion-item-hd-option" click.delegate="$parent.deleteTrait('selected', trait)"></i>
-          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteTrait('selected', trait)"></i>
+          <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editTrait(trait)"></i>
         </label>
         <div class="accordion-item-bd">
           <p if.bind="trait.flavor">
@@ -42,15 +42,15 @@
       </li>
     </ul>
     <hr>
-    <h2>Drawbacks<i click.delegate="addTrait('drawback')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
+    <h2>Drawbacks<i click.delegate="addTrait('drawback')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of drawbacks">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
         <label for.bind="trait.name" class="accordion-item-hd">
           ${trait.name}
           <span class="accordion-item-hd-cta">&#9650;</span>
-          <i class="fa fa-trash accordion-item-hd-option" click.delegate="$parent.deleteTrait('drawback', trait)"></i>
-          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteTrait('drawback', trait)"></i>
+          <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editTrait(trait)"></i>
         </label>
         <div class="accordion-item-bd">
           <p if.bind="trait.flavor">

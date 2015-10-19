@@ -5,15 +5,35 @@
       <ul class="accordion css-accordion">
         <li class="accordion-item">
           <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="i" />
-          <label for.bind="i" if.bind="i != 1 && i != 2 && i != 3" class="accordion-item-hd">${i}th Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
-          <label for.bind="i" if.bind="i == 1" class="accordion-item-hd">1st Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
-          <label for.bind="i" if.bind="i == 2" class="accordion-item-hd">2nd Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
-          <label for.bind="i" if.bind="i == 3" class="accordion-item-hd">3rd Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i != 1 && i != 2 && i != 3" class="accordion-item-hd">
+            ${i}th Level Spells
+            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i>
+            <span class="accordion-item-hd-cta">&#9650;</span>
+          </label>
+          <label for.bind="i" if.bind="i == 1" class="accordion-item-hd">
+            1st Level Spells
+            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i>
+            <span class="accordion-item-hd-cta">&#9650;</span>
+          </label>
+          <label for.bind="i" if.bind="i == 2" class="accordion-item-hd">
+            2nd Level Spells
+            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i>
+            <span class="accordion-item-hd-cta">&#9650;</span>
+          </label>
+          <label for.bind="i" if.bind="i == 3" class="accordion-item-hd">
+            3rd Level Spells
+            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i>
+            <span class="accordion-item-hd-cta">&#9650;</span>
+          </label>
           <div class="accordion-item-bd">
             <ul class="accordion css-accordion">
               <li class="accordion-item" repeat.for="spell of $parent.spells" if.bind="spell.level == $parent.i">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="spell.name" />
-                <label for.bind="spell.name" class="accordion-item-hd">${spell.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.$parent.editSpell(spell)"></i></label>
+                <label for.bind="spell.name" class="accordion-item-hd">
+                  ${spell.name}
+                  <span class="accordion-item-hd-cta">&#9650;</span>
+                  <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.$parent.editSpell(spell)"></i>
+                </label>
                 <div class="accordion-item-bd">
                   <strong>School: </strong>${spell.school}<br>
                   <h3>Casting</h3>

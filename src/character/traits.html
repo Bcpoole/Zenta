@@ -4,7 +4,11 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of racialTraits">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
-        <label for.bind="trait.name" class="accordion-item-hd">${trait.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i></label>
+        <label for.bind="trait.name" class="accordion-item-hd">
+          ${trait.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i>
+        </label>
         <div class="accordion-item-bd">
           <p if.bind="trait.flavor">
             <i>${trait.flavor}</i>
@@ -20,7 +24,11 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of traits">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
-        <label for.bind="trait.name" class="accordion-item-hd">${trait.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i></label>
+        <label for.bind="trait.name" class="accordion-item-hd">
+          ${trait.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i>
+        </label>
         <div class="accordion-item-bd">
           <p if.bind="trait.flavor">
             <i>${trait.flavor}</i>
@@ -36,7 +44,11 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of drawbacks">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
-        <label for.bind="trait.name" class="accordion-item-hd">${trait.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i></label>
+        <label for.bind="trait.name" class="accordion-item-hd">
+          ${trait.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editTrait(trait)"></i>
+        </label>
         <div class="accordion-item-bd">
           <p if.bind="trait.flavor">
             <i>${trait.flavor}</i>

@@ -1,7 +1,7 @@
 {
   "name": "Zenta",
   "version": "0.8.3",
-  "description": "A Pathfinder character JSON data viewer app with Aurelia.",
+  "description": "A Pathfinder character JSON data viewer app built with Aurelia.",
   "keywords": [
     "aurelia",
     "Pathfinder",

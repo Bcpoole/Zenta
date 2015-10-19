@@ -7,7 +7,11 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="feat of feats">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="feat.name" />
-        <label for.bind="feat.name" class="accordion-item-hd">${feat.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editFeat(feat)"></i></label>
+        <label for.bind="feat.name" class="accordion-item-hd">
+          ${feat.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editFeat(feat)"></i>
+        </label>
         <div class="accordion-item-bd">
           <p if.bind="feat.flavor">
             <i>${feat.flavor}</i><br>
@@ -26,7 +30,11 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="flaw of flaws">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="flaw.name" />
-        <label for.bind="flaw.name" class="accordion-item-hd">${flaw.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editFeat(flaw)"></i></label>
+        <label for.bind="flaw.name" class="accordion-item-hd">
+          ${flaw.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editFeat(flaw)"></i>
+        </label>
         <div class="accordion-item-bd">
           <p if.bind="flaw.flavor">
             <i>${flaw.flavor}</i>

@@ -7,9 +7,18 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="weapon of loadedCharacter.weapons">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.name" />
-        <label if.bind="weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">${weapon.name} ${weapon.weaponBonus}<span class="accordion-item-hd-cta">&#9650;</span></label>
-        <label if.bind="weapon.isMasterwork && !weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">${weapon.name} (mw)<span class="accordion-item-hd-cta">&#9650;</span></label>
-        <label if.bind="!weapon.isMasterwork" for.bind="weapon.name" class="accordion-item-hd">${weapon.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label if.bind="weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">
+          ${weapon.name} ${weapon.weaponBonus}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
+        <label if.bind="weapon.isMasterwork && !weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">
+          ${weapon.name} (mw)
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
+        <label if.bind="!weapon.isMasterwork" for.bind="weapon.name" class="accordion-item-hd">
+          ${weapon.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
         <div class="accordion-item-bd">
           <p>
             <strong>Damage: </strong>${weapon.damage}
@@ -25,7 +34,10 @@
             <ul class="accordion css-accordion">
               <li class="accordion-item">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.material.name" />
-                <label for.bind="weapon.material.name" class="accordion-item-hd">${weapon.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+                <label for.bind="weapon.material.name" class="accordion-item-hd">
+                  ${weapon.material.name}
+                  <span class="accordion-item-hd-cta">&#9650;</span>
+                </label>
                 <div class="accordion-item-bd">
                   <p>
                     <strong>HP/IN: </strong>${weapon.material.hpIn}<br>
@@ -41,7 +53,10 @@
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of weapon.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
-              <label for.bind="enchantment.name" class="accordion-item-hd">${enchantment.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+              <label for.bind="enchantment.name" class="accordion-item-hd">
+                ${enchantment.name}
+                <span class="accordion-item-hd-cta">&#9650;</span>
+              </label>
               <div class="accordion-item-bd">
                 <p>
                   <strong>Aura: </strong>${enchantment.aura}
@@ -60,9 +75,18 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" if.bind="armor.name">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.name" />
-        <label if.bind="armor.armorBonus" for.bind="armor.name" class="accordion-item-hd">${armor.name} ${armor.armorBonus}<span class="accordion-item-hd-cta">&#9650;</span></label>
-        <label if.bind="armor.isMasterwork && !armor.armorBonus" for.bind="armor.name" class="accordion-item-hd">${armor.name} (mw)<span class="accordion-item-hd-cta">&#9650;</span></label>
-        <label if.bind="!armor.isMasterwork" for.bind="armor.name" class="accordion-item-hd">${armor.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label if.bind="armor.armorBonus" for.bind="armor.name" class="accordion-item-hd">
+          ${armor.name} ${armor.armorBonus}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
+        <label if.bind="armor.isMasterwork && !armor.armorBonus" for.bind="armor.name" class="accordion-item-hd">
+          ${armor.name} (mw)
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
+        <label if.bind="!armor.isMasterwork" for.bind="armor.name" class="accordion-item-hd">
+          ${armor.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
         <div class="accordion-item-bd">
           <p>
             <strong>AC: </strong>${armor.ac}<br>
@@ -79,7 +103,10 @@
             <ul class="accordion css-accordion">
               <li class="accordion-item">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.material.name" />
-                <label for.bind="armor.material.name" class="accordion-item-hd">${armor.material.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+                <label for.bind="armor.material.name" class="accordion-item-hd">
+                  ${armor.material.name}
+                  <span class="accordion-item-hd-cta">&#9650;</span>
+                </label>
                 <div class="accordion-item-bd">
                   <p>
                     <strong>HP/IN: </strong>${armor.material.hpIn}<br>
@@ -95,7 +122,10 @@
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
-              <label for.bind="enchantment.name" class="accordion-item-hd">${enchantment.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
+              <label for.bind="enchantment.name" class="accordion-item-hd">
+                ${enchantment.name}
+                <span class="accordion-item-hd-cta">&#9650;</span>
+              </label>
               <div class="accordion-item-bd">
                 <p>
                   <strong>Aura: </strong>${enchantment.aura}
@@ -114,8 +144,14 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="item of loadedCharacter.wondrousItems">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="item.name" />
-        <label for.bind="item.name" if.bind="item.name" class="accordion-item-hd">${item.slot} - ${item.name}<span class="accordion-item-hd-cta">&#9650;</span></label>
-        <label for.bind="item.name" if.bind="!item.name" class="accordion-item-hd">${item.slot}<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <label for.bind="item.name" if.bind="item.name" class="accordion-item-hd">
+          ${item.slot} - ${item.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
+        <label for.bind="item.name" if.bind="!item.name" class="accordion-item-hd">
+          ${item.slot}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+        </label>
         <div class="accordion-item-bd">
           <p>
             ${item.description}
@@ -135,7 +171,11 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="ring of loadedCharacter.rings">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="ring.name" />
-        <label for.bind="ring.name" class="accordion-item-hd">${ring.name}<span class="accordion-item-hd-cta">&#9650;</span><i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editRing(ring)"></i></label>
+        <label for.bind="ring.name" class="accordion-item-hd">
+          ${ring.name}
+          <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-pencil accordion-item-hd-option" click.delegate="$parent.editRing(ring)"></i>
+        </label>
         <div class="accordion-item-bd">
           <p>
             <strong>Aura: </strong>${ring.aura}

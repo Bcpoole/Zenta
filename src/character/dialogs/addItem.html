@@ -12,8 +12,8 @@
     </dialog-body>
 
     <dialog-footer>
-      <button click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
-      <button click.trigger="controller.ok(item)">Ok</button>
+      <button class="btn btn-default" click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
+      <button class="btn btn-default" click.trigger="controller.ok(item)" disabled.bind="feat.name == ''">Ok</button>
     </dialog-footer>
   </dialog>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Feats <button click.delegate="addFeat('feat')" class="btn btn-primary">+</button></h2>
+    <h2>Feats<i click.delegate="addFeat('feat')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
     <div class="alert alert-info" role="alert" if.bind="err">
       <strong>${err}</strong>
     </div>
@@ -22,7 +22,7 @@
       </li>
     </ul>
     <hr>
-    <h2>Flaws <button click.delegate="addFeat('flaw')" class="btn btn-primary">+</button></h2>
+    <h2>Flaws<i click.delegate="addFeat('flaw')" class="glyphicon glyphicon-plus accordion-item-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="flaw of flaws">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="flaw.name" />

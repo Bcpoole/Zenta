@@ -5,10 +5,10 @@
       <ul class="accordion css-accordion">
         <li class="accordion-item">
           <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="i" />
-          <label for.bind="i" if.bind="i != 1 && i != 2 && i != 3" class="accordion-item-hd">${i}th Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-          <label for.bind="i" if.bind="i == 1" class="accordion-item-hd">1st Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-          <label for.bind="i" if.bind="i == 2" class="accordion-item-hd">2nd Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
-          <label for.bind="i" if.bind="i == 3" class="accordion-item-hd">3rd Level Spells&#09;<button click.delegate="$parent.addSpell(i)" class="btn btn-primary">+</button><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i != 1 && i != 2 && i != 3" class="accordion-item-hd">${i}th Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i == 1" class="accordion-item-hd">1st Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i == 2" class="accordion-item-hd">2nd Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
+          <label for.bind="i" if.bind="i == 3" class="accordion-item-hd">3rd Level Spells&#09;<i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus accordion-item-hd-option"></i><span class="accordion-item-hd-cta">&#9650;</span></label>
           <div class="accordion-item-bd">
             <ul class="accordion css-accordion">
               <li class="accordion-item" repeat.for="spell of $parent.spells" if.bind="spell.level == $parent.i">

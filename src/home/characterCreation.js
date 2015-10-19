@@ -1,7 +1,8 @@
 import {computedFrom, inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
-import {DialogService, Prompt} from 'aurelia-dialog';
+import {DialogService} from 'aurelia-dialog';
 import {Validation} from 'aurelia-validation';
+import {Prompt} from 'aurelia-dialog/examples/prompt';
 
 @inject(ApplicationState, DialogService, Validation)
 export class characterCreation {
@@ -111,11 +112,14 @@ export class characterCreation {
   }
 
   setCustomBudget() {
-    this.dialogService.open({ viewModel: Prompt, model: 'Insert Total Points'}).then((result) => {
-      if(/\d+/.test(result) && Number.isInteger(Number(result))) {
-        this.setTotalBudget(result.replace(/\s+/g, ''));
-      } else {
-        alert('"' + result + '"' + ' is not invalid input!');
+    this.dialogService.open({ viewModel: Prompt, model: 'Insert Total Points'}).then((response) => {
+      if (!response.wasCancelled) {
+        let output = response.output;
+        if(/\d+/.test(output) && Number.isInteger(Number(output))) {
+          this.setTotalBudget(output.replace(/\s+/g, ''));
+        } else {
+          alert('"' + output + '"' + ' is not invalid input!');
+        }
       }
     });
   }

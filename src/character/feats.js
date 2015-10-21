@@ -46,4 +46,16 @@ export class feats {
   editFeat(feat) {
     this.dialogService.open({ viewModel: AddFeat, model: feat });
   }
+
+  deleteFeat(sender, feat) {
+      if(confirm('Do you really want to delete "' + feat.name + '"?')) {
+        if (sender === 'feat') {
+          let idx = this.feats.indexOf(feat);
+          this.feats.splice(idx, 1);
+        } else if (sender === 'flaw') {
+          let idx = this.flaws.indexOf(feat);
+          this.flaws.splice(idx, 1);
+        }
+      }
+    }
 }

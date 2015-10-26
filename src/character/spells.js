@@ -41,4 +41,11 @@ export class spells {
   editSpell(spell) {
     this.dialogService.open({ viewModel: AddSpell, model: spell });
   }
+
+  deleteSpell(spell) {
+    if(confirm('Do you really want to delete "' + spell.name + '"?')) {
+      let idx = this.spells.indexOf(spell);
+      this.spells.splice(idx, 1);
+    }
+  }
 }

@@ -47,4 +47,11 @@ export class equipment {
   editRing(ring) {
     this.dialogService.open({ viewModel: AddRing, model: ring });
   }
+
+  deleteRing(ring) {
+    if(confirm('Do you really want to delete "' + ring.name + '"?')) {
+      let idx = this.loadedCharacter.rings.indexOf(ring);
+      this.loadedCharacter.rings.splice(idx, 1);
+    }
+  }
 }

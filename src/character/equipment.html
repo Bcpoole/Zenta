@@ -174,6 +174,7 @@
         <label for.bind="ring.name" class="accordion-item-hd">
           ${ring.name}
           <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteRing(ring)"></i>
           <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editRing(ring)"></i>
         </label>
         <div class="accordion-item-bd">

@@ -2,6 +2,7 @@ import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 import {DialogService} from 'aurelia-dialog';
 import {AddRing} from './dialogs/addRing';
+import {EditWondrousItem} from './dialogs/editWondrousItem';
 
 @inject(ApplicationState, DialogService)
 export class equipment {
@@ -27,6 +28,25 @@ export class equipment {
     }
     for (var item of this.loadedCharacter.weapons) {
       this.totalWeight += item.weight;
+    }
+  }
+
+  editWondrousItem(item) {
+    this.dialogService.open({ viewModel: EditWondrousItem, model: item });
+  }
+
+  deleteWondrousItem(item) {
+    let nullItem = {
+      slot: item.slot,
+      name: '',
+      value: 0,
+      aura: '',
+      weight: 0,
+      description: ''
+    }
+    if(confirm('Do you really want to delete "' + item.name + '"?')) {
+      let idx = this.loadedCharacter.wondrousItems.indexOf(item);
+      this.loadedCharacter.wondrousItems[idx] = nullItem;
     }
   }
 

@@ -1,0 +1,21 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="item.name" autofocus />
+      <h2>Value</h2>
+      <input type="number" value.bind="item.value" />
+      <h2>Aura</h2>
+      <input value.bind="item.aura" />
+      <h2>Weight</h2>
+      <input type="number" value.bind="item.weight" />
+      <h2>Description</h2>
+      <textarea class="form-control translucent" rows="5" value.bind="item.description"></textarea>
+    </dialog-body>
+
+    <dialog-footer>
+      <button class="btn btn-default" click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
+      <button class="btn btn-default" click.trigger="controller.ok(item)" disabled.bind="item.name == ''">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

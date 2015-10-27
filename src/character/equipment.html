@@ -147,10 +147,13 @@
         <label for.bind="item.name" if.bind="item.name" class="accordion-item-hd">
           ${item.slot} - ${item.name}
           <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteWondrousItem(item)"></i>
+          <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editWondrousItem(item)"></i>
         </label>
         <label for.bind="item.name" if.bind="!item.name" class="accordion-item-hd">
           ${item.slot}
           <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-plus additional-hd-option" click.delegate="$parent.editWondrousItem(item)"></i>
         </label>
         <div class="accordion-item-bd">
           <p>

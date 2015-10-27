@@ -24,12 +24,12 @@ export class equipment {
   }
 
   computeTotalWeight() {
-    this.totalWeight = this.loadedCharacter.armor.weight;
+    this.totalWeight = this.armor.weight;
 
-    for (var item of this.loadedCharacter.wondrousItems) {
+    for (var item of this.wondrousItems) {
       this.totalWeight += item.weight;
     }
-    for (var item of this.loadedCharacter.weapons) {
+    for (var item of this.weapons) {
       this.totalWeight += item.weight;
     }
   }

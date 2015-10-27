@@ -7,16 +7,17 @@
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="weapon of weapons">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.name" />
-        <label if.bind="weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">
-          ${weapon.name} ${weapon.weaponBonus}
-          <span class="accordion-item-hd-cta">&#9650;</span>
-        </label>
-        <label if.bind="weapon.isMasterwork && !weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">
-          ${weapon.name} (mw)
-          <span class="accordion-item-hd-cta">&#9650;</span>
-        </label>
-        <label if.bind="!weapon.isMasterwork" for.bind="weapon.name" class="accordion-item-hd">
-          ${weapon.name}
+        <label for.bind="weapon.name" class="accordion-item-hd">
+          <span if.bind="!weapon.isMasterwork">
+            ${weapon.name}
+          </span>
+          <span if.bind="weapon.isMasterwork && !weapon.weaponBonus">
+            ${weapon.name} (mw)
+          </span>
+          <span if.bind="weapon.weaponBonus">
+            ${weapon.name} ${weapon.weaponBonus}
+          </span>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteWeapon(weapon)"></i>
           <span class="accordion-item-hd-cta">&#9650;</span>
         </label>
         <div class="accordion-item-bd">

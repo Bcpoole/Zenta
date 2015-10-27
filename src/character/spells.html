@@ -5,23 +5,11 @@
       <ul class="accordion css-accordion">
         <li class="accordion-item">
           <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="i" />
-          <label for.bind="i" if.bind="i != 1 && i != 2 && i != 3" class="accordion-item-hd">
-            ${i}th Level Spells
-            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus additional-hd-option"></i>
-            <span class="accordion-item-hd-cta">&#9650;</span>
-          </label>
-          <label for.bind="i" if.bind="i == 1" class="accordion-item-hd">
-            1st Level Spells
-            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus additional-hd-option"></i>
-            <span class="accordion-item-hd-cta">&#9650;</span>
-          </label>
-          <label for.bind="i" if.bind="i == 2" class="accordion-item-hd">
-            2nd Level Spells
-            <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus additional-hd-option"></i>
-            <span class="accordion-item-hd-cta">&#9650;</span>
-          </label>
-          <label for.bind="i" if.bind="i == 3" class="accordion-item-hd">
-            3rd Level Spells
+          <label for.bind="i" class="accordion-item-hd">
+            <span if.bind="i != 1 && i != 2 && i != 3">${i}th Level Spells</span>
+            <span if.bind="i == 1">1st Level Spells</span>
+            <span if.bind="i == 2">2nd Level Spells</span>
+            <span if.bind="i == 3">3rd Level Spells</span>
             <i click.delegate="$parent.addSpell(i)" class="glyphicon glyphicon-plus additional-hd-option"></i>
             <span class="accordion-item-hd-cta">&#9650;</span>
           </label>

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Racial Traits<i click.delegate="addTrait('racial')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
+    <h2>Racial Traits<i click.delegate="addTrait('racial')" class="fa fa-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of racialTraits">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
@@ -21,7 +21,7 @@
       </li>
     </ul>
     <hr>
-    <h2>Traits<i click.delegate="addTrait('selected')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
+    <h2>Traits<i click.delegate="addTrait('selected')" class="fa fa-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of traits">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />
@@ -42,7 +42,7 @@
       </li>
     </ul>
     <hr>
-    <h2>Drawbacks<i click.delegate="addTrait('drawback')" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
+    <h2>Drawbacks<i click.delegate="addTrait('drawback')" class="fa fa-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" repeat.for="trait of drawbacks">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="trait.name" />

@@ -2,6 +2,7 @@ import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 import {DialogService} from 'aurelia-dialog';
 import {AddRing} from './dialogs/addRing';
+import {AddWeapon} from './dialogs/addWeapon';
 import {EditWondrousItem} from './dialogs/editWondrousItem';
 
 @inject(ApplicationState, DialogService)
@@ -32,6 +33,29 @@ export class equipment {
     for (var item of this.weapons) {
       this.totalWeight += item.weight;
     }
+  }
+
+  addWeapon() {
+    let weapon = {
+      name: '',
+      damage: '',
+      crit: '',
+      weight: 0,
+      value: 0,
+      isMasterwork: false,
+      weaponBonus: '',
+      material: {},
+      enchantments: []
+    }
+    this.dialogService.open({ viewModel: AddWeapon, model: weapon }).then(response => {
+      if (!response.wasCancelled) {
+        this.weapons.push(response.output);
+      }
+    });
+  }
+
+  editWeapon(weapon) {
+    this.dialogService.open({ viewModel: AddWeapon, model: weapon });
   }
 
   deleteWeapon(weapon) {

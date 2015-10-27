@@ -1,0 +1,25 @@
+<template>
+  <dialog>
+    <dialog-body>
+      <h2>Name</h2>
+      <input value.bind="weapon.name" autofocus/>
+      <h2>Weapon Bonus</h2>
+      <input value.bind="weapon.weaponBonus" />
+      <h2>Damage</h2>
+      <input value.bind="weapon.damage" />
+      <h2>Crit</h2>
+      <input value.bind="weapon.crit" />
+      <h2>Weight</h2>
+      <input type="number" value.bind="weapon.weight" />
+      <h2>Value</h2>
+      <input type="number" value.bind="ring.value" />
+      <h2>Masterwork</h2>
+      <input type="checkbox" checked.bind="weapon.isMasterwork" />
+    </dialog-body>
+
+    <dialog-footer>
+      <button class="btn btn-default" click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
+      <button class="btn btn-default" click.trigger="controller.ok(weapon)" disabled.bind="weapon.name == ''">Ok</button>
+    </dialog-footer>
+  </dialog>
+</template>

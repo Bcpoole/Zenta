@@ -5,7 +5,7 @@
     <hr>
     <h2>Weapons</h2>
     <ul class="accordion css-accordion">
-      <li class="accordion-item" repeat.for="weapon of loadedCharacter.weapons">
+      <li class="accordion-item" repeat.for="weapon of weapons">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.name" />
         <label if.bind="weapon.weaponBonus" for.bind="weapon.name" class="accordion-item-hd">
           ${weapon.name} ${weapon.weaponBonus}
@@ -142,7 +142,7 @@
     <hr>
     <h2>Wondrous Items</h2>
     <ul class="accordion css-accordion">
-      <li class="accordion-item" repeat.for="item of loadedCharacter.wondrousItems">
+      <li class="accordion-item" repeat.for="item of wondrousItems">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="item.name" />
         <label for.bind="item.name" if.bind="item.name" class="accordion-item-hd">
           ${item.slot} - ${item.name}
@@ -172,7 +172,7 @@
     <hr>
     <h2>Rings<i click.delegate="addRing()" class="glyphicon glyphicon-plus additional-hd-option"></i></h2>
     <ul class="accordion css-accordion">
-      <li class="accordion-item" repeat.for="ring of loadedCharacter.rings">
+      <li class="accordion-item" repeat.for="ring of rings">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="ring.name" />
         <label for.bind="ring.name" class="accordion-item-hd">
           ${ring.name}

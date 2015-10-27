@@ -16,6 +16,9 @@ export class equipment {
 
     this.loadedCharacter = this.appState.loadedCharacter;
     this.armor = this.loadedCharacter.armor;
+    this.weapons = this.loadedCharacter.weapons;
+    this.rings = this.loadedCharacter.rings;
+    this.wondrousItems = this.loadedCharacter.wondrousItems;
 
     this.computeTotalWeight();
   }
@@ -28,6 +31,13 @@ export class equipment {
     }
     for (var item of this.loadedCharacter.weapons) {
       this.totalWeight += item.weight;
+    }
+  }
+
+  deleteWeapon(weapon) {
+    if(confirm('Do you really want to delete "' + weapon.name + '"?')) {
+      let idx = this.weapons.indexOf(weapon);
+      this.weapons.splice(idx, 1);
     }
   }
 
@@ -45,8 +55,8 @@ export class equipment {
       description: ''
     }
     if(confirm('Do you really want to delete "' + item.name + '"?')) {
-      let idx = this.loadedCharacter.wondrousItems.indexOf(item);
-      this.loadedCharacter.wondrousItems[idx] = nullItem;
+      let idx = this.wondrousItems.indexOf(item);
+      this.wondrousItems[idx] = nullItem;
     }
   }
 
@@ -59,7 +69,7 @@ export class equipment {
     };
     this.dialogService.open({ viewModel: AddRing, model: ring }).then(response => {
       if (!response.wasCancelled) {
-        this.loadedCharacter.rings.push(response.output);
+        this.rings.push(response.output);
       }
     });
   }
@@ -70,8 +80,8 @@ export class equipment {
 
   deleteRing(ring) {
     if(confirm('Do you really want to delete "' + ring.name + '"?')) {
-      let idx = this.loadedCharacter.rings.indexOf(ring);
-      this.loadedCharacter.rings.splice(idx, 1);
+      let idx = this.rings.indexOf(ring);
+      this.rings.splice(idx, 1);
     }
   }
 }

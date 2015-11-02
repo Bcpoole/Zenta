@@ -11,8 +11,8 @@
           <span if.bind="!weapon.isMasterwork">${weapon.name}</span>
           <span if.bind="weapon.isMasterwork && !weapon.weaponBonus">${weapon.name} (mw)</span>
           <span if.bind="weapon.weaponBonus">${weapon.name} ${weapon.weaponBonus}</span>
-          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteWeapon(weapon)"></i>
           <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-trash additional-hd-option" click.delegate="$parent.deleteWeapon(weapon)"></i>
           <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editWeapon(weapon)"></i>
         </label>
         <div class="accordion-item-bd">
@@ -27,12 +27,14 @@
             <strong>Value: </strong>${weapon.value} gp
           </p>
           <p>
-            <ul class="accordion css-accordion">
+            <ul class="accordion css-accordion" if.bind="weapon.material">
               <li class="accordion-item">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.material.name" />
                 <label for.bind="weapon.material.name" class="accordion-item-hd">
                   ${weapon.material.name}
                   <span class="accordion-item-hd-cta">&#9650;</span>
+                  <i class="fa fa-trash additional-hd-option" click.delegate="$parent.removeMaterial(weapon)"></i>
+                  <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editMaterial(weapon)"></i>
                 </label>
                 <div class="accordion-item-bd">
                   <p>
@@ -90,12 +92,14 @@
             <strong>Value: </strong>${armor.value} gp
           </p>
           <p>
-            <ul class="accordion css-accordion">
+            <ul class="accordion css-accordion" if.bind="armor.material">
               <li class="accordion-item">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.material.name" />
                 <label for.bind="armor.material.name" class="accordion-item-hd">
                   ${armor.material.name}
                   <span class="accordion-item-hd-cta">&#9650;</span>
+                  <i class="fa fa-trash additional-hd-option" click.delegate="removeMaterial(armor)"></i>
+                  <i class="fa fa-pencil additional-hd-option" click.delegate="editMaterial(armor)"></i>
                 </label>
                 <div class="accordion-item-bd">
                   <p>

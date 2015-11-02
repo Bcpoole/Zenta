@@ -65,6 +65,14 @@ export class equipment {
     }
   }
 
+  editMaterial(item) {
+    //TO-DO
+  }
+
+  removeMaterial(item) {
+    item.material = null;
+  }
+
   editWondrousItem(item) {
     this.dialogService.open({ viewModel: EditWondrousItem, model: item });
   }

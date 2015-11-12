@@ -67,5 +67,3 @@ Displays are listed on the character name dropdown in the nav-right once a chara
 - Add dialogs (with edit versions)
 - Make a better looking confirm dialog
 - Delete options
-- Skills overhaul
-- Class/Class UI overhaul

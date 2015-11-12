@@ -1,16 +1,16 @@
 import {DialogController} from 'aurelia-dialog';
 
-export class AddRing {
+export class EditMaterial {
   static inject = [DialogController];
 
   constructor(controller){
     this.controller = controller;
   }
 
-  activate(ring){
-    this.ring = ring;
+  activate(material){
+    this.material = material;
 
-    if (this.ring.name == '') {
+    if (this.material.name == '') {
       this.isNew = true;
     }
   }

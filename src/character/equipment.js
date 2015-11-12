@@ -1,9 +1,10 @@
 import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 import {DialogService} from 'aurelia-dialog';
-import {AddRing} from './dialogs/addRing';
 import {AddWeapon} from './dialogs/addWeapon';
+import {EditMaterial} from './dialogs/editMaterial';
 import {EditWondrousItem} from './dialogs/editWondrousItem';
+import {AddRing} from './dialogs/addRing';
 
 @inject(ApplicationState, DialogService)
 export class equipment {
@@ -66,7 +67,7 @@ export class equipment {
   }
 
   editMaterial(item) {
-    //TO-DO
+    this.dialogService.open({ viewModel: EditMaterial, model: item.material });
   }
 
   removeMaterial(item) {

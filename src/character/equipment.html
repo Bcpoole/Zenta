@@ -48,6 +48,9 @@
               </li>
             </ul>
           </p>
+          <p if.bind="!weapon.material">
+            <strong>Set Material <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editMaterial(weapon)"></i></strong>
+          </p>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of weapon.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />

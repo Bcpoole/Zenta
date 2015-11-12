@@ -67,11 +67,17 @@ export class equipment {
   }
 
   editMaterial(item) {
+  console.log(item.material);
     this.dialogService.open({ viewModel: EditMaterial, model: item.material });
   }
 
   removeMaterial(item) {
-    item.material = null;
+    item.material = {
+      name: '',
+      hpIn: 0,
+      hardness: 0,
+      description: ''
+    }
   }
 
   editWondrousItem(item) {

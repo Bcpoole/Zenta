@@ -27,7 +27,7 @@
             <strong>Value: </strong>${weapon.value} gp
           </p>
           <p>
-            <ul class="accordion css-accordion" if.bind="weapon.material">
+            <ul class="accordion css-accordion" if.bind="weapon.material.name">
               <li class="accordion-item">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="weapon.material.name" />
                 <label for.bind="weapon.material.name" class="accordion-item-hd">
@@ -48,7 +48,7 @@
               </li>
             </ul>
           </p>
-          <p if.bind="!weapon.material">
+          <p if.bind="!weapon.material.name">
             <strong>Set Material <i class="fa fa-pencil" click.delegate="$parent.editMaterial(weapon)"></i></strong>
           </p>
           <ul class="accordion css-accordion">
@@ -95,7 +95,7 @@
             <strong>Value: </strong>${armor.value} gp
           </p>
           <p>
-            <ul class="accordion css-accordion" if.bind="armor.material">
+            <ul class="accordion css-accordion" if.bind="armor.material.name">
               <li class="accordion-item">
                 <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.material.name" />
                 <label for.bind="armor.material.name" class="accordion-item-hd">
@@ -116,8 +116,8 @@
               </li>
             </ul>
           </p>
-          <p if.bind="!weapon.material">
-            <strong>Set Material <i class="fa fa-pencil" click.delegate="$parent.editMaterial(weapon)"></i></strong>
+          <p if.bind="!armor.material.name">
+            <strong>Set Material <i class="fa fa-pencil" click.delegate="editMaterial(armor)"></i></strong>
           </p>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of armor.enchantments">

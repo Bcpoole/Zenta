@@ -45,7 +45,12 @@ export class equipment {
       value: 0,
       isMasterwork: false,
       weaponBonus: '',
-      material: {},
+      material: {
+        name: '',
+        hpIn: 0,
+        hardness: 0,
+        description: ''
+      },
       enchantments: []
     }
     this.dialogService.open({ viewModel: AddWeapon, model: weapon }).then(response => {

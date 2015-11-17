@@ -85,6 +85,17 @@ export class equipment {
     }
   }
 
+  addEnchantment(item) {
+
+  }
+
+  removeEnchantment(item, enchantment){
+    if(confirm('Do you really want to remove "' + enchantment.name + '" from "' + item.name + '"?')) {
+      let idx = item.enchantments.indexOf(enchantment);
+      item.enchantments.splice(idx, 1);
+    }
+  }
+
   editWondrousItem(item) {
     this.dialogService.open({ viewModel: EditWondrousItem, model: item });
   }

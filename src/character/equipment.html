@@ -84,6 +84,8 @@
           <span if.bind="armor.isMasterwork && !armor.armorBonus">${armor.name} (mw)</span>
           <span if.bind="armor.armorBonus">${armor.name} ${armor.armorBonus}</span>
           <span class="accordion-item-hd-cta">&#9650;</span>
+          <i class="fa fa-trash additional-hd-option" click.delegate="deleteArmor()"></i>
+          <i class="fa fa-pencil additional-hd-option" click.delegate="editArmor()"></i>
         </label>
         <div class="accordion-item-bd">
           <p>

@@ -2,6 +2,7 @@ import {inject} from 'aurelia-framework';
 import {ApplicationState} from '../applicationState';
 import {DialogService} from 'aurelia-dialog';
 import {AddWeapon} from './dialogs/addWeapon';
+import {EditArmor} from './dialogs/editArmor';
 import {EditMaterial} from './dialogs/editMaterial';
 import {AddEnchantment} from './dialogs/addEnchantment';
 import {EditWondrousItem} from './dialogs/editWondrousItem';
@@ -69,6 +70,35 @@ export class equipment {
     if(confirm('Do you really want to delete "' + weapon.name + '"?')) {
       let idx = this.weapons.indexOf(weapon);
       this.weapons.splice(idx, 1);
+    }
+  }
+
+  editArmor() {
+    this.dialogService.open({ viewModel: EditArmor, model: this.armor });
+  }
+
+  deleteArmor() {
+    let nullArmor = {
+      name: '',
+      ac: 0,
+      maxDexBonus: 0,
+      armorCheckPenalty: 0,
+      arcaneSpellFailureChance: 0,
+      speed: '',
+      weight: 0,
+      value: 0,
+      isMasterwork: false,
+      armorBonus: '',
+      material: {
+        name: '',
+        hpIn: 0,
+        hardness: 0,
+        description: ''
+      },
+      enchantments: []
+    }
+    if(confirm('Do you really want to delete "' + this.armor.name + '"?')) {
+      this.armor = nullArmor;
     }
   }
 

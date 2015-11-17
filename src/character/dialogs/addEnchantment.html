@@ -2,18 +2,16 @@
   <dialog>
     <dialog-body>
       <h2>Name</h2>
-      <input value.bind="ring.name" autofocus/>
+      <input value.bind="enchantment.name" autofocus/>
       <h2>Aura</h2>
-      <input value.bind="ring.aura" />
-      <h2>Value</h2>
-      <input type="number" value.bind="ring.value" />
+      <input value.bind="enchantment.aura" />
       <h2>Description</h2>
-      <textarea class="form-control translucent" rows="5" value.bind="ring.description"></textarea>
+      <textarea class="form-control translucent" rows="5" value.bind="enchantment.description"></textarea>
     </dialog-body>
 
     <dialog-footer>
       <button class="btn btn-default" click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
-      <button class="btn btn-default" click.trigger="controller.ok(ring)" disabled.bind="ring.name == ''">Ok</button>
+      <button class="btn btn-default" click.trigger="controller.ok(enchantment)" disabled.bind="enchantment.name == ''">Ok</button>
     </dialog-footer>
   </dialog>
 </template>

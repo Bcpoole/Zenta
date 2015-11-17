@@ -51,7 +51,7 @@
           <p if.bind="!weapon.material.name">
             <strong>Set Material <i class="fa fa-pencil" click.delegate="$parent.editMaterial(weapon)"></i></strong>
           </p>
-          <h4>Enchantments</h4>
+          <h4>Enchantments <i click.delegate="$parent.addEnchantment(weapon)" class="fa fa-plus additional-hd-option"></i></h4>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of weapon.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
@@ -59,7 +59,7 @@
                 ${enchantment.name}
                 <span class="accordion-item-hd-cta">&#9650;</span>
                 <i class="fa fa-trash additional-hd-option" click.delegate="$parent.$parent.removeEnchantment($parent.weapon, enchantment)"></i>
-                <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.$parent.editEnchantment($parent.weapon, enchantment)"></i>
+                <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.$parent.editEnchantment(enchantment)"></i>
               </label>
               <div class="accordion-item-bd">
                 <p>
@@ -122,7 +122,7 @@
           <p if.bind="!armor.material.name">
             <strong>Set Material <i class="fa fa-pencil" click.delegate="editMaterial(armor)"></i></strong>
           </p>
-          <h4>Enchantments</h4>
+          <h4>Enchantments <i click.delegate="$parent.addEnchantment(armor)" class="fa fa-plus additional-hd-option"></i></h4>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />
@@ -130,7 +130,7 @@
                 ${enchantment.name}
                 <span class="accordion-item-hd-cta">&#9650;</span>
                 <i class="fa fa-trash additional-hd-option" click.delegate="$parent.removeEnchantment($parent.armor, enchantment)"></i>
-                <i class="fa fa-pencil additional-hd-option" click.delegate="editEnchantment(armor, enchantment)"></i>
+                <i class="fa fa-pencil additional-hd-option" click.delegate="$parent.editEnchantment(enchantment)"></i>
               </label>
               <div class="accordion-item-bd">
                 <p>

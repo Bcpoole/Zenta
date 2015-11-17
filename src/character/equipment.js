@@ -3,6 +3,7 @@ import {ApplicationState} from '../applicationState';
 import {DialogService} from 'aurelia-dialog';
 import {AddWeapon} from './dialogs/addWeapon';
 import {EditMaterial} from './dialogs/editMaterial';
+import {AddEnchantment} from './dialogs/addEnchantment';
 import {EditWondrousItem} from './dialogs/editWondrousItem';
 import {AddRing} from './dialogs/addRing';
 
@@ -72,7 +73,6 @@ export class equipment {
   }
 
   editMaterial(item) {
-  console.log(item.material);
     this.dialogService.open({ viewModel: EditMaterial, model: item.material });
   }
 
@@ -86,7 +86,20 @@ export class equipment {
   }
 
   addEnchantment(item) {
+    let enchantment = {
+      name: '',
+      aura: '',
+      description: ''
+    }
+    this.dialogService.open({ viewModel: AddEnchantment, model: enchantment }).then(response => {
+      if (!response.wasCancelled) {
+        item.enchantments.push(response.output);
+      }
+    });
+  }
 
+  editEnchantment(enchantment) {
+    this.dialogService.open({ viewModel: AddEnchantment, model: enchantment });
   }
 
   removeEnchantment(item, enchantment){

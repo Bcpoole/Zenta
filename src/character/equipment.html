@@ -122,7 +122,7 @@
           <p if.bind="!armor.material.name">
             <strong>Set Material <i class="fa fa-pencil" click.delegate="editMaterial(armor)"></i></strong>
           </p>
-          <h4>Enchantments <i click.delegate="$parent.addEnchantment(armor)" class="fa fa-plus additional-hd-option"></i></h4>
+          <h4>Enchantments <i click.delegate="addEnchantment(armor)" class="fa fa-plus additional-hd-option"></i></h4>
           <ul class="accordion css-accordion">
             <li class="accordion-item" repeat.for="enchantment of armor.enchantments">
               <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="enchantment.name" />

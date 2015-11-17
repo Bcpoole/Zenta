@@ -2,18 +2,30 @@
   <dialog>
     <dialog-body>
       <h2>Name</h2>
-      <input value.bind="ring.name" autofocus/>
-      <h2>Aura</h2>
-      <input value.bind="ring.aura" />
+      <input value.bind="armor.name" autofocus/>
+      <h2>Armor Bonus</h2>
+      <input value.bind="armor.armorBonus" />
+      <h2>AC</h2>
+      <input type="number" value.bind="armor.ac" />
+      <h2>Max Dex Bonus</h2>
+      <input type="number" value.bind="armor.maxDexBonus" />
+      <h2>Armor Check Penalty</h2>
+      <input type="number" value.bind="armor.armorCheckPenalty" />
+      <h2>Arcane Spell Failure Chance</h2>
+      <input type="number" value.bind="armor.arcaneSpellFailureChance" />
+      <h2>Speed</h2>
+      <input value.bind="armor.speed" />
+      <h2>Weight</h2>
+      <input type="number" value.bind="armor.weight" />
       <h2>Value</h2>
       <input type="number" value.bind="ring.value" />
-      <h2>Description</h2>
-      <textarea class="form-control translucent" rows="5" value.bind="ring.description"></textarea>
+      <h2>Masterwork</h2>
+      <input type="checkbox" checked.bind="armor.isMasterwork" />
     </dialog-body>
 
     <dialog-footer>
       <button class="btn btn-default" click.trigger="controller.cancel()" if.bind="isNew">Cancel</button>
-      <button class="btn btn-default" click.trigger="controller.ok(ring)" disabled.bind="ring.name == ''">Ok</button>
+      <button class="btn btn-default" click.trigger="controller.ok(armor)" disabled.bind="ring.name == ''">Ok</button>
     </dialog-footer>
   </dialog>
 </template>

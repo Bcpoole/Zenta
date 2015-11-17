@@ -75,7 +75,7 @@
       </li>
     </ul>
     <hr>
-    <h2>Armor</h2>
+    <h2>Armor <i click.delegate="editArmor()" class="fa fa-plus additional-hd-option" if.bind="!armor.name"></i></h2>
     <ul class="accordion css-accordion">
       <li class="accordion-item" if.bind="armor.name">
         <input class="accordion-item-input" type="checkbox" name="accordion" id.bind="armor.name" />

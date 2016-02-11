@@ -62,6 +62,3 @@ Displays are listed on the character name dropdown in the nav-right once a chara
 - Spells
 - Stats - *Ability Scores, Offensive & Defensive Stats*
 - Traits & Drawbacks
-
-## TO-DO
-- Make a better looking confirm dialog than default browser dialog
